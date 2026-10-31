@@ -1,4 +1,4 @@
-.instiui-app {
+.chakra-app {
   display: grid;
   grid-template-rows: 63px minmax(0, 1fr);
   width: 100%;
@@ -10,7 +10,7 @@
   color: #061e4a;
 }
 
-.instiui-navbar {
+.chakra-navbar {
   position: relative;
   z-index: 1;
   display: flex;
@@ -22,21 +22,21 @@
   background: #fff;
 }
 
-.instiui-navbar__identity {
+.chakra-navbar__identity {
   display: flex;
   align-items: center;
   min-width: 0;
 }
 
-.instiui-mobile-menu-toggle,
-.instiui-mobile-search-toggle,
-.instiui-mobile-outline-toggle,
-.instiui-mobile-outline-close,
-.instiui-mobile-backdrop {
+.chakra-mobile-menu-toggle,
+.chakra-mobile-search-toggle,
+.chakra-mobile-outline-toggle,
+.chakra-mobile-outline-close,
+.chakra-mobile-backdrop {
   display: none;
 }
 
-.instiui-search {
+.chakra-search {
   position: absolute;
   left: 50%;
   display: grid;
@@ -54,7 +54,7 @@
   color: #254574;
 }
 
-.instiui-search > svg {
+.chakra-search > svg {
   display: block;
   width: 17px;
   height: 17px;
@@ -65,7 +65,7 @@
   stroke-width: 1.8;
 }
 
-.instiui-search input {
+.chakra-search input {
   width: 100%;
   min-width: 0;
   padding: 0;
@@ -77,17 +77,17 @@
   font-size: 13px;
 }
 
-.instiui-search input::placeholder {
+.chakra-search input::placeholder {
   color: #35547f;
   opacity: 1;
 }
 
-.instiui-search:focus-within {
+.chakra-search:focus-within {
   border-color: #8ca8d4;
   box-shadow: 0 0 0 3px rgba(73, 113, 182, 0.12);
 }
 
-.instiui-search kbd {
+.chakra-search kbd {
   color: #244574;
   font-family: inherit;
   font-size: 12px;
@@ -95,14 +95,14 @@
   white-space: nowrap;
 }
 
-.instiui-brand {
+.chakra-brand {
   display: flex;
   align-items: center;
   min-width: 0;
   white-space: nowrap;
 }
 
-.instiui-brand__mark {
+.chakra-brand__mark {
   display: block;
   flex: 0 0 auto;
   width: clamp(26px, 2vw, 31px);
@@ -110,7 +110,7 @@
   fill: #062fa8;
 }
 
-.instiui-brand__name {
+.chakra-brand__name {
   margin-left: 0.8vw;
   color: #071e4d;
   font-family: Georgia, "Times New Roman", serif;
@@ -120,7 +120,7 @@
   letter-spacing: -0.035em;
 }
 
-.instiui-version {
+.chakra-version {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +137,7 @@
   line-height: 1;
 }
 
-.instiui-version svg {
+.chakra-version svg {
   width: 10px;
   height: 10px;
   fill: none;
@@ -147,14 +147,14 @@
   stroke-width: 1.2;
 }
 
-.instiui-navbar__icons {
+.chakra-navbar__icons {
   display: flex;
   align-items: center;
   gap: 1.56vw;
   height: 100%;
 }
 
-.instiui-navbar__icon {
+.chakra-navbar__icon {
   display: grid;
   width: 1.3vw;
   min-width: 17px;
@@ -162,7 +162,7 @@
   place-items: center;
 }
 
-.instiui-navbar__icon svg {
+.chakra-navbar__icon svg {
   display: block;
   width: 100%;
   height: 100%;
@@ -173,33 +173,33 @@
   stroke-width: 1.8;
 }
 
-.instiui-navbar__icon--sun {
+.chakra-navbar__icon--sun {
   color: #ff7416;
 }
 
-.instiui-navbar__icon--moon {
+.chakra-navbar__icon--moon {
   width: 1.2vw;
   min-width: 16px;
   margin-right: 0.4vw;
   color: #536e9e;
 }
 
-.instiui-navbar__icon--moon svg {
+.chakra-navbar__icon--moon svg {
   stroke-width: 1.55;
 }
 
-.instiui-navbar__icon--github {
+.chakra-navbar__icon--github {
   width: 1.56vw;
   min-width: 20px;
   color: #061e4a;
 }
 
-.instiui-navbar__icon--github svg {
+.chakra-navbar__icon--github svg {
   fill: currentColor;
   stroke: none;
 }
 
-.instiui-layout {
+.chakra-layout {
   position: relative;
   display: grid;
   grid-template-columns: clamp(260px, 21.9vw, 336px) minmax(0, 1fr) clamp(200px, 16.15vw, 248px);
@@ -208,8 +208,8 @@
   background: #fff;
 }
 
-.instiui-left-column,
-.instiui-page-outline {
+.chakra-left-column,
+.chakra-page-outline {
   position: relative;
   min-width: 0;
   min-height: 0;
@@ -217,19 +217,19 @@
   background: #fff;
 }
 
-.instiui-left-column {
-  --instiui-sidebar-row-extension: 32px;
-  --instiui-fade-overlap: 70px;
+.chakra-left-column {
+  --chakra-sidebar-row-extension: 32px;
+  --chakra-fade-overlap: 70px;
   border-right: 1px solid #e0e6ee;
 }
 
-.instiui-left-column::after {
+.chakra-left-column::after {
   position: absolute;
   z-index: 1;
   right: 0;
   bottom: 0;
   left: 0;
-  height: calc(16% - var(--instiui-sidebar-row-extension) + var(--instiui-fade-overlap));
+  height: calc(16% - var(--chakra-sidebar-row-extension) + var(--chakra-fade-overlap));
   background: linear-gradient(
     to bottom,
     #fff 0%,
@@ -240,28 +240,28 @@
   pointer-events: none;
 }
 
-.instiui-left-column__art,
-.instiui-page-outline__art {
+.chakra-left-column__art,
+.chakra-page-outline__art {
   position: absolute;
   z-index: 0;
   inset: 0;
 }
 
-.instiui-rail__pixels {
+.chakra-rail__pixels {
   touch-action: pan-y;
 }
 
-.instiui-workspace {
+.chakra-workspace {
   min-width: 0;
   min-height: 0;
   background: #fff;
 }
 
-.instiui-page-outline {
+.chakra-page-outline {
   border-left: 1px solid #e0e6ee;
 }
 
-.instiui-page-outline__heading {
+.chakra-page-outline__heading {
   position: relative;
   z-index: 1;
   margin: 26px 16px;
@@ -274,28 +274,28 @@
 }
 
 @media (max-width: 900px) {
-  .instiui-layout {
+  .chakra-layout {
     grid-template-columns: clamp(244px, 31vw, 280px) minmax(0, 1fr);
   }
 
-  .instiui-page-outline {
+  .chakra-page-outline {
     display: none;
   }
 }
 
 @media (max-width: 760px) {
-  .instiui-app {
+  .chakra-app {
     grid-template-rows: 60px minmax(0, 1fr);
   }
 
-  .instiui-navbar {
+  .chakra-navbar {
     z-index: 5;
     height: 60px;
     padding-inline: 16px;
   }
 
-  .instiui-mobile-menu-toggle,
-  .instiui-mobile-search-toggle {
+  .chakra-mobile-menu-toggle,
+  .chakra-mobile-search-toggle {
     display: grid;
     flex: 0 0 auto;
     width: 34px;
@@ -309,7 +309,7 @@
     cursor: pointer;
   }
 
-  .instiui-mobile-menu-toggle {
+  .chakra-mobile-menu-toggle {
     position: absolute;
     z-index: 8;
     top: 14px;
@@ -317,12 +317,12 @@
     transition: left 220ms ease;
   }
 
-  .instiui-mobile-menu-toggle.is-open {
+  .chakra-mobile-menu-toggle.is-open {
     top: 4px;
     left: calc(min(86vw, 320px) - 48px);
   }
 
-  .instiui-mobile-outline-toggle {
+  .chakra-mobile-outline-toggle {
     position: absolute;
     z-index: 1;
     top: 14px;
@@ -344,18 +344,18 @@
     transition: background-color 140ms ease, box-shadow 140ms ease;
   }
 
-  .instiui-mobile-outline-toggle:hover {
+  .chakra-mobile-outline-toggle:hover {
     background: #f6f8fc;
     box-shadow: 0 4px 14px rgba(13, 38, 76, 0.14);
   }
 
-  .instiui-mobile-outline-toggle:focus-visible,
-  .instiui-mobile-outline-close:focus-visible {
+  .chakra-mobile-outline-toggle:focus-visible,
+  .chakra-mobile-outline-close:focus-visible {
     outline: 2px solid #7999d2;
     outline-offset: 2px;
   }
 
-  .instiui-mobile-outline-toggle svg {
+  .chakra-mobile-outline-toggle svg {
     width: 17px;
     height: 17px;
     fill: none;
@@ -365,8 +365,8 @@
     stroke-width: 1.6;
   }
 
-  .instiui-mobile-menu-toggle svg,
-  .instiui-mobile-search-toggle svg {
+  .chakra-mobile-menu-toggle svg,
+  .chakra-mobile-search-toggle svg {
     display: block;
     width: 19px;
     height: 19px;
@@ -377,48 +377,48 @@
     stroke-width: 1.8;
   }
 
-  .instiui-mobile-menu-toggle:focus-visible,
-  .instiui-mobile-search-toggle:focus-visible {
+  .chakra-mobile-menu-toggle:focus-visible,
+  .chakra-mobile-search-toggle:focus-visible {
     outline: 2px solid #7999d2;
     outline-offset: 2px;
   }
 
-  .instiui-version {
+  .chakra-version {
     margin-left: 14px;
     font-size: 11px;
   }
 
-  .instiui-navbar__icons {
+  .chakra-navbar__icons {
     margin-left: auto;
     gap: 14px;
   }
 
-  .instiui-navbar__icon,
-  .instiui-navbar__icon--moon,
-  .instiui-navbar__icon--github {
+  .chakra-navbar__icon,
+  .chakra-navbar__icon--moon,
+  .chakra-navbar__icon--github {
     width: 20px;
     min-width: 20px;
   }
 
-  .instiui-navbar__icon--moon {
+  .chakra-navbar__icon--moon {
     margin-right: 0;
   }
 
-  .instiui-navbar__icon--github {
+  .chakra-navbar__icon--github {
     width: 22px;
   }
 
-  .instiui-navbar__icon svg {
+  .chakra-navbar__icon svg {
     width: 18px;
     height: 18px;
   }
 
-  .instiui-navbar__icon--github svg {
+  .chakra-navbar__icon--github svg {
     width: 22px;
     height: 22px;
   }
 
-  .instiui-search {
+  .chakra-search {
     display: none;
     top: calc(100% + 58px);
     right: 12px;
@@ -428,15 +428,15 @@
     transform: none;
   }
 
-  .instiui-navbar.is-search-open .instiui-search {
+  .chakra-navbar.is-search-open .chakra-search {
     display: grid;
   }
 
-  .instiui-layout {
+  .chakra-layout {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .instiui-mobile-backdrop {
+  .chakra-mobile-backdrop {
     position: absolute;
     z-index: 2;
     inset: 0;
@@ -446,7 +446,7 @@
     cursor: pointer;
   }
 
-  .instiui-left-column {
+  .chakra-left-column {
     position: absolute;
     z-index: 3;
     inset: 0 auto 0 0;
@@ -458,22 +458,22 @@
     transition: transform 220ms ease, visibility 220ms;
   }
 
-  .instiui-left-column.is-mobile-open {
+  .chakra-left-column.is-mobile-open {
     transform: translateX(0);
     visibility: visible;
   }
 
-  .instiui-left-column::after {
+  .chakra-left-column::after {
     display: block;
-    height: calc(21% - var(--instiui-sidebar-row-extension) + var(--instiui-fade-overlap));
+    height: calc(21% - var(--chakra-sidebar-row-extension) + var(--chakra-fade-overlap));
   }
 
-  .instiui-workspace {
+  .chakra-workspace {
     display: block;
     grid-column: 1;
   }
 
-  .instiui-page-outline {
+  .chakra-page-outline {
     position: absolute;
     z-index: 3;
     inset: 0 0 0 auto;
@@ -486,22 +486,22 @@
     transition: transform 220ms ease, visibility 220ms;
   }
 
-  .instiui-page-outline__art {
+  .chakra-page-outline__art {
     inset: auto 6% 0;
     width: 88%;
     height: 88%;
   }
 
-  .instiui-page-outline.is-mobile-open {
+  .chakra-page-outline.is-mobile-open {
     transform: translateX(0);
     visibility: visible;
   }
 
-  .instiui-page-outline__heading {
+  .chakra-page-outline__heading {
     margin-right: 54px;
   }
 
-  .instiui-mobile-outline-close {
+  .chakra-mobile-outline-close {
     position: absolute;
     z-index: 2;
     top: 15px;
@@ -518,7 +518,7 @@
     cursor: pointer;
   }
 
-  .instiui-mobile-outline-close svg {
+  .chakra-mobile-outline-close svg {
     display: block;
     width: 19px;
     height: 19px;
@@ -531,62 +531,62 @@
 }
 
 @media (max-width: 420px) {
-  .instiui-app {
+  .chakra-app {
     grid-template-rows: 56px minmax(0, 1fr);
   }
 
-  .instiui-navbar {
+  .chakra-navbar {
     height: 56px;
     padding-inline: 10px;
   }
 
-  .instiui-mobile-menu-toggle,
-  .instiui-mobile-search-toggle {
+  .chakra-mobile-menu-toggle,
+  .chakra-mobile-search-toggle {
     width: 32px;
     height: 32px;
     padding: 6px;
   }
 
-  .instiui-brand__mark {
+  .chakra-brand__mark {
     width: 26px;
     height: 26px;
   }
 
-  .instiui-brand__name {
+  .chakra-brand__name {
     margin-left: 6px;
     font-size: 20px;
   }
 
-  .instiui-version {
+  .chakra-version {
     display: none;
   }
 
-  .instiui-navbar__icons {
+  .chakra-navbar__icons {
     gap: 7px;
   }
 
-  .instiui-navbar__icon,
-  .instiui-navbar__icon--moon,
-  .instiui-navbar__icon--github {
+  .chakra-navbar__icon,
+  .chakra-navbar__icon--moon,
+  .chakra-navbar__icon--github {
     width: 17px;
     min-width: 17px;
     margin-right: 0;
   }
 
-  .instiui-navbar__icon--github {
+  .chakra-navbar__icon--github {
     width: 19px;
     min-width: 19px;
   }
 
-  .instiui-navbar__icon--github svg {
+  .chakra-navbar__icon--github svg {
     width: 19px;
     height: 19px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .instiui-left-column,
-  .instiui-page-outline {
+  .chakra-left-column,
+  .chakra-page-outline {
     transition: none;
   }
 }

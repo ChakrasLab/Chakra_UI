@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import leftRailArtwork from "../../assets/instiui-left-rail.png";
-import rightRailArtwork from "../../assets/instiui-right-rail.png";
+import leftRailArtwork from "../../assets/chakra-left-rail.png";
+import rightRailArtwork from "../../assets/chakra-right-rail.png";
 import { InteractivePixels } from "@chakra/react";
 import DocumentationSidebar from "./DocumentationSidebar";
-import "./InstiUiShell.css";
+import "./ChakraUiShell.css";
 
 const logoDots = Array.from({ length: 64 }, (_, index) => {
   const column = index % 8;
@@ -64,7 +64,7 @@ function MenuIcon({ isOpen }: { isOpen: boolean }) {
 }
 
 /** The Chakra UI frame and its two edge illustrations. */
-export default function InstiUiShell() {
+export default function ChakraUiShell() {
   const [activePage, setActivePage] = useState("introduction");
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -110,15 +110,15 @@ export default function InstiUiShell() {
   };
 
   return (
-    <div className="instiui-app" data-theme={theme}>
-      <header className={`instiui-navbar${isMobileSearchOpen ? " is-search-open" : ""}`}>
-        <div className="instiui-navbar__identity">
-          <div className="instiui-brand" aria-label="Chakra UI">
-            <svg className="instiui-brand__mark" viewBox="0 0 33 33" aria-hidden="true">
+    <div className="chakra-app" data-theme={theme}>
+      <header className={`chakra-navbar${isMobileSearchOpen ? " is-search-open" : ""}`}>
+        <div className="chakra-navbar__identity">
+          <div className="chakra-brand" aria-label="Chakra UI">
+            <svg className="chakra-brand__mark" viewBox="0 0 33 33" aria-hidden="true">
               {logoDots}
             </svg>
-            <span className="instiui-brand__name">Chakra UI</span>
-            <span className="instiui-version">
+            <span className="chakra-brand__name">Chakra UI</span>
+            <span className="chakra-version">
               v0.1.0
               <svg viewBox="0 0 12 12" aria-hidden="true">
                 <path d="m3 4.5 3 3 3-3" />
@@ -127,7 +127,7 @@ export default function InstiUiShell() {
           </div>
         </div>
 
-        <label className="instiui-search">
+        <label className="chakra-search">
           <SearchIcon />
           <input
             ref={searchInputRef}
@@ -140,9 +140,9 @@ export default function InstiUiShell() {
           <kbd>Ctrl K</kbd>
         </label>
 
-        <div className="instiui-navbar__icons">
+        <div className="chakra-navbar__icons">
           <button
-            className="instiui-mobile-search-toggle"
+            className="chakra-mobile-search-toggle"
             type="button"
             aria-label={isMobileSearchOpen ? "Close search" : "Search documentation"}
             aria-expanded={isMobileSearchOpen}
@@ -150,16 +150,16 @@ export default function InstiUiShell() {
           >
             <SearchIcon />
           </button>
-          <span className="instiui-navbar__icon instiui-navbar__icon--sun " aria-hidden="true"><SunIcon /></span>
-          <span className="instiui-navbar__icon instiui-navbar__icon--moon" aria-hidden="true"><MoonIcon /></span>
-          <span className="instiui-navbar__icon instiui-navbar__icon--github" aria-hidden="true"><GitHubIcon /></span>
+          <span className="chakra-navbar__icon chakra-navbar__icon--sun " aria-hidden="true"><SunIcon /></span>
+          <span className="chakra-navbar__icon chakra-navbar__icon--moon" aria-hidden="true"><MoonIcon /></span>
+          <span className="chakra-navbar__icon chakra-navbar__icon--github" aria-hidden="true"><GitHubIcon /></span>
         </div>
       </header>
 
-      <div className="instiui-layout">
+      <div className="chakra-layout">
         {(isMobileMenuOpen || isMobileOutlineOpen) && (
           <button
-            className="instiui-mobile-backdrop"
+            className="chakra-mobile-backdrop"
             type="button"
             aria-label={isMobileOutlineOpen ? "Close on this page panel" : "Close navigation menu"}
             onClick={() => {
@@ -170,11 +170,11 @@ export default function InstiUiShell() {
           />
         )}
         <button
-          className={`instiui-mobile-menu-toggle${isMobileMenuOpen ? " is-open" : ""}`}
+          className={`chakra-mobile-menu-toggle${isMobileMenuOpen ? " is-open" : ""}`}
           type="button"
           aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isMobileMenuOpen}
-          aria-controls="instiui-documentation-sidebar"
+          aria-controls="chakra-documentation-sidebar"
           onClick={() => {
             setIsMobileMenuOpen((open) => !open);
             setIsMobileOutlineOpen(false);
@@ -184,11 +184,11 @@ export default function InstiUiShell() {
           <MenuIcon isOpen={isMobileMenuOpen} />
         </button>
         <button
-          className="instiui-mobile-outline-toggle"
+          className="chakra-mobile-outline-toggle"
           type="button"
           aria-label={isMobileOutlineOpen ? "Close on this page panel" : "Open on this page panel"}
           aria-expanded={isMobileOutlineOpen}
-          aria-controls="instiui-page-outline"
+          aria-controls="chakra-page-outline"
           onClick={() => {
             const shouldOpen = !isMobileOutlineOpen;
             setIsMobileOutlineOpen(shouldOpen);
@@ -204,11 +204,11 @@ export default function InstiUiShell() {
           </svg>
           <span>On this page</span>
         </button>
-        <div className={`instiui-left-column${isMobileMenuOpen ? " is-mobile-open" : ""}`}>
-          <div className="instiui-left-column__art" aria-hidden="true">
+        <div className={`chakra-left-column${isMobileMenuOpen ? " is-mobile-open" : ""}`}>
+          <div className="chakra-left-column__art" aria-hidden="true">
             <InteractivePixels
               src={leftRailArtwork}
-              className="instiui-rail__pixels"
+              className="chakra-rail__pixels"
               ariaLabel="Interactive India Gate pixel artwork"
               objectPosition={{ x: 1, y: 1 }}
             />
@@ -224,24 +224,24 @@ export default function InstiUiShell() {
             }}
           />
         </div>
-        <main className="instiui-workspace" aria-label="Chakra UI workspace" />
+        <main className="chakra-workspace" aria-label="Chakra UI workspace" />
         <aside
-          id="instiui-page-outline"
-          className={`instiui-page-outline${isMobileOutlineOpen ? " is-mobile-open" : ""}`}
+          id="chakra-page-outline"
+          className={`chakra-page-outline${isMobileOutlineOpen ? " is-mobile-open" : ""}`}
           aria-label="On this page"
         >
-          <div className="instiui-page-outline__art" aria-hidden="true">
+          <div className="chakra-page-outline__art" aria-hidden="true">
             <InteractivePixels
               src={rightRailArtwork}
-              className="instiui-rail__pixels"
+              className="chakra-rail__pixels"
               ariaLabel="Interactive Rashtrapati Bhavan pixel artwork"
               objectPosition={{ x: 0.5, y: 1 }}
               crop={{ left: 2, top: 2 }}
             />
           </div>
-          <h2 className="instiui-page-outline__heading">On this page</h2>
+          <h2 className="chakra-page-outline__heading">On this page</h2>
           <button
-            className="instiui-mobile-outline-close"
+            className="chakra-mobile-outline-close"
             type="button"
             aria-label="Close on this page panel"
             onClick={() => setIsMobileOutlineOpen(false)}

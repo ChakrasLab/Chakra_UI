@@ -1,12 +1,12 @@
-.instiui-sidebar-frame {
+.chakra-sidebar-frame {
   position: absolute;
   z-index: 2;
   /* Leave room for one extra component row before the India Gate artwork. */
-  inset: 0 0 calc(16% - var(--instiui-sidebar-row-extension)) clamp(42px, 3.65vw, 56px);
+  inset: 0 0 calc(16% - var(--chakra-sidebar-row-extension)) clamp(42px, 3.65vw, 56px);
   overflow: hidden;
 }
 
-.instiui-sidebar {
+.chakra-sidebar {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -18,13 +18,13 @@
   scrollbar-color: #d8e1ef transparent;
 }
 
-.instiui-sidebar__section + .instiui-sidebar__section {
+.chakra-sidebar__section + .chakra-sidebar__section {
   margin-top: 13px;
   padding-top: 14px;
   border-top: 1px solid #e7ebf2;
 }
 
-.instiui-sidebar__heading {
+.chakra-sidebar__heading {
   margin: 2px 0 7px 2px;
   color: #183967;
   font-size: 11px;
@@ -34,7 +34,7 @@
   text-transform: uppercase;
 }
 
-.instiui-sidebar__items {
+.chakra-sidebar__items {
   display: grid;
   gap: 1px;
   margin: 0;
@@ -42,7 +42,7 @@
   list-style: none;
 }
 
-.instiui-sidebar__link {
+.chakra-sidebar__link {
   display: grid;
   grid-template-columns: 19px minmax(0, 1fr) 12px;
   align-items: center;
@@ -62,22 +62,22 @@
   transition: background-color 140ms ease, color 140ms ease;
 }
 
-.instiui-sidebar__link:hover {
+.chakra-sidebar__link:hover {
   background: rgba(223, 232, 246, 0.72);
 }
 
-.instiui-sidebar__link:focus-visible {
+.chakra-sidebar__link:focus-visible {
   outline: 2px solid #7999d2;
   outline-offset: 1px;
 }
 
-.instiui-sidebar__link.is-active {
+.chakra-sidebar__link.is-active {
   background: rgba(220, 230, 245, 0.88);
   color: #0734a6;
   font-weight: 600;
 }
 
-.instiui-nav-icon {
+.chakra-nav-icon {
   display: block;
   width: 17px;
   height: 17px;
@@ -88,18 +88,18 @@
   stroke-width: 1.7;
 }
 
-.instiui-sidebar__link.is-active .instiui-nav-icon {
+.chakra-sidebar__link.is-active .chakra-nav-icon {
   fill: currentColor;
   stroke-width: 1.2;
 }
 
-.instiui-sidebar__link span {
+.chakra-sidebar__link span {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.instiui-sidebar__chevron {
+.chakra-sidebar__chevron {
   width: 13px;
   height: 13px;
   fill: none;
@@ -109,7 +109,7 @@
   stroke-width: 1.6;
 }
 
-.instiui-sidebar__empty {
+.chakra-sidebar__empty {
   margin: 8px 2px;
   color: #587097;
   font-size: 12px;
@@ -117,20 +117,20 @@
 }
 
 @media (max-width: 760px) {
-  .instiui-sidebar {
+  .chakra-sidebar {
     padding: 20px 18px 28px;
     background: rgba(255, 255, 255, 0.96);
   }
 
-  .instiui-sidebar-frame {
-    inset: 0 0 calc(21% - var(--instiui-sidebar-row-extension)) 0;
+  .chakra-sidebar-frame {
+    inset: 0 0 calc(21% - var(--chakra-sidebar-row-extension)) 0;
   }
 
-  .instiui-sidebar__heading {
+  .chakra-sidebar__heading {
     font-size: 10px;
   }
 
-  .instiui-sidebar__link {
+  .chakra-sidebar__link {
     grid-template-columns: 19px minmax(0, 1fr) 12px;
     gap: 12px;
     padding-inline: 10px;

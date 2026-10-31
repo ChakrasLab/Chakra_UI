@@ -1,11 +1,11 @@
-# InstiUI
+# Chakra UI
 
-InstiUI is organized as an npm workspace monorepo.
+Chakra UI is organized as an npm workspace monorepo.
 
 ## Project Structure
 
 ```text
-instiui/
+chakra-ui/
 ├── apps/
 │   └── docs/
 │       └── src/

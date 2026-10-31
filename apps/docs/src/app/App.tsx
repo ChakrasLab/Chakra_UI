@@ -1,5 +1,5 @@
-import InstiUiShell from "../components/documentation-layout/InstiUiShell";
+import ChakraUiShell from "../components/documentation-layout/ChakraUiShell";
 
 export default function App() {
-  return <InstiUiShell />;
+  return <ChakraUiShell />;
 }

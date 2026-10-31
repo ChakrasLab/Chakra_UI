@@ -33,7 +33,7 @@ const iconArtwork: Record<NavigationIconName, ReactNode> = {
 
 function NavigationIcon({ name }: { name: NavigationIconName }) {
   return (
-    <svg className="instiui-nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <svg className="chakra-nav-icon" viewBox="0 0 24 24" aria-hidden="true">
       {iconArtwork[name]}
     </svg>
   );
@@ -63,31 +63,31 @@ export default function DocumentationSidebar({
     : navigationSections;
 
   return (
-    <div className="instiui-sidebar-frame">
+    <div className="chakra-sidebar-frame">
       <nav
-        id="instiui-documentation-sidebar"
-        className="instiui-sidebar"
+        id="chakra-documentation-sidebar"
+        className="chakra-sidebar"
         aria-label="Documentation"
       >
         {visibleSections.length > 0 ? (
           visibleSections.map((section) => (
-            <section className="instiui-sidebar__section" key={section.id}>
-              <h2 className="instiui-sidebar__heading">{section.title}</h2>
-              <ul className="instiui-sidebar__items">
+            <section className="chakra-sidebar__section" key={section.id}>
+              <h2 className="chakra-sidebar__heading">{section.title}</h2>
+              <ul className="chakra-sidebar__items">
                 {section.items.map((item) => {
                   const isActive = activePage === item.id;
                   return (
                     <li key={item.id}>
                       <button
                         type="button"
-                        className={`instiui-sidebar__link${isActive ? " is-active" : ""}`}
+                        className={`chakra-sidebar__link${isActive ? " is-active" : ""}`}
                         aria-current={isActive ? "page" : undefined}
                         onClick={() => onPageChange(item.id)}
                       >
                         <NavigationIcon name={item.icon} />
                         <span>{item.label}</span>
                         {!isActive && (
-                          <svg className="instiui-sidebar__chevron" viewBox="0 0 16 16" aria-hidden="true">
+                          <svg className="chakra-sidebar__chevron" viewBox="0 0 16 16" aria-hidden="true">
                             <path d="m6 3 5 5-5 5" />
                           </svg>
                         )}
@@ -99,7 +99,7 @@ export default function DocumentationSidebar({
             </section>
           ))
         ) : (
-          <p className="instiui-sidebar__empty">No pages match “{searchQuery}”.</p>
+          <p className="chakra-sidebar__empty">No pages match “{searchQuery}”.</p>
         )}
       </nav>
     </div>
