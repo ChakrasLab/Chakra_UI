@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import {
   navigationSections,
   type NavigationIconName,
-} from "./navigationSections";
+} from "../../config/navigation";
 import "./DocumentationSidebar.css";
 
 const iconArtwork: Record<NavigationIconName, ReactNode> = {

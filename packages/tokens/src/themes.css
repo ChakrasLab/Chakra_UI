@@ -1,0 +1,17 @@
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --sui-color-surface-canvas: #111827;
+  --sui-color-surface-subtle: #1f2937;
+  --sui-color-text-primary: #e5edf8;
+  --sui-color-text-strong: #f8fafc;
+  --sui-color-text-secondary: #c3d1e5;
+  --sui-color-border-subtle: #334155;
+  --sui-color-border-control: #475569;
+  --sui-color-focus: #93b4ee;
+  --sui-shadow-panel: 0 12px 32px rgb(0 0 0 / 32%);
+}

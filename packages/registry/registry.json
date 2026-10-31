@@ -1,0 +1,22 @@
+{
+  "$schema": "https://instiui.dev/schema/registry.json",
+  "name": "instiui",
+  "version": "0.1.0",
+  "components": [
+    {
+      "name": "button",
+      "type": "component",
+      "files": ["src/components/button/button.tsx"]
+    },
+    {
+      "name": "input",
+      "type": "component",
+      "files": ["src/components/input/input.tsx"]
+    },
+    {
+      "name": "dialog",
+      "type": "component",
+      "files": ["src/components/dialog/dialog.tsx"]
+    }
+  ]
+}

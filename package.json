@@ -1,16 +1,16 @@
 {
-  "name": "swadesh-ui",
+  "name": "chakra-ui",
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "workspaces": [
+    "apps/docs",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "dev": "npm run dev --workspace @chakra/docs",
+    "build": "tsc --noEmit && npm run build --workspace @chakra/docs",
+    "preview": "npm run preview --workspace @chakra/docs"
   },
   "devDependencies": {
     "@types/react": "^19.2.0",

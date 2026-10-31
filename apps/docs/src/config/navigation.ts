@@ -69,7 +69,6 @@ export const navigationSections: NavigationSection[] = [
     id: "components",
     title: "Components",
     items: [
-      { id: "overview", label: "Overview", icon: "grid" },
       { id: "button", label: "Button", icon: "button" },
       { id: "input", label: "Input", icon: "input" },
       { id: "select", label: "Select", icon: "select" },

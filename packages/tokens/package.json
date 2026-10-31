@@ -1,0 +1,14 @@
+{
+  "name": "@chakra/tokens",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "style": "./src/index.css",
+  "exports": {
+    ".": "./src/index.css",
+    "./index.css": "./src/index.css",
+    "./primitives.css": "./src/primitives.css",
+    "./semantic.css": "./src/semantic.css",
+    "./themes.css": "./src/themes.css"
+  }
+}

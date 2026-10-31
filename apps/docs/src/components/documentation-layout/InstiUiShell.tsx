@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import leftRailArtwork from "../assets/instiui-left-rail.png";
-import rightRailArtwork from "../assets/instiui-right-rail.png";
-import InteractivePixels from "../components/InteractivePixels";
-import DocumentationSidebar from "../navigation/DocumentationSidebar";
+import leftRailArtwork from "../../assets/instiui-left-rail.png";
+import rightRailArtwork from "../../assets/instiui-right-rail.png";
+import { InteractivePixels } from "@chakra/react";
+import DocumentationSidebar from "./DocumentationSidebar";
 import "./InstiUiShell.css";
 
 const logoDots = Array.from({ length: 64 }, (_, index) => {
@@ -63,7 +63,7 @@ function MenuIcon({ isOpen }: { isOpen: boolean }) {
   );
 }
 
-/** The Swadesh UI frame and its two edge illustrations. */
+/** The Chakra UI frame and its two edge illustrations. */
 export default function InstiUiShell() {
   const [activePage, setActivePage] = useState("introduction");
   const [searchQuery, setSearchQuery] = useState("");
@@ -71,6 +71,8 @@ export default function InstiUiShell() {
   const [isMobileOutlineOpen, setIsMobileOutlineOpen] = useState(false);
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const searchInputRef = useRef<HTMLInputElement | null>(null);
+  const [theme] = useState<"light" | "dark">("light");
+
 
   useEffect(() => {
     const focusSearch = (event: KeyboardEvent) => {
@@ -108,14 +110,14 @@ export default function InstiUiShell() {
   };
 
   return (
-    <div className="instiui-app">
+    <div className="instiui-app" data-theme={theme}>
       <header className={`instiui-navbar${isMobileSearchOpen ? " is-search-open" : ""}`}>
         <div className="instiui-navbar__identity">
-          <div className="instiui-brand" aria-label="Swadesh UI">
+          <div className="instiui-brand" aria-label="Chakra UI">
             <svg className="instiui-brand__mark" viewBox="0 0 33 33" aria-hidden="true">
               {logoDots}
             </svg>
-            <span className="instiui-brand__name">Swadesh UI</span>
+            <span className="instiui-brand__name">Chakra UI</span>
             <span className="instiui-version">
               v0.1.0
               <svg viewBox="0 0 12 12" aria-hidden="true">
@@ -148,7 +150,7 @@ export default function InstiUiShell() {
           >
             <SearchIcon />
           </button>
-          <span className="instiui-navbar__icon instiui-navbar__icon--sun" aria-hidden="true"><SunIcon /></span>
+          <span className="instiui-navbar__icon instiui-navbar__icon--sun " aria-hidden="true"><SunIcon /></span>
           <span className="instiui-navbar__icon instiui-navbar__icon--moon" aria-hidden="true"><MoonIcon /></span>
           <span className="instiui-navbar__icon instiui-navbar__icon--github" aria-hidden="true"><GitHubIcon /></span>
         </div>
@@ -222,7 +224,7 @@ export default function InstiUiShell() {
             }}
           />
         </div>
-        <main className="instiui-workspace" aria-label="Swadesh UI workspace" />
+        <main className="instiui-workspace" aria-label="Chakra UI workspace" />
         <aside
           id="instiui-page-outline"
           className={`instiui-page-outline${isMobileOutlineOpen ? " is-mobile-open" : ""}`}
