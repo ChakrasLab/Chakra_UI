@@ -1,0 +1,53 @@
+.chakra-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--chakra-space-2);
+  border: 1px solid transparent;
+  border-radius: var(--chakra-radius-control);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color var(--chakra-motion-fast), border-color var(--chakra-motion-fast), color var(--chakra-motion-fast), box-shadow var(--chakra-motion-fast);
+}
+
+.chakra-button:focus-visible {
+  outline: 2px solid var(--chakra-color-focus);
+  outline-offset: 2px;
+}
+
+.chakra-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+}
+
+.chakra-button--sm { min-height: 32px; padding-inline: var(--chakra-space-3); font-size: var(--chakra-font-size-sm); }
+.chakra-button--md { min-height: 40px; padding-inline: var(--chakra-space-4); font-size: var(--chakra-font-size-md); }
+.chakra-button--lg { min-height: 48px; padding-inline: var(--chakra-space-5); font-size: var(--chakra-font-size-md); }
+
+.chakra-button--solid {
+  background: var(--chakra-color-brand);
+  color: var(--chakra-color-on-brand);
+}
+.chakra-button--solid:hover:not(:disabled) { background: var(--chakra-color-brand-hover); }
+.chakra-button--solid[data-active="true"] { background: var(--chakra-color-brand-active); }
+
+.chakra-button--outline {
+  border-color: var(--chakra-color-border-control);
+  background: var(--chakra-color-surface-canvas);
+  color: var(--chakra-color-text-primary);
+}
+.chakra-button--outline:hover:not(:disabled) { background: var(--chakra-color-surface-subtle); }
+.chakra-button--outline[data-active="true"] { border-color: var(--chakra-color-brand); background: var(--chakra-color-surface-subtle); color: var(--chakra-color-brand); }
+
+.chakra-button--ghost {
+  background: transparent;
+  color: var(--chakra-color-text-primary);
+}
+.chakra-button--ghost:hover:not(:disabled) { background: var(--chakra-color-surface-subtle); }
+.chakra-button--ghost[data-active="true"] { background: var(--chakra-color-surface-selected); color: var(--chakra-color-brand); font-weight: 600; }
+
+@media (prefers-reduced-motion: reduce) {
+  .chakra-button { transition: none; }
+}

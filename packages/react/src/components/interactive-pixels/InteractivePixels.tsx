@@ -71,7 +71,7 @@ export default function InteractivePixels({
 
     const drawBase = () => {
       if (!image.complete || !image.naturalWidth) return;
-      ctx.fillStyle = "#ffffff";
+      ctx.fillStyle = getComputedStyle(stage).backgroundColor;
       ctx.fillRect(0, 0, width, height);
       const placement = getImagePlacement();
       const { width: croppedWidth, height: croppedHeight } = getCroppedSize();
@@ -310,7 +310,7 @@ export default function InteractivePixels({
         width: "100%",
         height: "100%",
         overflow: "hidden",
-        background: "#fff",
+        background: "var(--chakra-color-surface-canvas, #fff)",
       }}
     >
       <canvas

@@ -1,27 +1,6 @@
-export type NavigationIconName =
-  | "home"
-  | "package"
-  | "bolt"
-  | "folder"
-  | "refresh"
-  | "layers"
-  | "palette"
-  | "type"
-  | "grid"
-  | "image"
-  | "info"
-  | "accessibility"
-  | "globe"
-  | "button"
-  | "input"
-  | "select"
-  | "checkbox"
-  | "radio"
-  | "switch"
-  | "dialog"
-  | "tabs"
-  | "tooltip"
-  | "table";
+import type { NavigationIconName } from "@chakra/icons";
+
+export type { NavigationIconName } from "@chakra/icons";
 
 export interface NavigationItem {
   id: string;

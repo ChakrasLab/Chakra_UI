@@ -9,6 +9,7 @@
     "preview": "vite preview --config ../../vite.config.ts"
   },
   "dependencies": {
+    "@chakra/icons": "0.1.0",
     "@chakra/react": "0.1.0",
     "@chakra/tokens": "0.1.0",
     "react": "^19.2.0",

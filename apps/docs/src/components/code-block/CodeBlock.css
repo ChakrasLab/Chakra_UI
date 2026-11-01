@@ -1,0 +1,30 @@
+.docs-code-block {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--chakra-color-border-subtle);
+  border-radius: var(--chakra-radius-control);
+  background: linear-gradient(110deg, var(--chakra-color-surface-subtle), var(--chakra-color-surface-canvas));
+  color: var(--chakra-color-text-primary);
+}
+
+.docs-code-block pre {
+  margin: 0;
+  padding: 18px 48px 18px 20px;
+  overflow-x: auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.65;
+  tab-size: 2;
+}
+
+.docs-code-block__copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 8px;
+}
+
+.docs-code-block__copy svg { width: 17px; height: 17px; }
+.docs-code-block__status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }

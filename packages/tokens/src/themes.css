@@ -1,17 +1,26 @@
 :root,
-:root[data-theme="light"] {
+:root[data-theme="light"],
+[data-theme="light"] {
   color-scheme: light;
 }
 
-:root[data-theme="dark"] {
+:root[data-theme="dark"],
+[data-theme="dark"] {
   color-scheme: dark;
-  --sui-color-surface-canvas: #111827;
-  --sui-color-surface-subtle: #1f2937;
-  --sui-color-text-primary: #e5edf8;
-  --sui-color-text-strong: #f8fafc;
-  --sui-color-text-secondary: #c3d1e5;
-  --sui-color-border-subtle: #334155;
-  --sui-color-border-control: #475569;
-  --sui-color-focus: #93b4ee;
-  --sui-shadow-panel: 0 12px 32px rgb(0 0 0 / 32%);
+  --chakra-color-surface-canvas: #111827;
+  --chakra-color-surface-subtle: #1f2937;
+  --chakra-color-surface-control: #172033;
+  --chakra-color-text-primary: #e5edf8;
+  --chakra-color-text-strong: #f8fafc;
+  --chakra-color-text-secondary: #c3d1e5;
+  --chakra-color-text-muted: #a8bad4;
+  --chakra-color-border-subtle: #334155;
+  --chakra-color-border-control: #475569;
+  --chakra-color-focus: #93b4ee;
+  --chakra-color-brand: #557ddd;
+  --chakra-color-brand-hover: #6e91e8;
+  --chakra-color-brand-active: #3f64c2;
+  --chakra-color-on-brand: #08152e;
+  --chakra-color-surface-selected: #293b59;
+  --chakra-shadow-surface: 0 12px 32px rgb(0 0 0 / 32%);
 }

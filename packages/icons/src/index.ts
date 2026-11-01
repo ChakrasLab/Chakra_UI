@@ -3,3 +3,7 @@ export * from "./icon-registry";
 export * from "./icons/home";
 export * from "./icons/search";
 export * from "./icons/arrow-right";
+export * from "./icons/arrow-left";
+export * from "./icons/system";
+export * from "./icons/navigation";
+export * from "./icons/concepts";

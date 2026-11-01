@@ -1,7 +1,7 @@
 :root {
-  font-family: var(--sui-font-sans);
-  color: var(--sui-color-text-primary);
-  background: var(--sui-color-surface-canvas);
+  font-family: var(--chakra-font-sans);
+  color: var(--chakra-color-text-primary);
+  background: var(--chakra-color-surface-canvas);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,5 +22,5 @@ body,
 
 body {
   min-height: 100vh;
-  background: var(--sui-color-surface-canvas);
+  background: var(--chakra-color-surface-canvas);
 }
