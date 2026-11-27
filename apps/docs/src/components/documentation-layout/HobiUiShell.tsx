@@ -220,7 +220,7 @@ export default function HobiUiShell() {
           </button>
           <a
             className="hobiui-navbar__github"
-            href="https://github.com/ChakrasLab/Chakra_UI"
+            href="https://github.com/HobiqoraLabs/Chakra_UI"
             target="_blank"
             rel="noreferrer"
             aria-label="Hobi UI on GitHub"
