@@ -1,11 +1,20 @@
 {
   "name": "@hobiui/react",
+  "description": "Accessible React components built around Hobi UI design tokens.",
   "version": "0.1.0",
+  "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HobiqoraLabs/hobiui.git"
+    "url": "https://github.com/HobiqoraLabs/hobiui.git",
+    "directory": "packages/react"
   },
+  "homepage": "https://ui.hobiqora.in",
+  "bugs": {
+    "url": "https://github.com/HobiqoraLabs/hobiui/issues"
+  },
+  "keywords": ["react", "ui", "component-library", "design-system", "design-tokens", "accessibility"],
+  "types": "./dist/types/index.d.ts",
   "files": ["dist"],
   "sideEffects": ["**/*.css"],
   "scripts": {
@@ -18,11 +27,13 @@
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./style.css": "./dist/style.css"
   },
   "peerDependencies": {
+    "@hobiui/tokens": "^0.1.0",
     "react": ">=18 <20"
   }
 }

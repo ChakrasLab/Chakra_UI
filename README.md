@@ -30,11 +30,19 @@ Create a production build with `npm run build` and preview it with `npm run prev
 - Vercel hosts and deploys the documentation site. Keep the Vercel project connected to this repository and use `main` as its production branch; Vercel can create preview deployments for pull requests.
 - Dependabot checks npm workspace dependencies and GitHub Actions weekly.
 
-## npm package releases
+## Published packages
 
-`@hobiui/tokens`, `@hobiui/icons`, and `@hobiui/react` are published independently through Changesets. A changeset records which packages need a patch, minor, or major version bump. When changesets reach `main`, GitHub Actions opens or updates a version pull request. Merging that pull request publishes only packages with new versions. npm Trusted Publishing uses GitHub OIDC and adds provenance automatically.
+The public packages are published independently under `@hobiui`:
 
-When a change should be released, add a changeset with `npm run changeset` and select the affected packages and bump type. Commit the generated Markdown file with the code change. You can also add one directly under `.changeset/` using this format:
+- [`@hobiui/react`](https://www.npmjs.com/package/@hobiui/react) — React components; install `@hobiui/tokens` as well and load both stylesheets.
+- [`@hobiui/icons`](https://www.npmjs.com/package/@hobiui/icons) — tree-shakeable React SVG icons.
+- [`@hobiui/tokens`](https://www.npmjs.com/package/@hobiui/tokens) — CSS design tokens and themes.
+
+See each package README for installation, imports, and examples. The documentation site is at [ui.hobiqora.in](https://ui.hobiqora.in).
+
+## Package releases
+
+Changesets handles package versioning and selective publishing. For a user-facing package change, add a changeset with `npm run changeset` and choose the affected packages and bump type. Commit the generated Markdown file with the code change. You can also add one under `.changeset/` using this format:
 
 ```md
 ---
@@ -45,15 +53,7 @@ When a change should be released, add a changeset with `npm run changeset` and s
 Describe the user-visible change.
 ```
 
-Before merging the release workflow into `main`:
-
-1. Confirm the npm account controls the `@hobiui` scope used by these package names.
-2. Publish each package once manually to create it on npm, if it does not already exist. npm requires the package to exist before Trusted Publishing can be configured.
-3. Configure npm Trusted Publishing for each package with repository `HobiqoraLabs/hobiui` and workflow `publish-packages.yml`.
-4. In GitHub Actions settings, allow GitHub Actions to create and approve pull requests. The workflow needs this to open its version pull request.
-5. Merge the release workflow into `main`. Add changesets for package changes; the workflow creates a version pull request, and merging that pull request publishes the changed packages.
-
-The `@hobiui` names are kept from the current workspace. Change them to an npm organization you control before release if that scope is not yours.
+When changesets reach `main`, GitHub Actions opens or updates a version pull request. Merging that pull request publishes only packages with new versions through npm Trusted Publishing (GitHub OIDC).
 
 ## Adding a component
 
