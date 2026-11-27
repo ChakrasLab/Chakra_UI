@@ -32,13 +32,26 @@ Create a production build with `npm run build` and preview it with `npm run prev
 
 ## npm package releases
 
-`@chakra/tokens`, `@chakra/icons`, and `@chakra/react` now have publishable package builds. A published GitHub Release starts `.github/workflows/publish-packages.yml`, which publishes all three packages with npm provenance using GitHub OIDC.
+`@chakra/tokens`, `@chakra/icons`, and `@chakra/react` are published independently through Changesets. A changeset records which packages need a patch, minor, or major version bump. When changesets reach `main`, GitHub Actions opens or updates a version pull request. Merging that pull request publishes only packages with new versions. npm Trusted Publishing uses GitHub OIDC and adds provenance automatically.
 
-Before the first release:
+When a change should be released, add a changeset with `npm run changeset` and select the affected packages and bump type. Commit the generated Markdown file with the code change. You can also add one directly under `.changeset/` using this format:
+
+```md
+---
+'@chakra/react': minor
+'@chakra/tokens': patch
+---
+
+Describe the user-visible change.
+```
+
+Before merging the release workflow into `main`:
 
 1. Confirm the npm account controls the `@chakra` scope used by these package names.
-2. Configure npm Trusted Publishing for each package with repository `ChakrasLab/Chakra_UI` and workflow `publish-packages.yml`.
-3. Update package versions, then publish a GitHub Release.
+2. Publish each package once manually to create it on npm, if it does not already exist. npm requires the package to exist before Trusted Publishing can be configured.
+3. Configure npm Trusted Publishing for each package with repository `ChakrasLab/Chakra_UI` and workflow `publish-packages.yml`.
+4. In GitHub Actions settings, allow GitHub Actions to create and approve pull requests. The workflow needs this to open its version pull request.
+5. Merge the release workflow into `main`. Add changesets for package changes; the workflow creates a version pull request, and merging that pull request publishes the changed packages.
 
 The `@chakra` names are kept from the current workspace. Change them to an npm organization you control before release if that scope is not yours.
 
