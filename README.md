@@ -26,12 +26,9 @@ Create a production build with `npm run build` and preview it with `npm run prev
 
 ## CI and deployment
 
-- Pull requests to `main` build the workspace packages and documentation site.
-- Pushes to `main` build and deploy the site to GitHub Pages at `https://chakraslab.github.io/Chakra_UI/`.
+- GitHub Actions builds the workspace packages and documentation site for pull requests and pushes to `main`.
+- Vercel hosts and deploys the documentation site. Keep the Vercel project connected to this repository and use `main` as its production branch; Vercel can create preview deployments for pull requests.
 - Dependabot checks npm workspace dependencies and GitHub Actions weekly.
-- `npm run build:pages` creates the production site with the GitHub Pages base path.
-
-In repository settings, set Pages' build source to **GitHub Actions** if it is not already enabled.
 
 ## npm package releases
 
