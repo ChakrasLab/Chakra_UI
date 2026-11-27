@@ -1,7 +1,7 @@
 {
   "name": "@hobiui/react",
   "description": "Accessible React components built around Hobi UI design tokens.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "type": "module",
   "repository": {
@@ -33,7 +33,7 @@
     "./style.css": "./dist/style.css"
   },
   "peerDependencies": {
-    "@hobiui/tokens": "^0.1.0",
+    "@hobiui/tokens": "^0.1.1",
     "react": ">=18 <20"
   }
 }
