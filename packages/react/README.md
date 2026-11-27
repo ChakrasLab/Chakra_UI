@@ -1,24 +1,59 @@
 # @hobiui/react
 
-Reusable React components for the Hobi UI workspace.
+Accessible React components styled with the Hobi UI design tokens.
 
-This package is prepared for npm publishing but has not been released yet. After release, install it with:
+## Install
 
 ```sh
 npm install @hobiui/react @hobiui/tokens
 ```
 
-Import the token definitions and component styles once in the app entry point:
+Hobi UI supports React 18 and 19. The React package declares React and `@hobiui/tokens` as peer dependencies. If your application already uses React, keep one shared React installation.
 
-```ts
+## Setup
+
+Import both stylesheets once from your application entry point, such as `src/main.tsx`:
+
+```tsx
 import "@hobiui/tokens/index.css";
 import "@hobiui/react/style.css";
 ```
 
-Then import components and types from the package root:
+The token stylesheet provides the semantic CSS variables used by the component styles. You can customize the semantic values in your own stylesheet:
 
-```tsx
-import { Button, Input, Tabs } from "@hobiui/react";
+```css
+:root {
+  --hobiui-color-brand: #3157c8;
+}
 ```
 
-React 18 and 19 are supported as peer dependencies.
+## Use components
+
+```tsx
+import { Button, Input, Tabs, type ButtonProps } from "@hobiui/react";
+
+export function Example() {
+  const buttonProps: ButtonProps = { variant: "solid", size: "md" };
+
+  return (
+    <>
+      <Button {...buttonProps}>Save changes</Button>
+      <Input aria-label="Project name" placeholder="Project name" />
+      <Tabs
+        items={[
+          { value: "overview", label: "Overview", content: "Project overview" },
+          { value: "activity", label: "Activity", content: "Recent activity" },
+        ]}
+      />
+    </>
+  );
+}
+```
+
+The package also exports Checkbox, DataTable, Dialog, Radio, Select, Switch, Tooltip, and InteractivePixels, along with each component's public prop types. TypeScript declarations are included. TypeScript applications should have `@types/react` installed.
+
+## Links
+
+- [Documentation](https://ui.hobiqora.in)
+- [Source and issue tracker](https://github.com/HobiqoraLabs/hobiui)
+- [License](./LICENSE)

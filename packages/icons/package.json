@@ -1,11 +1,20 @@
 {
   "name": "@hobiui/icons",
+  "description": "Tree-shakeable SVG icons for React, with accessible defaults.",
   "version": "0.1.0",
+  "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HobiqoraLabs/hobiui.git"
+    "url": "https://github.com/HobiqoraLabs/hobiui.git",
+    "directory": "packages/icons"
   },
+  "homepage": "https://ui.hobiqora.in",
+  "bugs": {
+    "url": "https://github.com/HobiqoraLabs/hobiui/issues"
+  },
+  "keywords": ["react", "icons", "svg", "icon-library", "design-system"],
+  "types": "./dist/types/index.d.ts",
   "files": ["dist"],
   "sideEffects": false,
   "scripts": {
@@ -18,7 +27,8 @@
   "exports": {
     ".": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "peerDependencies": {

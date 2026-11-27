@@ -1,11 +1,19 @@
 {
   "name": "@hobiui/tokens",
+  "description": "Customizable CSS design tokens and light and dark themes for Hobi UI.",
   "version": "0.1.0",
+  "license": "MIT",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/HobiqoraLabs/hobiui.git"
+    "url": "https://github.com/HobiqoraLabs/hobiui.git",
+    "directory": "packages/tokens"
   },
+  "homepage": "https://ui.hobiqora.in",
+  "bugs": {
+    "url": "https://github.com/HobiqoraLabs/hobiui/issues"
+  },
+  "keywords": ["design-tokens", "css-variables", "design-system", "theme", "dark-mode"],
   "files": ["src"],
   "publishConfig": {
     "access": "public"
