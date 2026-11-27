@@ -49,7 +49,7 @@ Before merging the release workflow into `main`:
 
 1. Confirm the npm account controls the `@hobiui` scope used by these package names.
 2. Publish each package once manually to create it on npm, if it does not already exist. npm requires the package to exist before Trusted Publishing can be configured.
-3. Configure npm Trusted Publishing for each package with repository `HobiqoraLabs/Chakra_UI` and workflow `publish-packages.yml`.
+3. Configure npm Trusted Publishing for each package with repository `HobiqoraLabs/hobiui` and workflow `publish-packages.yml`.
 4. In GitHub Actions settings, allow GitHub Actions to create and approve pull requests. The workflow needs this to open its version pull request.
 5. Merge the release workflow into `main`. Add changesets for package changes; the workflow creates a version pull request, and merging that pull request publishes the changed packages.
 
