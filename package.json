@@ -16,9 +16,13 @@
     "test": "vitest run",
     "build:packages": "npm run build --workspace @chakra/icons && npm run build --workspace @chakra/react",
     "build": "npm run build:packages && tsc --noEmit && npm run build --workspace @chakra/docs",
-    "preview": "npm run preview --workspace @chakra/docs"
+    "preview": "npm run preview --workspace @chakra/docs",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "npm run build:packages && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^3.0.3",
     "@testing-library/jest-dom": "^8.0.0",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.6.13",
