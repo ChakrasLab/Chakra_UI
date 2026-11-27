@@ -1,17 +1,21 @@
-# Hobi UI Icons
+# @hobiui/icons
 
-Shared, monochrome SVG icons for the Hobi UI workspace. All icons inherit `currentColor` and use the same 24 × 24 viewBox, 2-unit rounded stroke, accessible defaults, and `size` prop.
+Tree-shakeable SVG icons for React. Icons inherit `currentColor`, use a 24 × 24 viewBox, and expose accessible defaults and a `size` prop.
 
-## Package status
+## Install
 
-This package is prepared for public npm publishing but has not been released yet. After release, install it with `npm i @hobiui/icons`.
+```sh
+npm install @hobiui/icons
+```
+
+React 18 and 19 are supported as peer dependencies.
 
 ## Use an icon
 
 ```tsx
 import { SearchIcon } from "@hobiui/icons";
 
-function SearchButton() {
+export function SearchButton() {
   return (
     <button type="button" aria-label="Search">
       <SearchIcon size={20} aria-hidden="true" />
@@ -20,19 +24,20 @@ function SearchButton() {
 }
 ```
 
-Decorative icons are hidden from assistive technology by default. Pass `title` when an icon is informative on its own:
+Decorative icons are hidden from assistive technology by default. Import the icon and pass a title when it conveys information on its own:
 
 ```tsx
-<InfoIcon title="More information" size={20} />
+import { InfoIcon } from "@hobiui/icons";
+
+export function MoreInfo() {
+  return <InfoIcon title="More information" size={20} />;
+}
 ```
 
-## Categories
+All public icons and the `IconProps` type are exported from the package root. TypeScript declarations are included; TypeScript applications should have `@types/react` installed.
 
-- `core/` — common interface, concept, and utility symbols.
-- `navigation/` — movement, disclosure, and menu symbols.
-- `forms/` — form and control symbols.
-- `feedback/` — status and feedback symbols.
+## Links
 
-Every public icon is explicitly exported from `src/index.ts`. The documentation catalog imports those same components and includes names, descriptions, and search keywords for discovery.
-
-Institutional motifs are added only when a real component or content pattern needs them. They remain separate from ordinary interface icons.
+- [Documentation and icon catalog](https://ui.hobiqora.in)
+- [Source and issue tracker](https://github.com/HobiqoraLabs/hobiui)
+- [License](./LICENSE)
