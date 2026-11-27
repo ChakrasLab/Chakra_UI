@@ -1,0 +1,29 @@
+import { CheckboxPlayground } from "../../components/component-playground/ComponentPlayground";
+
+# Checkbox
+
+Checkbox is a labeled native checkbox with optional description text. Use it for an independent choice that can be selected alongside other choices.
+
+<h2 id="playground">Playground</h2>
+
+Toggle the checkbox and try its disabled state.
+
+<CheckboxPlayground />
+
+<h2 id="usage">Usage</h2>
+
+Provide a concise `label`. Add `description` for supporting information. Use `checked` with `onChange` for a controlled checkbox, or `defaultChecked` for an uncontrolled checkbox.
+
+<h2 id="groups">Groups</h2>
+
+For related choices, group several Checkbox components inside a `<fieldset>` and provide a `<legend>`. Each checkbox should keep its own distinct `name` or value so the form can identify the selected choices.
+
+<h2 id="validation">Validation</h2>
+
+Use `invalid` to expose an invalid state, then render a visible error message and connect it through `aria-describedby`. Checkbox does not generate validation text for you.
+
+<h2 id="checkbox-guidance">Guidance</h2>
+
+- Use a checkbox when choices are independent; use Radio when only one choice is allowed.
+- Keep the full label clickable and avoid changing the native checkbox keyboard behavior.
+- Do not use a checkbox for an immediate on/off setting; use Switch for that pattern.

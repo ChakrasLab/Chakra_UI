@@ -1,15 +1,17 @@
-import { ChevronRightIcon, NavigationIcon } from "@chakra/icons";
+import { ChevronRightIcon } from "@chakra/icons";
 import { Button } from "@chakra/react";
 import { navigationSections } from "../../config/navigation";
 import "./DocumentationSidebar.css";
 
 interface DocumentationSidebarProps {
+  navId: string;
   activePage: string;
   searchQuery: string;
   onPageChange: (pageId: string) => void;
 }
 
 export default function DocumentationSidebar({
+  navId,
   activePage,
   searchQuery,
   onPageChange,
@@ -29,7 +31,7 @@ export default function DocumentationSidebar({
   return (
     <div className="chakra-sidebar-frame">
       <nav
-        id="chakra-documentation-sidebar"
+        id={navId}
         className="chakra-sidebar"
         aria-label="Documentation"
       >
@@ -40,6 +42,7 @@ export default function DocumentationSidebar({
               <ul className="chakra-sidebar__items">
                 {section.items.map((item) => {
                   const isActive = activePage === item.id;
+                  const ItemIcon = item.icon;
                   return (
                     <li key={item.id}>
                       <Button
@@ -51,7 +54,7 @@ export default function DocumentationSidebar({
                         aria-current={isActive ? "page" : undefined}
                         onClick={() => onPageChange(item.id)}
                       >
-                        <NavigationIcon name={item.icon} className="chakra-nav-icon" />
+                        <ItemIcon size={17} className="chakra-nav-icon" />
                         <span>{item.label}</span>
                         {!isActive && (
                           <ChevronRightIcon className="chakra-sidebar__chevron" />

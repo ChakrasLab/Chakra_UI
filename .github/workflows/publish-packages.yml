@@ -1,0 +1,42 @@
+name: Publish npm packages
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js and npm registry
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Ensure npm supports trusted publishing
+        run: npm install --global npm@^11.5.1
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build packages
+        run: npm run build:packages
+
+      - name: Publish tokens
+        run: npm publish --workspace @chakra/tokens --access public --provenance
+
+      - name: Publish icons
+        run: npm publish --workspace @chakra/icons --access public --provenance
+
+      - name: Publish React components
+        run: npm publish --workspace @chakra/react --access public --provenance

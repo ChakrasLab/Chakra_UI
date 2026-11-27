@@ -12,10 +12,11 @@
   padding: 18px 48px 18px 20px;
   overflow-x: auto;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 13px;
+  font-size: .8125rem;
   line-height: 1.65;
   tab-size: 2;
 }
+.docs-code-block pre:focus-visible { outline: 2px solid var(--chakra-color-focus); outline-offset: -2px; }
 
 .docs-code-block__copy {
   position: absolute;
@@ -27,4 +28,20 @@
 }
 
 .docs-code-block__copy svg { width: 17px; height: 17px; }
-.docs-code-block__status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+.docs-code-block__status {
+  position: absolute;
+  top: 12px;
+  right: 48px;
+  padding: 4px 8px;
+  border-radius: var(--chakra-radius-sm);
+  background: var(--chakra-color-surface-canvas);
+  color: var(--chakra-color-text-secondary);
+  font-size: var(--chakra-font-size-xs);
+  opacity: 1;
+}
+.docs-code-block__status:empty { opacity: 0; }
+.docs-code-block[data-copy-state="failed"] .docs-code-block__status { color: var(--chakra-color-error); }
+
+@media (pointer: coarse) {
+  .docs-code-block__copy { min-width: 44px; min-height: 44px; }
+}

@@ -1,12 +1,20 @@
 {
   "name": "@chakra/icons",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
+  "files": ["dist"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "vite build && tsc --project tsconfig.build.json",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "import": "./src/index.ts"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "peerDependencies": {

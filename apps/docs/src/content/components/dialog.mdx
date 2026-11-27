@@ -1,3 +1,26 @@
+import { DialogPlayground } from "../../components/component-playground/ComponentPlayground";
+
 # Dialog
 
-Modal dialog component for overlay interactions and confirmations.
+Dialog renders a modal using the native HTML `<dialog>` element. Control it with `open` and `onOpenChange`; the browser handles the top layer, modal focus behavior, and Escape dismissal.
+
+<h2 id="playground">Playground</h2>
+
+Open the dialog, close it with Escape or the close action, and toggle its description.
+
+<DialogPlayground />
+
+<h2 id="controlled-state">Controlled state</h2>
+
+Set `open` from application state and pass the state setter as `onOpenChange`. Use the `title` prop to provide an accessible name. `description` is connected to the dialog with `aria-describedby`; `children` render as the body and `footer` provides an optional action area.
+
+<h2 id="dismissal">Dismissal behavior</h2>
+
+Escape closes the dialog by default. Set `closeOnEscape={false}` only when the user must resolve a specific step before closing. Backdrop clicks do not close it by default; set `closeOnBackdrop` to enable that behavior. The close button remains available either way.
+
+<h2 id="dialog-guidance">Guidance</h2>
+
+- Use a dialog only when the user needs to respond before continuing; use a non-modal panel for optional details.
+- Keep the title specific and the available actions clear.
+- Return focus to the control that opened the dialog; the native modal dialog behavior handles this when it closes.
+- Avoid putting essential instructions only in the description because users may close the dialog before reading it.

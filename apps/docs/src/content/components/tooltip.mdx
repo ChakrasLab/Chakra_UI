@@ -1,0 +1,22 @@
+import { TooltipPlayground } from "../../components/component-playground/ComponentPlayground";
+
+# Tooltip
+
+Tooltip adds a short supplemental description to one interactive child. It appears on hover and keyboard focus and connects the text to the child with `aria-describedby`.
+
+<h2 id="playground">Playground</h2>
+
+Edit the tooltip text, then hover or focus the Settings button.
+
+<TooltipPlayground />
+
+<h2 id="usage">Usage</h2>
+
+Pass a short string with `content` and one interactive React element as the child. Tooltip preserves an existing `aria-describedby` value and adds its own description ID.
+
+<h2 id="accessibility">Accessibility</h2>
+
+- Keep essential instructions and actions visible in the page; tooltip text is supplemental.
+- Use a meaningful accessible name on the trigger itself.
+- Keep the description concise and avoid interactive content inside the tooltip.
+- Ensure the trigger has a visible keyboard focus style.

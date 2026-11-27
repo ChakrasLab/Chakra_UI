@@ -1,0 +1,49 @@
+import CodeBlock from "../../components/code-block/CodeBlock";
+
+export const focusExample = `.control:focus-visible {
+  outline: 2px solid var(--chakra-color-focus);
+  outline-offset: 2px;
+}`;
+
+export const reducedMotionExample = `@media (prefers-reduced-motion: no-preference) {
+  .motion-sample:hover {
+    transform: translateX(8px);
+    transition: transform var(--chakra-motion-fast);
+  }
+}`;
+
+# Accessibility
+
+Accessibility is part of the component contract. Build interfaces that work with a keyboard, expose meaningful structure to assistive technology, and remain readable across themes and motion settings.
+
+<h2 id="semantic-structure">Semantic structure</h2>
+
+Use native elements for their intended purpose: buttons for actions, links for navigation, labels for form fields, and headings that reflect the page outline. Add ARIA only when native HTML does not express the needed name, role, or state.
+
+<h2 id="keyboard">Keyboard and focus</h2>
+
+Every interactive control should be reachable and operable by keyboard. Preserve a visible focus indicator, and make sure overlays return focus to the control that opened them when they close.
+
+<CodeBlock code={focusExample} />
+
+<h2 id="color-and-contrast">Color and contrast</h2>
+
+Check text, icons, borders, and focus indicators against the surface beneath them in every theme. Do not use color as the only way to communicate status or selection; pair it with text, shape, or another visual cue.
+
+<h2 id="motion">Motion</h2>
+
+Respect the user's reduced-motion preference. Keep transitions brief and avoid relying on movement to explain an interaction.
+
+<CodeBlock code={reducedMotionExample} />
+
+The example keeps the movement itself out of reduced-motion mode; removing only the transition would still allow the element to move instantly.
+
+<h2 id="accessibility-review">Review each component</h2>
+
+- Can you complete the interaction using only a keyboard?
+- Does each control have a clear accessible name and state?
+- Is focus visible and in a logical order?
+- Does content remain usable when zoomed or reflowed into a narrow viewport?
+- Does text remain usable when enlarged to 200%?
+- Does the layout reflow at a 320 CSS pixel viewport without losing content or functionality?
+- Are errors described in text and connected to the relevant field?

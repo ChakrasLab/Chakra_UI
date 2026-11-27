@@ -22,5 +22,7 @@ body,
 
 body {
   min-height: 100vh;
+  min-height: 100dvh;
+  line-height: 1.5;
   background: var(--chakra-color-surface-canvas);
 }

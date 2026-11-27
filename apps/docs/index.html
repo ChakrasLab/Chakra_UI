@@ -3,7 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="text-scale" content="scale" />
+    <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#ffffff" />
+    <script>
+      try {
+        const preference = localStorage.getItem("chakra-color-scheme");
+        const colorScheme = document.querySelector('meta[name="color-scheme"]');
+        if (preference === "light" || preference === "dark") {
+          document.documentElement.dataset.theme = preference;
+          document.documentElement.dataset.themePreference = preference;
+          colorScheme.content = preference;
+          document.querySelector('meta[name="theme-color"]').content = preference === "dark" ? "#111827" : "#ffffff";
+        } else {
+          document.documentElement.dataset.themePreference = "system";
+          const systemIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          document.querySelector('meta[name="theme-color"]').content = systemIsDark ? "#111827" : "#ffffff";
+        }
+      } catch {
+        document.documentElement.dataset.themePreference = "system";
+      }
+    </script>
     <title>Chakra UI</title>
   </head>
   <body>

@@ -1,9 +1,56 @@
-export * from "./icon";
-export * from "./icon-registry";
-export * from "./icons/home";
-export * from "./icons/search";
-export * from "./icons/arrow-right";
-export * from "./icons/arrow-left";
-export * from "./icons/system";
-export * from "./icons/navigation";
-export * from "./icons/concepts";
+export type { IconProps } from "./types";
+
+export {
+  AccessibilityIcon,
+  BoxIcon,
+  CheckIcon,
+  CopyIcon,
+  DialogIcon,
+  GithubIcon,
+  GlobeIcon,
+  ImageIcon,
+  LayersIcon,
+  MoonIcon,
+  PaletteIcon,
+  SearchIcon,
+  SunIcon,
+  TableIcon,
+  TabsIcon,
+  TagsIcon,
+  TooltipIcon,
+  TypeIcon,
+} from "./core";
+
+export {
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  BoltIcon,
+  ChevronDownIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronUpIcon,
+  CloseIcon,
+  FolderIcon,
+  GridIcon,
+  HomeIcon,
+  MenuIcon,
+  PackageIcon,
+  RefreshIcon,
+} from "./navigation";
+
+export {
+  ButtonIcon,
+  CheckboxIcon,
+  InputIcon,
+  RadioIcon,
+  SelectIcon,
+  SwitchIcon,
+} from "./forms";
+
+export {
+  ErrorIcon,
+  InfoIcon,
+  LoadingIcon,
+  SuccessIcon,
+  WarningIcon,
+} from "./feedback";

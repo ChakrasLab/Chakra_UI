@@ -1,3 +1,61 @@
+import { ButtonPlayground } from "../../components/component-playground/ComponentPlayground";
+import CodeBlock from "../../components/code-block/CodeBlock";
+
+export const toggleExample = `import { Button } from "@chakra/react";
+
+function FavoriteButton({ isFavorite, onToggle }) {
+  return (
+    <Button
+      variant="ghost"
+      active={isFavorite}
+      aria-pressed={isFavorite}
+      onClick={onToggle}
+    >
+      Save to favorites
+    </Button>
+  );
+}`;
+
 # Button
 
-Interactive button component for actions and triggers.
+Use Button for actions that change state, submit data, or open an interface. It is a native `<button>` with shared design tokens and standard button attributes.
+
+<h2 id="examples">Examples</h2>
+
+Use the controls to change the Button props. The preview and copyable example update together.
+
+<ButtonPlayground />
+
+<h2 id="variants-and-sizes">Variants and sizes</h2>
+
+<div className="foundation-table-wrap">
+  <table className="foundation-table">
+    <caption className="visually-hidden">Button properties, available values, and defaults</caption>
+    <thead><tr><th scope="col">Prop</th><th scope="col">Values</th><th scope="col">Default</th><th scope="col">Purpose</th></tr></thead>
+    <tbody>
+      <tr><th scope="row"><code>variant</code></th><td><code>solid</code>, <code>outline</code>, <code>ghost</code></td><td><code>solid</code></td><td>Visual emphasis</td></tr>
+      <tr><th scope="row"><code>size</code></th><td><code>sm</code>, <code>md</code>, <code>lg</code></td><td><code>md</code></td><td>Control height and horizontal padding</td></tr>
+      <tr><th scope="row"><code>active</code></th><td><code>true</code>, <code>false</code></td><td><code>false</code></td><td>Apply selected styling through <code>data-active</code></td></tr>
+    </tbody>
+  </table>
+</div>
+
+All native button attributes are forwarded, including `disabled`, `name`, `value`, and `type`.
+
+<h2 id="selected-state">Selected and toggle states</h2>
+
+`active` changes the visual treatment; it does not add toggle semantics by itself. For a toggle, expose the state with `aria-pressed` and update it when the user activates the button.
+
+<CodeBlock code={toggleExample} />
+
+<h2 id="forms">Buttons in forms</h2>
+
+The component defaults to `type="button"` to avoid accidental form submission. Set `type="submit"` for the form's submit action. Use `disabled` when the action cannot currently be completed, and explain the reason in nearby text when it is not obvious.
+
+<h2 id="accessibility">Accessibility</h2>
+
+- Use a concise label that describes the action.
+- Give icon-only buttons an accessible name with visible text or `aria-label`.
+- Keep a visible keyboard focus indicator and do not use a button for navigation; use a link for navigation.
+
+`@chakra/react` is prepared for npm publishing but has not been released yet.

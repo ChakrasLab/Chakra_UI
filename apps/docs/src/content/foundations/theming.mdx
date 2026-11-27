@@ -1,0 +1,55 @@
+import CodeBlock from "../../components/code-block/CodeBlock";
+
+export const themeExample = `@import "@chakra/tokens/index.css";
+
+/* Put theme overrides after the token import. */
+:root[data-theme="dark"] {
+  --chakra-color-brand: #8fb2ff;
+  --chakra-color-brand-hover: #a8c3ff;
+  --chakra-color-brand-active: #7299ed;
+}`;
+
+export const customThemeExample = `/* Define a custom theme scope. */
+[data-theme="ocean"] {
+  color-scheme: light;
+  --chakra-color-surface-canvas: #f4faff;
+  --chakra-color-text-primary: #102b46;
+  --chakra-color-brand: #075985;
+  --chakra-color-brand-hover: #064b70;
+  --chakra-color-brand-active: #043b5a;
+  --chakra-color-on-brand: #fff;
+  --chakra-color-focus: #0284c7;
+}`;
+
+# Theming
+
+Chakra's semantic tokens resolve to the active theme. Components can keep using the same variable names while the theme changes their surface, text, border, focus, and brand values.
+
+<h2 id="activate-theme">Activate a theme</h2>
+
+The token package follows the system color scheme unless an explicit theme is selected. Set `data-theme="light"` or `data-theme="dark"` on an element to override the system preference for that subtree. Place custom CSS after the token import so your values take precedence.
+
+<CodeBlock code={`<div className="app-shell" data-theme="dark">
+  <YourApplication />
+</div>`} />
+
+<h2 id="semantic-mapping">Customize a built-in theme</h2>
+
+Primitives describe the palette; semantic variables describe interface intent. Override semantic variables once instead of adding theme-specific overrides to every component.
+
+<CodeBlock code={themeExample} />
+
+<h2 id="custom-themes">Add a custom theme scope</h2>
+
+Define a theme selector and apply its `data-theme` value to the application subtree. This example changes a few roles; a complete custom theme should set every semantic token the application uses, including text, surfaces, borders, focus, status, and brand roles.
+
+<CodeBlock code={customThemeExample} />
+
+<h2 id="theme-guidance">Theme guidance</h2>
+
+- Prefer semantic variables such as `--chakra-color-text-primary` in component styles.
+- Keep raw values in the primitive palette and theme mappings.
+- Verify controls, focus indicators, disabled states, and code samples in each theme.
+- Use `color-scheme` to tell browser-rendered controls which color mode is active.
+
+`@chakra/tokens` is prepared for npm publishing but has not been released yet.

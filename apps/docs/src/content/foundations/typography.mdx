@@ -1,3 +1,43 @@
+import CodeBlock from "../../components/code-block/CodeBlock";
+
+export const typographyExample = `@import "@chakra/tokens/index.css";
+
+.body-copy {
+  font-family: var(--chakra-font-sans);
+  font-size: var(--chakra-font-size-md);
+  color: var(--chakra-color-text-primary);
+}`;
+
 # Typography
 
-Type scale, font stacks, and typographic hierarchy.
+Use the shared font families and size tokens to keep text consistent across components. Establish hierarchy with semantic HTML, weight, and spacing before introducing one-off sizes.
+
+<h2 id="font-families">Font families</h2>
+
+The token package provides a sans-serif stack for interface text and a serif stack used for selected brand moments. Use the sans-serif token for product content unless a component has a clear reason to use the alternate family.
+
+<CodeBlock code={typographyExample} />
+
+<h2 id="type-scale">Type scale</h2>
+
+<div className="foundation-table-wrap">
+  <table className="foundation-table">
+    <caption className="visually-hidden">Chakra typography tokens and common uses</caption>
+    <thead><tr><th scope="col">Token</th><th scope="col">Size</th><th scope="col">Typical use</th></tr></thead>
+    <tbody>
+      <tr><th scope="row"><code>--chakra-font-size-xs</code></th><td>0.6875rem</td><td>Compact labels and metadata</td></tr>
+      <tr><th scope="row"><code>--chakra-font-size-sm</code></th><td>0.75rem</td><td>Supporting text and compact controls</td></tr>
+      <tr><th scope="row"><code>--chakra-font-size-md</code></th><td>0.875rem</td><td>Default interface text</td></tr>
+      <tr><th scope="row"><code>--chakra-font-size-lg</code></th><td>1rem</td><td>Emphasized body text</td></tr>
+    </tbody>
+  </table>
+</div>
+
+These tokens describe the current compact interface scale. At the browser's default 16px root size they resolve to 11px, 12px, 14px, and 16px; rem values also respect the user's root text-size setting. Page headings use responsive styles rather than this body-text scale.
+
+<h2 id="hierarchy">Build hierarchy</h2>
+
+- Use headings in order (`h1`, then `h2`, then `h3`) to express document structure.
+- Keep paragraphs at a comfortable reading width and use line height that supports scanning.
+- Reserve muted text styles for supporting information that remains readable.
+- Avoid assigning meaning through font size alone; include a clear label or structure.

@@ -3,13 +3,19 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.14"
+  },
   "workspaces": [
     "apps/docs",
     "packages/*"
   ],
   "scripts": {
+    "predev": "npm run build:packages",
     "dev": "npm run dev --workspace @chakra/docs",
-    "build": "tsc --noEmit && npm run build --workspace @chakra/docs",
+    "build:packages": "npm run build --workspace @chakra/icons && npm run build --workspace @chakra/react",
+    "build": "npm run build:packages && tsc --noEmit && npm run build --workspace @chakra/docs",
+    "build:pages": "npm run build:packages && tsc --noEmit && npm run build --workspace @chakra/docs -- --mode pages",
     "preview": "npm run preview --workspace @chakra/docs"
   },
   "devDependencies": {

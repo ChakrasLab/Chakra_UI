@@ -1,0 +1,3 @@
+import { createIcon } from "../create-icon";
+
+export const MenuIcon = createIcon("MenuIcon", <path d="M4 7h16M4 12h16M4 17h16" />);

@@ -1,11 +1,35 @@
-import type { NavigationIconName } from "@chakra/icons";
-
-export type { NavigationIconName } from "@chakra/icons";
+import type { ComponentType } from "react";
+import type { IconProps } from "@chakra/icons";
+import {
+  AccessibilityIcon,
+  BoltIcon,
+  ButtonIcon,
+  CheckboxIcon,
+  DialogIcon,
+  FolderIcon,
+  GlobeIcon,
+  GridIcon,
+  HomeIcon,
+  ImageIcon,
+  InfoIcon,
+  InputIcon,
+  LayersIcon,
+  PackageIcon,
+  PaletteIcon,
+  RadioIcon,
+  RefreshIcon,
+  SelectIcon,
+  SwitchIcon,
+  TableIcon,
+  TabsIcon,
+  TooltipIcon,
+  TypeIcon,
+} from "@chakra/icons";
 
 export interface NavigationItem {
   id: string;
   label: string;
-  icon: NavigationIconName;
+  icon: ComponentType<IconProps>;
 }
 
 export interface NavigationSection {
@@ -23,41 +47,41 @@ export const navigationSections: NavigationSection[] = [
     id: "getting-started",
     title: "Getting Started",
     items: [
-      { id: "introduction", label: "Introduction", icon: "home" },
-      { id: "installation", label: "Installation", icon: "package" },
-      { id: "quick-start", label: "Quick start", icon: "bolt" },
-      { id: "project-structure", label: "Project structure", icon: "folder" },
-      { id: "migration-guide", label: "Migration guide", icon: "refresh" },
+      { id: "introduction", label: "Introduction", icon: HomeIcon },
+      { id: "installation", label: "Installation", icon: PackageIcon },
+      { id: "quick-start", label: "Quick start", icon: BoltIcon },
+      { id: "project-structure", label: "Project structure", icon: FolderIcon },
+      { id: "migration-guide", label: "Migration guide", icon: RefreshIcon },
     ],
   },
   {
     id: "foundations",
     title: "Foundations",
     items: [
-      { id: "design-tokens", label: "Design tokens", icon: "layers" },
-      { id: "colors", label: "Colors", icon: "palette" },
-      { id: "typography", label: "Typography", icon: "type" },
-      { id: "spacing-and-layout", label: "Spacing and layout", icon: "grid" },
-      { id: "icons", label: "Icons", icon: "image" },
-      { id: "theming", label: "Theming", icon: "info" },
-      { id: "accessibility", label: "Accessibility", icon: "accessibility" },
-      { id: "localization", label: "Localization", icon: "globe" },
+      { id: "design-tokens", label: "Design tokens", icon: LayersIcon },
+      { id: "colors", label: "Colors", icon: PaletteIcon },
+      { id: "typography", label: "Typography", icon: TypeIcon },
+      { id: "spacing-and-layout", label: "Spacing and layout", icon: GridIcon },
+      { id: "icons", label: "Icons", icon: ImageIcon },
+      { id: "theming", label: "Theming", icon: InfoIcon },
+      { id: "accessibility", label: "Accessibility", icon: AccessibilityIcon },
+      { id: "localization", label: "Localization", icon: GlobeIcon },
     ],
   },
   {
     id: "components",
     title: "Components",
     items: [
-      { id: "button", label: "Button", icon: "button" },
-      { id: "input", label: "Input", icon: "input" },
-      { id: "select", label: "Select", icon: "select" },
-      { id: "checkbox", label: "Checkbox", icon: "checkbox" },
-      { id: "radio", label: "Radio", icon: "radio" },
-      { id: "switch", label: "Switch", icon: "switch" },
-      { id: "dialog", label: "Dialog", icon: "dialog" },
-      { id: "tabs", label: "Tabs", icon: "tabs" },
-      { id: "tooltip", label: "Tooltip", icon: "tooltip" },
-      { id: "data-table", label: "Data table", icon: "table" },
+      { id: "button", label: "Button", icon: ButtonIcon },
+      { id: "input", label: "Input", icon: InputIcon },
+      { id: "select", label: "Select", icon: SelectIcon },
+      { id: "checkbox", label: "Checkbox", icon: CheckboxIcon },
+      { id: "radio", label: "Radio", icon: RadioIcon },
+      { id: "switch", label: "Switch", icon: SwitchIcon },
+      { id: "dialog", label: "Dialog", icon: DialogIcon },
+      { id: "tabs", label: "Tabs", icon: TabsIcon },
+      { id: "tooltip", label: "Tooltip", icon: TooltipIcon },
+      { id: "data-table", label: "Data table", icon: TableIcon },
     ],
   },
 ];

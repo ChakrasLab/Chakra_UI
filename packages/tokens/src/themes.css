@@ -1,11 +1,22 @@
-:root,
-:root[data-theme="light"],
-[data-theme="light"] {
+:root {
+  color-scheme: light dark;
+}
+
+:root:has(> head > meta[name="color-scheme"][content="light"]) {
   color-scheme: light;
 }
 
-:root[data-theme="dark"],
-[data-theme="dark"] {
+:root:has(> head > meta[name="color-scheme"][content="dark"]) {
+  color-scheme: dark;
+}
+
+:where(:root[data-theme="light"]),
+:where([data-theme="light"]) {
+  color-scheme: light;
+}
+
+:where(:root[data-theme="dark"]),
+:where([data-theme="dark"]) {
   color-scheme: dark;
   --chakra-color-surface-canvas: #111827;
   --chakra-color-surface-subtle: #1f2937;
@@ -22,5 +33,52 @@
   --chakra-color-brand-active: #3f64c2;
   --chakra-color-on-brand: #08152e;
   --chakra-color-surface-selected: #293b59;
+  --chakra-color-accent: #ffad70;
+  --chakra-color-info: #72b7ff;
+  --chakra-color-info-subtle: #152c43;
+  --chakra-color-info-border: #284b70;
+  --chakra-color-warning: #ffd08a;
+  --chakra-color-warning-subtle: #352818;
+  --chakra-color-warning-border: #5c4425;
+  --chakra-color-success: #78d99b;
+  --chakra-color-success-subtle: #142e24;
+  --chakra-color-success-border: #28513c;
+  --chakra-color-error: #ff8a80;
+  --chakra-color-error-subtle: #3c2023;
+  --chakra-color-error-border: #63353a;
   --chakra-shadow-surface: 0 12px 32px rgb(0 0 0 / 32%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :where(:root:not([data-theme])) {
+    --chakra-color-surface-canvas: #111827;
+    --chakra-color-surface-subtle: #1f2937;
+    --chakra-color-surface-control: #172033;
+    --chakra-color-text-primary: #e5edf8;
+    --chakra-color-text-strong: #f8fafc;
+    --chakra-color-text-secondary: #c3d1e5;
+    --chakra-color-text-muted: #a8bad4;
+    --chakra-color-border-subtle: #334155;
+    --chakra-color-border-control: #475569;
+    --chakra-color-focus: #93b4ee;
+    --chakra-color-brand: #557ddd;
+    --chakra-color-brand-hover: #6e91e8;
+    --chakra-color-brand-active: #3f64c2;
+    --chakra-color-on-brand: #08152e;
+    --chakra-color-surface-selected: #293b59;
+    --chakra-color-accent: #ffad70;
+    --chakra-color-info: #72b7ff;
+    --chakra-color-info-subtle: #152c43;
+    --chakra-color-info-border: #284b70;
+    --chakra-color-warning: #ffd08a;
+    --chakra-color-warning-subtle: #352818;
+    --chakra-color-warning-border: #5c4425;
+    --chakra-color-success: #78d99b;
+    --chakra-color-success-subtle: #142e24;
+    --chakra-color-success-border: #28513c;
+    --chakra-color-error: #ff8a80;
+    --chakra-color-error-subtle: #3c2023;
+    --chakra-color-error-border: #63353a;
+    --chakra-shadow-surface: 0 12px 32px rgb(0 0 0 / 32%);
+  }
 }

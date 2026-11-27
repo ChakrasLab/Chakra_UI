@@ -1,0 +1,13 @@
+.chakra-tooltip { position: relative; display: inline-flex; max-width: 100%; vertical-align: middle; }
+.chakra-tooltip__content { position: absolute; z-index: 10; inset-inline-start: 50%; inset-block-end: calc(100% + 8px); width: max-content; max-width: min(260px, calc(100vw - 32px)); padding: 7px 10px; transform: translate(-50%, 3px); border: 1px solid var(--chakra-color-border-control); border-radius: var(--chakra-radius-sm); background: var(--chakra-color-text-strong); color: var(--chakra-color-surface-canvas); box-shadow: var(--chakra-shadow-control-hover); font-size: var(--chakra-font-size-sm); font-weight: 450; line-height: 1.4; opacity: 0; pointer-events: none; visibility: hidden; transition: opacity var(--chakra-motion-fast), transform var(--chakra-motion-fast), visibility var(--chakra-motion-fast); }
+.chakra-tooltip:hover .chakra-tooltip__content,
+.chakra-tooltip:focus-within .chakra-tooltip__content { transform: translate(-50%, 0); opacity: 1; visibility: visible; }
+.chakra-tooltip__content::after { position: absolute; top: 100%; left: 50%; width: 7px; height: 7px; transform: translate(-50%, -50%) rotate(45deg); border-right: 1px solid var(--chakra-color-border-control); border-bottom: 1px solid var(--chakra-color-border-control); background: var(--chakra-color-text-strong); content: ""; }
+
+[dir="rtl"] .chakra-tooltip__content { transform: translate(50%, 3px); }
+[dir="rtl"] .chakra-tooltip:hover .chakra-tooltip__content,
+[dir="rtl"] .chakra-tooltip:focus-within .chakra-tooltip__content { transform: translate(50%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .chakra-tooltip__content { transition: none; }
+}

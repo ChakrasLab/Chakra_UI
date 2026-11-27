@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { Button } from "@chakra/react";
 import { CheckIcon, CopyIcon } from "@chakra/icons";
 import "./CodeBlock.css";
@@ -10,32 +10,60 @@ interface CodeBlockProps {
 
 export default function CodeBlock({ code, label = "Copy code" }: CodeBlockProps) {
   const [copyState, setCopyState] = useState<"idle" | "copied" | "failed">("idle");
+  const codeId = useId();
+  const blockRef = useRef<HTMLDivElement | null>(null);
+  const copyTimeoutRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    if (copyState === "idle") return;
-    const timeout = window.setTimeout(() => setCopyState("idle"), 1800);
-    return () => window.clearTimeout(timeout);
-  }, [copyState]);
+    return () => window.clearTimeout(copyTimeoutRef.current);
+  }, []);
 
-  const copyCode = async () => {
+  const copyCode = async (text = code) => {
+    window.clearTimeout(copyTimeoutRef.current);
     try {
-      await navigator.clipboard.writeText(code);
+      await navigator.clipboard.writeText(text);
       setCopyState("copied");
     } catch {
       setCopyState("failed");
     }
+    copyTimeoutRef.current = window.setTimeout(() => {
+      setCopyState("idle");
+      copyTimeoutRef.current = undefined;
+    }, 1800);
   };
 
+  useEffect(() => {
+    const handleCommand = (event: Event) => {
+      const commandEvent = event as CommandEvent;
+      if (commandEvent.command !== "--copy") return;
+      const source = commandEvent.source;
+      const target = commandEvent.target;
+      if (
+        !(source instanceof HTMLButtonElement) ||
+        !blockRef.current?.contains(source) ||
+        !(target instanceof HTMLElement)
+      ) return;
+      event.preventDefault();
+      void copyCode(target.innerText.trim());
+    };
+
+    document.addEventListener("command", handleCommand, true);
+    return () => document.removeEventListener("command", handleCommand, true);
+  }, [code]);
+
   return (
-    <div className="docs-code-block">
-      <pre><code>{code}</code></pre>
+    <div ref={blockRef} className="docs-code-block" data-copy-state={copyState}>
+      <pre id={codeId} tabIndex={0}><code>{code}</code></pre>
       <Button
         className="docs-code-block__copy"
         variant="ghost"
         size="sm"
         type="button"
-        aria-label={copyState === "copied" ? "Code copied" : label}
-        onClick={copyCode}
+        {...({ command: "--copy", commandfor: codeId } as any)}
+        aria-label={label}
+        onClick={() => {
+          if (!("CommandEvent" in window)) void copyCode();
+        }}
       >
         {copyState === "copied" ? <CheckIcon /> : <CopyIcon />}
       </Button>

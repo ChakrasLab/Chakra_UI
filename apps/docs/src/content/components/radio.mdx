@@ -1,0 +1,25 @@
+import { RadioPlayground } from "../../components/component-playground/ComponentPlayground";
+
+# Radio
+
+Radio is a labeled native radio option. Use a group when the user must choose exactly one option from a short list.
+
+<h2 id="playground">Playground</h2>
+
+Choose a plan in the preview. Only one option in the group can be selected.
+
+<RadioPlayground />
+
+<h2 id="groups">Radio groups</h2>
+
+Give related Radio components the same `name` and different `value` props. Place them inside a `<fieldset>` with a `<legend>` that describes the choice. Use `checked` with `onChange` for a controlled group, or `defaultChecked` for its initial selection.
+
+<h2 id="props">Props</h2>
+
+`label` and `name` are required. `description` adds supporting text; `invalid` exposes the invalid state. Native radio attributes such as `value`, `checked`, `defaultChecked`, and `disabled` are forwarded.
+
+<h2 id="radio-guidance">Guidance</h2>
+
+- Use radios for mutually exclusive options and checkboxes for independent options.
+- Keep each option's label distinct and describe the group in its legend.
+- Avoid using a radio group for a long list of choices; consider Select instead.

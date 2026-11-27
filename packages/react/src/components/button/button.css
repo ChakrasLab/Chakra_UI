@@ -47,7 +47,3 @@
 }
 .chakra-button--ghost:hover:not(:disabled) { background: var(--chakra-color-surface-subtle); }
 .chakra-button--ghost[data-active="true"] { background: var(--chakra-color-surface-selected); color: var(--chakra-color-brand); font-weight: 600; }
-
-@media (prefers-reduced-motion: reduce) {
-  .chakra-button { transition: none; }
-}

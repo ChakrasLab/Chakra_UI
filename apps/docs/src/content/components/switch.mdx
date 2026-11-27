@@ -1,0 +1,22 @@
+import { SwitchPlayground } from "../../components/component-playground/ComponentPlayground";
+
+# Switch
+
+Switch is a native checkbox exposed with switch semantics. Use it for a setting that takes effect immediately, such as turning notifications on or off.
+
+<h2 id="playground">Playground</h2>
+
+Toggle the setting in the preview.
+
+<SwitchPlayground />
+
+<h2 id="usage">Usage</h2>
+
+Provide a clear `label` and, when useful, a `description`. Use `checked` with `onChange` for a controlled switch, or `defaultChecked` for an uncontrolled switch. The component forwards native checkbox attributes such as `name`, `value`, `disabled`, and `required`.
+
+<h2 id="switch-guidance">Guidance</h2>
+
+- Label the setting by the feature it controls, such as “Email notifications.”
+- Keep the effect immediate and make the current state visually clear.
+- Use Checkbox when the choice is submitted with a form or can be combined with other choices.
+- Do not use color or position alone to communicate the on/off state.

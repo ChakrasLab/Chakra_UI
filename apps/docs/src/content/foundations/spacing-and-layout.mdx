@@ -1,0 +1,56 @@
+import CodeBlock from "../../components/code-block/CodeBlock";
+
+export const spacingExample = `@import "@chakra/tokens/index.css";
+
+.stack {
+  display: grid;
+  gap: var(--chakra-space-4);
+}
+
+.panel {
+  padding: var(--chakra-space-6);
+}`;
+
+# Spacing and layout
+
+Use the spacing scale for gaps, padding, and related layout decisions. Shared values make layouts easier to tune and keep components visually related.
+
+<h2 id="spacing-scale">Spacing scale</h2>
+
+<div className="foundation-table-wrap">
+  <table className="foundation-table">
+    <caption className="visually-hidden">Chakra spacing tokens and their common uses</caption>
+    <thead><tr><th scope="col">Token</th><th scope="col">Value</th><th scope="col">Example</th></tr></thead>
+    <tbody>
+      <tr><th scope="row"><code>--chakra-space-1</code></th><td>4px</td><td>Icon to label</td></tr>
+      <tr><th scope="row"><code>--chakra-space-2</code></th><td>8px</td><td>Tight control groups</td></tr>
+      <tr><th scope="row"><code>--chakra-space-3</code></th><td>12px</td><td>Compact component padding</td></tr>
+      <tr><th scope="row"><code>--chakra-space-4</code></th><td>16px</td><td>Default content gap</td></tr>
+      <tr><th scope="row"><code>--chakra-space-5</code></th><td>20px</td><td>Intermediate layout gap</td></tr>
+      <tr><th scope="row"><code>--chakra-space-6</code></th><td>24px</td><td>Section spacing</td></tr>
+      <tr><th scope="row"><code>--chakra-space-8</code></th><td>32px</td><td>Major group separation</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="apply-spacing">Apply spacing tokens</h2>
+
+Use spacing tokens in CSS properties such as `gap`, `padding`, and `margin`. Keep each token tied to a relationship in the layout, rather than choosing a value independently for every element.
+
+<CodeBlock code={spacingExample} />
+
+<h2 id="responsive-layout">Responsive layout</h2>
+
+Use flexible grid tracks and min/max constraints so content can shrink before it overflows. Add breakpoints when the layout itself needs to change, such as moving a two-column composition into one column. Choose breakpoint values based on the content and available space in your application.
+
+<CodeBlock code={`.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--chakra-space-6);
+}
+
+@media (max-width: 47.5em) {
+  .content-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}`} />

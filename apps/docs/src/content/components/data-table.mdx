@@ -1,0 +1,30 @@
+import { DataTablePlayground } from "../../components/component-playground/ComponentPlayground";
+
+# Data table
+
+DataTable renders structured rows and columns as a semantic HTML table. Columns can opt into client-side sorting by providing a `sortValue` function.
+
+<h2 id="playground">Playground</h2>
+
+Sort by Project, Owner, or Status. Change the number of rows in the preview.
+
+<DataTablePlayground />
+
+<h2 id="columns">Columns and rows</h2>
+
+Provide a visible `caption`, a `data` array, and `columns`. Each column needs a unique `id`, a `header`, and a `cell` renderer. Set `rowHeader` on a column such as a record name to identify each row. Use `getRowId` to provide stable row keys when the data can change.
+
+<h2 id="sorting">Sorting</h2>
+
+Add `sortValue` to columns that can be sorted. The header becomes a keyboard-operable button and the column exposes its current direction with `aria-sort`. String values use locale-aware numeric collation; number values sort numerically. Columns without `sortValue` stay static.
+
+<h2 id="empty-state">Empty state</h2>
+
+When `data` is empty, DataTable renders `emptyMessage` in a cell spanning the table columns. The default message is “No rows to display.”
+
+<h2 id="table-guidance">Guidance</h2>
+
+- Use a concise caption so people can identify the table's purpose.
+- Keep headers descriptive and make sure each cell has a clear relationship to its row and column headers.
+- On narrow screens, the table scrolls horizontally inside its own wrapper.
+- Use a dedicated grid pattern for interactive cell navigation; this component is a data table, not an ARIA grid.

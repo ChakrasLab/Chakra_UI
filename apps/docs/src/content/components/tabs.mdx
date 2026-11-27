@@ -1,0 +1,26 @@
+import { TabsPlayground } from "../../components/component-playground/ComponentPlayground";
+
+# Tabs
+
+Tabs switches between related panels of content. It supports controlled or uncontrolled selection, horizontal or vertical orientation, and automatic arrow-key activation.
+
+<h2 id="playground">Playground</h2>
+
+Change the orientation and use the arrow keys to move between tabs.
+
+<TabsPlayground />
+
+<h2 id="items">Tab items</h2>
+
+Pass `items` with a unique `value`, visible `label`, and panel `content` for each tab. Set `disabled` on an item to remove it from selection and keyboard navigation. Supply an `aria-label` that describes the tab set.
+
+<h2 id="state">Selection state</h2>
+
+Use `defaultValue` for uncontrolled selection. Use `value` with `onValueChange` when application state controls the selected panel. The first enabled item is selected when neither value is provided.
+
+<h2 id="keyboard">Keyboard behavior</h2>
+
+- Tab enters the tab list at the selected tab; another Tab moves to the active panel.
+- Left and Right Arrow keys move across horizontal tabs; Up and Down Arrow keys move across vertical tabs.
+- Home and End move focus to the first and last enabled tabs.
+- Arrow-key movement also activates the tab and its panel.

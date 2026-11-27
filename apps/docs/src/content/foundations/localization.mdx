@@ -1,0 +1,48 @@
+import CodeBlock from "../../components/code-block/CodeBlock";
+
+export const localizedDateExample = `const locale = navigator.language;
+const date = new Date();
+
+const formattedDate = new Intl.DateTimeFormat(locale, {
+  dateStyle: "medium",
+}).format(date);`;
+
+export const localizedNumberExample = `const locale = navigator.language;
+
+const amount = new Intl.NumberFormat(locale, {
+  style: "currency",
+  currency: "INR",
+}).format(1234.56);`;
+
+# Localization
+
+Localization prepares the interface for different languages, writing systems, and regional conventions. Keep content flexible so translations can change length and direction without breaking the layout.
+
+<h2 id="translate-content">Translate interface content</h2>
+
+Keep user-facing text separate from layout code so it can be translated consistently. Avoid building sentences by joining fragments; word order and grammar can differ between languages. Leave room for translated labels to grow.
+
+<h2 id="format-values">Format dates and numbers</h2>
+
+Use the browser's internationalization APIs to format dates, numbers, and currencies for the selected locale instead of hard-coding punctuation or ordering.
+
+<CodeBlock code={localizedDateExample} />
+
+For currency, pass an ISO 4217 currency code that matches the value being shown. A locale controls formatting conventions; it does not convert the amount into another currency.
+
+<CodeBlock code={localizedNumberExample} />
+
+<h2 id="right-to-left">Support right-to-left layouts</h2>
+
+Prefer CSS logical properties such as `margin-inline`, `padding-inline`, and `inset-inline-start` when the relationship is about reading direction. Set the document's `dir` attribute for right-to-left content, and check icon direction, alignment, and keyboard flow.
+
+<CodeBlock code={`<div lang="ar" dir="rtl">
+  <p>مثال على محتوى عربي من اليمين إلى اليسار</p>
+</div>`} />
+
+<h2 id="localization-guidance">Localization guidance</h2>
+
+- Set the page language with the correct `lang` attribute.
+- Test long translations and mixed-direction text in real layouts.
+- Avoid text embedded in images and avoid assuming one language's word lengths.
+- Use locale-aware formatting for dates, numbers, and currencies.

@@ -29,10 +29,10 @@
 
   --chakra-font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --chakra-font-serif: Georgia, "Times New Roman", serif;
-  --chakra-font-size-xs: 11px;
-  --chakra-font-size-sm: 12px;
-  --chakra-font-size-md: 14px;
-  --chakra-font-size-lg: 16px;
+  --chakra-font-size-xs: 0.6875rem;
+  --chakra-font-size-sm: 0.75rem;
+  --chakra-font-size-md: 0.875rem;
+  --chakra-font-size-lg: 1rem;
 
   --chakra-shadow-panel: 0 12px 32px rgb(11 32 67 / 12%);
   --chakra-shadow-control: 0 1px 2px rgb(13 38 76 / 3%);

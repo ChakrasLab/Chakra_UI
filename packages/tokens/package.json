@@ -1,8 +1,11 @@
 {
   "name": "@chakra/tokens",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
+  "files": ["src"],
+  "publishConfig": {
+    "access": "public"
+  },
   "style": "./src/index.css",
   "exports": {
     ".": "./src/index.css",

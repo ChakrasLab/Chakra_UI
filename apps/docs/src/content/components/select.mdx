@@ -1,0 +1,26 @@
+import { SelectPlayground } from "../../components/component-playground/ComponentPlayground";
+
+# Select
+
+Select is a styled native `<select>` control. It keeps browser selection, keyboard, and form behavior while using the shared surface, border, and focus tokens.
+
+<h2 id="playground">Playground</h2>
+
+Change the selection and toggle the disabled state.
+
+<SelectPlayground />
+
+<h2 id="usage">Usage</h2>
+
+Connect the control to a visible label. Provide `<option>` elements as children and give each option a stable value. Use a disabled prompt option when the user must make an explicit choice.
+
+<h2 id="props">Props</h2>
+
+`size` accepts `sm`, `md`, or `lg`. `invalid` styles the control as invalid and sets `aria-invalid="true"`. All other native select attributes are forwarded, including `value`, `defaultValue`, `required`, `disabled`, and `name`.
+
+<h2 id="accessibility">Accessibility</h2>
+
+- Keep the label visible and associated with the select's `id`.
+- Do not remove the browser's keyboard selection behavior.
+- Connect helper or error text with `aria-describedby`.
+- Use a different control when the option list is long enough that native selection becomes difficult.

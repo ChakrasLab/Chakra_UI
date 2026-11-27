@@ -30,6 +30,8 @@ export default function InteractivePixels({
     if (!stage || !canvas || !ctx) return;
 
     const image = new Image();
+    image.decoding = "async";
+    image.fetchPriority = "low";
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const patchCanvas = document.createElement("canvas");
     const patchCtx = patchCanvas.getContext("2d", { willReadFrequently: true });
@@ -240,7 +242,7 @@ export default function InteractivePixels({
     }
 
     const onPointerMove = (event: PointerEvent) => {
-      if (reducedMotion.matches || !image.complete) return;
+      if (event.pointerType === "touch" || reducedMotion.matches || !image.complete) return;
       const rect = canvas.getBoundingClientRect();
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;

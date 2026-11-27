@@ -1,4 +1,4 @@
-:root {
+:where(:root) {
   --chakra-color-surface-canvas: var(--chakra-white);
   --chakra-color-surface-subtle: var(--chakra-blue-50);
   --chakra-color-surface-control: var(--chakra-white);
@@ -24,5 +24,8 @@
   --chakra-color-success: #159447;
   --chakra-color-success-subtle: #f0fbf3;
   --chakra-color-success-border: #d0edda;
+  --chakra-color-error: #b42318;
+  --chakra-color-error-subtle: #fff4f2;
+  --chakra-color-error-border: #f4c7c3;
   --chakra-shadow-surface: var(--chakra-shadow-panel);
 }

@@ -1,3 +1,66 @@
+import CodeBlock from "../../components/code-block/CodeBlock";
+
+export const semanticColorExample = `@import "@chakra/tokens/index.css";
+
+.card {
+  color: var(--chakra-color-text-primary);
+  background: var(--chakra-color-surface-canvas);
+  border: 1px solid var(--chakra-color-border-subtle);
+}`;
+
 # Colors
 
-Color palettes and semantic color definitions for light and dark themes.
+Color tokens have two jobs: primitive values form the palette, and semantic tokens describe how the interface uses color. Components should use semantic roles so themes can change without changing component styles.
+
+<h2 id="color-layers">Color layers</h2>
+
+The current primitive palette contains a blue scale, white, saffron, and a brand blue. Semantic tokens cover surfaces, text, borders, focus, brand, accent, and status roles. The palette is intentionally smaller than a utility-class color catalog; use semantic names for everyday component styling.
+
+<div className="foundation-swatches" role="group" aria-label="Core semantic color examples">
+  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--chakra-color-surface-canvas)" }} /><code>--chakra-color-surface-canvas</code></div>
+  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--chakra-color-text-primary)" }} /><code>--chakra-color-text-primary</code></div>
+  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--chakra-color-brand)" }} /><code>--chakra-color-brand</code></div>
+  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--chakra-color-accent)" }} /><code>--chakra-color-accent</code></div>
+</div>
+
+<h2 id="semantic-roles">Semantic roles</h2>
+
+Choose a semantic role by what it means in the interface, not only by how its color looks. For example, use `--chakra-color-text-primary` for primary text and `--chakra-color-surface-canvas` for a page surface.
+
+<CodeBlock code={semanticColorExample} />
+
+<h2 id="theme-colors">Theme colors</h2>
+
+The system color scheme is the default. The dark theme remaps semantic variables while keeping their names stable. Set `data-theme="light"` or `data-theme="dark"` on a root element or subtree to select a theme explicitly.
+
+<CodeBlock code={`<section
+  data-theme="dark"
+  style={{
+    color: "var(--chakra-color-text-primary)",
+    background: "var(--chakra-color-surface-canvas)",
+  }}
+>
+  The semantic colors update with the theme.
+</section>`} />
+
+The swatches below follow the active theme. Primitive values stay the same in both themes; semantic values can change.
+
+<div className="foundation-table-wrap">
+  <table className="foundation-table">
+    <caption className="visually-hidden">Primitive and semantic color token values in light and dark themes</caption>
+    <thead><tr><th scope="col">Token</th><th scope="col">Light</th><th scope="col">Dark</th><th scope="col">Preview</th></tr></thead>
+    <tbody>
+      <tr><th scope="row"><code>--chakra-blue-900</code></th><td><code>#0b285b</code></td><td><code>#0b285b</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--chakra-blue-900)" }} /></td></tr>
+      <tr><th scope="row"><code>--chakra-color-text-primary</code></th><td><code>#0b285b</code></td><td><code>#e5edf8</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--chakra-color-text-primary)" }} /></td></tr>
+      <tr><th scope="row"><code>--chakra-color-brand</code></th><td><code>#062fa8</code></td><td><code>#557ddd</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--chakra-color-brand)" }} /></td></tr>
+      <tr><th scope="row"><code>--chakra-color-accent</code></th><td><code>#ff7416</code></td><td><code>#ffad70</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--chakra-color-accent)" }} /></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 id="color-guidance">Usage guidance</h2>
+
+- Use semantic color variables in component styles.
+- Keep primitive palette values in theme definitions and token packages.
+- Pair color with text, shape, or another cue when it communicates status.
+- Check text and control contrast against the actual surface in each theme.

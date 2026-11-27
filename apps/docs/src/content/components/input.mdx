@@ -1,3 +1,44 @@
+import { InputPlayground } from "../../components/component-playground/ComponentPlayground";
+import CodeBlock from "../../components/code-block/CodeBlock";
+
+export const inputErrorExample = `import { Input } from "@chakra/react";
+
+<label htmlFor="email">Email address</label>
+<Input
+  id="email"
+  name="email"
+  type="email"
+  invalid
+  aria-describedby="email-error"
+/>
+<p id="email-error">Enter a valid email address.</p>`;
+
 # Input
 
-Text input component for user entry and form handling.
+Input is a styled native text control. It forwards standard HTML input attributes and uses the shared semantic tokens for its surface, border, focus, and error state.
+
+<h2 id="playground">Playground</h2>
+
+Change the input type and native required or disabled state. The copyable example updates to match.
+
+<InputPlayground />
+
+<h2 id="label-and-description">Labels and descriptions</h2>
+
+Input does not render a label for you. Connect a visible `<label>` to the input with matching `htmlFor` and `id` values. Use `aria-describedby` to connect helper or error text.
+
+<h2 id="validation">Validation</h2>
+
+Set the `invalid` prop to expose `aria-invalid="true"` and style the error border. The prop does not create or announce an error message; render clear text and connect it with `aria-describedby`.
+
+<CodeBlock code={inputErrorExample} />
+
+<h2 id="input-props">Props</h2>
+
+`size` accepts `sm`, `md`, or `lg`. `invalid` controls error styling and the invalid state. All other standard `input` attributes are forwarded, including `type`, `name`, `value`, `defaultValue`, `required`, `disabled`, and `autoComplete`.
+
+<h2 id="input-guidance">Guidance</h2>
+
+- Keep labels visible; placeholders are hints, not labels.
+- Prefer native input types such as `email`, `search`, and `number` when they match the data.
+- Explain validation errors in text and preserve the value when validation fails.

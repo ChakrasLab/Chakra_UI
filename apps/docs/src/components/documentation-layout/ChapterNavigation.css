@@ -31,11 +31,20 @@
   align-items: center;
   gap: var(--chakra-space-2);
   min-width: 0;
+  border: 0;
+  background: transparent;
   color: var(--chakra-color-brand);
+  cursor: pointer;
   font-size: var(--chakra-font-size-md);
   font-weight: 650;
+  font-family: inherit;
   overflow-wrap: anywhere;
+  text-align: start;
 }
+
+.chakra-chapter-navigation__title:hover { text-decoration: underline; text-underline-offset: 3px; }
+.chakra-chapter-navigation__title:focus-visible { outline: 2px solid var(--chakra-color-focus); outline-offset: 2px; }
+.chakra-chapter-navigation__fallback { color: var(--chakra-color-text-muted); font-size: var(--chakra-font-size-sm); }
 
 .chakra-chapter-navigation__title svg {
   width: 17px;
@@ -52,7 +61,7 @@
   object-position: center bottom;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 47.5em) {
   .chakra-chapter-navigation { padding-top: 16px; }
   .chakra-chapter-navigation__content { min-height: 48px; }
   .chakra-chapter-navigation__title { font-size: var(--chakra-font-size-sm); }
