@@ -1,10 +1,10 @@
 .docs-code-block {
   position: relative;
   overflow: hidden;
-  border: 1px solid var(--chakra-color-border-subtle);
-  border-radius: var(--chakra-radius-control);
-  background: linear-gradient(110deg, var(--chakra-color-surface-subtle), var(--chakra-color-surface-canvas));
-  color: var(--chakra-color-text-primary);
+  border: 1px solid var(--hobiui-color-border-subtle);
+  border-radius: var(--hobiui-radius-control);
+  background: linear-gradient(110deg, var(--hobiui-color-surface-subtle), var(--hobiui-color-surface-canvas));
+  color: var(--hobiui-color-text-primary);
 }
 
 .docs-code-block pre {
@@ -16,7 +16,7 @@
   line-height: 1.65;
   tab-size: 2;
 }
-.docs-code-block pre:focus-visible { outline: 2px solid var(--chakra-color-focus); outline-offset: -2px; }
+.docs-code-block pre:focus-visible { outline: 2px solid var(--hobiui-color-focus); outline-offset: -2px; }
 
 .docs-code-block__copy {
   position: absolute;
@@ -33,14 +33,14 @@
   top: 12px;
   right: 48px;
   padding: 4px 8px;
-  border-radius: var(--chakra-radius-sm);
-  background: var(--chakra-color-surface-canvas);
-  color: var(--chakra-color-text-secondary);
-  font-size: var(--chakra-font-size-xs);
+  border-radius: var(--hobiui-radius-sm);
+  background: var(--hobiui-color-surface-canvas);
+  color: var(--hobiui-color-text-secondary);
+  font-size: var(--hobiui-font-size-xs);
   opacity: 1;
 }
 .docs-code-block__status:empty { opacity: 0; }
-.docs-code-block[data-copy-state="failed"] .docs-code-block__status { color: var(--chakra-color-error); }
+.docs-code-block[data-copy-state="failed"] .docs-code-block__status { color: var(--hobiui-color-error); }
 
 @media (pointer: coarse) {
   .docs-code-block__copy { min-width: 44px; min-height: 44px; }

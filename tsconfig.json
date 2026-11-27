@@ -16,9 +16,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@chakra/icons": ["./packages/icons/src/index.ts"],
-      "@chakra/react": ["./packages/react/src/index.ts"],
-      "@chakra/tokens": ["./packages/tokens/src/index.css"]
+      "@hobiui/icons": ["./packages/icons/src/index.ts"],
+      "@hobiui/react": ["./packages/react/src/index.ts"],
+      "@hobiui/tokens": ["./packages/tokens/src/index.css"]
     },
     "types": ["vite/client"]
   },

@@ -22,7 +22,7 @@ export function DocumentationOutline({
   const [currentSection, setCurrentSection] = useState("");
 
   useEffect(() => {
-    const article = document.querySelector(".chakra-docs-page");
+    const article = document.querySelector(".hobiui-docs-page");
     const headingElements = Array.from(article?.querySelectorAll<HTMLHeadingElement>("h2[id]") ?? []);
     const nextHeadings = headingElements.map((heading) => ({
       id: heading.id,
@@ -31,7 +31,7 @@ export function DocumentationOutline({
     setHeadings(nextHeadings);
     setCurrentSection(nextHeadings[0]?.id ?? "");
 
-    const workspace = document.querySelector(".chakra-workspace");
+    const workspace = document.querySelector(".hobiui-workspace");
     if (!workspace || headingElements.length === 0) return;
 
     const observer = new IntersectionObserver((entries) => {
@@ -69,7 +69,7 @@ export default function DocumentationContent({ pageId }: { pageId: string }) {
   if (!Document) return null;
 
   return (
-    <article className={`chakra-docs-page chakra-docs-page--${pageId}`} key={pageId}>
+    <article className={`hobiui-docs-page hobiui-docs-page--${pageId}`} key={pageId}>
       <Document />
     </article>
   );

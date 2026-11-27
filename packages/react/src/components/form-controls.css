@@ -1,102 +1,102 @@
-.chakra-input,
-.chakra-select {
+.hobiui-input,
+.hobiui-select {
   display: block;
   width: 100%;
   min-width: 0;
-  border: 1px solid var(--chakra-color-border-control);
-  border-radius: var(--chakra-radius-control);
-  background: var(--chakra-color-surface-control);
-  color: var(--chakra-color-text-primary);
+  border: 1px solid var(--hobiui-color-border-control);
+  border-radius: var(--hobiui-radius-control);
+  background: var(--hobiui-color-surface-control);
+  color: var(--hobiui-color-text-primary);
   font: inherit;
-  transition: border-color var(--chakra-motion-fast), box-shadow var(--chakra-motion-fast);
+  transition: border-color var(--hobiui-motion-fast), box-shadow var(--hobiui-motion-fast);
 }
 
-.chakra-input::placeholder { color: var(--chakra-color-text-muted); opacity: 1; }
-.chakra-input--sm,
-.chakra-select--sm { min-height: 32px; padding-inline: var(--chakra-space-2); font-size: var(--chakra-font-size-sm); }
-.chakra-input--md,
-.chakra-select--md { min-height: 40px; padding-inline: var(--chakra-space-3); font-size: var(--chakra-font-size-md); }
-.chakra-input--lg,
-.chakra-select--lg { min-height: 48px; padding-inline: var(--chakra-space-4); font-size: var(--chakra-font-size-md); }
+.hobiui-input::placeholder { color: var(--hobiui-color-text-muted); opacity: 1; }
+.hobiui-input--sm,
+.hobiui-select--sm { min-height: 32px; padding-inline: var(--hobiui-space-2); font-size: var(--hobiui-font-size-sm); }
+.hobiui-input--md,
+.hobiui-select--md { min-height: 40px; padding-inline: var(--hobiui-space-3); font-size: var(--hobiui-font-size-md); }
+.hobiui-input--lg,
+.hobiui-select--lg { min-height: 48px; padding-inline: var(--hobiui-space-4); font-size: var(--hobiui-font-size-md); }
 
-.chakra-input:focus,
-.chakra-select:focus { border-color: var(--chakra-color-focus); outline: 0; box-shadow: 0 0 0 3px color-mix(in srgb, var(--chakra-color-focus) 22%, transparent); }
-.chakra-input:focus-visible,
-.chakra-select:focus-visible { outline: 2px solid var(--chakra-color-focus); outline-offset: 2px; }
-.chakra-input[aria-invalid="true"],
-.chakra-select[aria-invalid="true"] { border-color: var(--chakra-color-error); }
-.chakra-input:disabled,
-.chakra-select:disabled { cursor: not-allowed; opacity: .6; }
-.chakra-select { padding-inline-end: 34px; }
+.hobiui-input:focus,
+.hobiui-select:focus { border-color: var(--hobiui-color-focus); outline: 0; box-shadow: 0 0 0 3px color-mix(in srgb, var(--hobiui-color-focus) 22%, transparent); }
+.hobiui-input:focus-visible,
+.hobiui-select:focus-visible { outline: 2px solid var(--hobiui-color-focus); outline-offset: 2px; }
+.hobiui-input[aria-invalid="true"],
+.hobiui-select[aria-invalid="true"] { border-color: var(--hobiui-color-error); }
+.hobiui-input:disabled,
+.hobiui-select:disabled { cursor: not-allowed; opacity: .6; }
+.hobiui-select { padding-inline-end: 34px; }
 
-.chakra-choice {
+.hobiui-choice {
   display: inline-flex;
   align-items: flex-start;
   gap: 10px;
   min-width: 0;
-  color: var(--chakra-color-text-primary);
+  color: var(--hobiui-color-text-primary);
   cursor: pointer;
 }
 
-.chakra-choice__input {
+.hobiui-choice__input {
   flex: 0 0 auto;
   width: 18px;
   height: 18px;
   margin: 2px 0 0;
-  accent-color: var(--chakra-color-brand);
+  accent-color: var(--hobiui-color-brand);
 }
 
-.chakra-choice__input:focus-visible { outline: 2px solid var(--chakra-color-focus); outline-offset: 2px; }
-.chakra-choice__input:disabled { cursor: not-allowed; }
-.chakra-choice__content { display: grid; gap: 2px; min-width: 0; }
-.chakra-choice__label { color: var(--chakra-color-text-primary); font-size: var(--chakra-font-size-md); line-height: 1.4; }
-.chakra-choice__description { color: var(--chakra-color-text-muted); font-size: var(--chakra-font-size-sm); line-height: 1.4; }
-.chakra-choice[data-disabled="true"] { cursor: not-allowed; opacity: .62; }
-.chakra-choice[data-invalid="true"] .chakra-choice__label { color: var(--chakra-color-error); }
+.hobiui-choice__input:focus-visible { outline: 2px solid var(--hobiui-color-focus); outline-offset: 2px; }
+.hobiui-choice__input:disabled { cursor: not-allowed; }
+.hobiui-choice__content { display: grid; gap: 2px; min-width: 0; }
+.hobiui-choice__label { color: var(--hobiui-color-text-primary); font-size: var(--hobiui-font-size-md); line-height: 1.4; }
+.hobiui-choice__description { color: var(--hobiui-color-text-muted); font-size: var(--hobiui-font-size-sm); line-height: 1.4; }
+.hobiui-choice[data-disabled="true"] { cursor: not-allowed; opacity: .62; }
+.hobiui-choice[data-invalid="true"] .hobiui-choice__label { color: var(--hobiui-color-error); }
 
-.chakra-switch {
+.hobiui-switch {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--chakra-color-text-primary);
+  color: var(--hobiui-color-text-primary);
   cursor: pointer;
 }
 
-.chakra-switch__input {
+.hobiui-switch__input {
   appearance: none;
   position: relative;
   flex: 0 0 auto;
   width: 38px;
   height: 22px;
   margin: 0;
-  border: 1px solid var(--chakra-color-border-control);
-  border-radius: var(--chakra-radius-pill);
-  background: var(--chakra-color-surface-subtle);
+  border: 1px solid var(--hobiui-color-border-control);
+  border-radius: var(--hobiui-radius-pill);
+  background: var(--hobiui-color-surface-subtle);
   cursor: inherit;
-  transition: background-color var(--chakra-motion-fast), border-color var(--chakra-motion-fast);
+  transition: background-color var(--hobiui-motion-fast), border-color var(--hobiui-motion-fast);
 }
 
-.chakra-switch__input::before {
+.hobiui-switch__input::before {
   position: absolute;
   inset-block-start: 2px;
   inset-inline-start: 2px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--chakra-color-text-muted);
+  background: var(--hobiui-color-text-muted);
   content: "";
-  transition: transform var(--chakra-motion-fast), background-color var(--chakra-motion-fast);
+  transition: transform var(--hobiui-motion-fast), background-color var(--hobiui-motion-fast);
 }
 
-.chakra-switch__input:checked { border-color: var(--chakra-color-brand); background: var(--chakra-color-brand); }
-.chakra-switch__input:checked::before { transform: translateX(16px); background: var(--chakra-color-on-brand); }
-.chakra-switch__input:focus-visible { outline: 2px solid var(--chakra-color-focus); outline-offset: 3px; }
-.chakra-switch[data-disabled="true"] { cursor: not-allowed; opacity: .62; }
-[dir="rtl"] .chakra-switch__input:checked::before { transform: translateX(-16px); }
+.hobiui-switch__input:checked { border-color: var(--hobiui-color-brand); background: var(--hobiui-color-brand); }
+.hobiui-switch__input:checked::before { transform: translateX(16px); background: var(--hobiui-color-on-brand); }
+.hobiui-switch__input:focus-visible { outline: 2px solid var(--hobiui-color-focus); outline-offset: 3px; }
+.hobiui-switch[data-disabled="true"] { cursor: not-allowed; opacity: .62; }
+[dir="rtl"] .hobiui-switch__input:checked::before { transform: translateX(-16px); }
 
 @media (prefers-reduced-motion: reduce) {
-  .chakra-input,
-  .chakra-select,
-  .chakra-switch__input,
-  .chakra-switch__input::before { transition: none; }
+  .hobiui-input,
+  .hobiui-select,
+  .hobiui-switch__input,
+  .hobiui-switch__input::before { transition: none; }
 }

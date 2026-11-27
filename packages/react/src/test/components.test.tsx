@@ -21,7 +21,7 @@ describe("Button", () => {
     const button = screen.getByRole("button", { name: "Save" });
     expect(button).toHaveAttribute("type", "button");
     expect(button).toHaveAttribute("data-active", "true");
-    expect(button).toHaveClass("chakra-button--outline");
+    expect(button).toHaveClass("hobiui-button--outline");
 
     await user.click(button);
     expect(onClick).toHaveBeenCalledTimes(1);

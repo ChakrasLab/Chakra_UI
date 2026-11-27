@@ -14,17 +14,17 @@ export function Switch({ label, description, className = "", ...props }: SwitchP
     .join(" ") || undefined;
 
   return (
-    <label className={`chakra-switch ${className}`.trim()} data-disabled={props.disabled || undefined}>
+    <label className={`hobiui-switch ${className}`.trim()} data-disabled={props.disabled || undefined}>
       <input
         {...props}
-        className="chakra-switch__input"
+        className="hobiui-switch__input"
         type="checkbox"
         role="switch"
         aria-describedby={describedBy}
       />
-      <span className="chakra-choice__content">
-        <span className="chakra-choice__label">{label}</span>
-        {description && <span className="chakra-choice__description" id={descriptionId}>{description}</span>}
+      <span className="hobiui-choice__content">
+        <span className="hobiui-choice__label">{label}</span>
+        {description && <span className="hobiui-choice__description" id={descriptionId}>{description}</span>}
       </span>
     </label>
   );

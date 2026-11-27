@@ -60,8 +60,8 @@ export function DataTable<Row>({
   };
 
   return (
-    <div className={`chakra-data-table-wrap ${className}`.trim()}>
-      <table className="chakra-data-table">
+    <div className={`hobiui-data-table-wrap ${className}`.trim()}>
+      <table className="hobiui-data-table">
         <caption>{caption}</caption>
         <thead>
           <tr>
@@ -70,7 +70,7 @@ export function DataTable<Row>({
               return (
                 <th key={column.id} scope="col" aria-sort={direction}>
                   {column.sortValue ? (
-                    <button className="chakra-data-table__sort" type="button" onClick={() => toggleSort(column.id)}>
+                    <button className="hobiui-data-table__sort" type="button" onClick={() => toggleSort(column.id)}>
                       {column.header}
                       <span aria-hidden="true">{direction === "ascending" ? " ↑" : direction === "descending" ? " ↓" : " ↕"}</span>
                     </button>
@@ -82,7 +82,7 @@ export function DataTable<Row>({
         </thead>
         <tbody>
           {sortedRows.length === 0 ? (
-            <tr><td className="chakra-data-table__empty" colSpan={Math.max(columns.length, 1)}>{emptyMessage}</td></tr>
+            <tr><td className="hobiui-data-table__empty" colSpan={Math.max(columns.length, 1)}>{emptyMessage}</td></tr>
           ) : sortedRows.map(({ row, index }) => (
             <tr key={getRowId ? getRowId(row, index) : index}>
               {columns.map((column) => {

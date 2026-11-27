@@ -44,7 +44,7 @@ export function Dialog({
     <dialog
       {...props}
       ref={dialogRef}
-      className={`chakra-dialog ${className}`.trim()}
+      className={`hobiui-dialog ${className}`.trim()}
       aria-labelledby={titleId}
       aria-describedby={description ? descriptionId : undefined}
       onCancel={(event) => {
@@ -60,13 +60,13 @@ export function Dialog({
         }
       }}
     >
-      <header className="chakra-dialog__header">
-        <div className="chakra-dialog__heading">
+      <header className="hobiui-dialog__header">
+        <div className="hobiui-dialog__heading">
           <h2 id={titleId}>{title}</h2>
           {description && <p id={descriptionId}>{description}</p>}
         </div>
         <Button
-          className="chakra-dialog__close"
+          className="hobiui-dialog__close"
           variant="ghost"
           type="button"
           aria-label={closeLabel}
@@ -75,8 +75,8 @@ export function Dialog({
           <span aria-hidden="true">×</span>
         </Button>
       </header>
-      <div className="chakra-dialog__body">{children}</div>
-      {footer && <footer className="chakra-dialog__footer">{footer}</footer>}
+      <div className="hobiui-dialog__body">{children}</div>
+      {footer && <footer className="hobiui-dialog__footer">{footer}</footer>}
     </dialog>
   );
 }

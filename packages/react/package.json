@@ -1,10 +1,10 @@
 {
-  "name": "@chakra/react",
+  "name": "@hobiui/react",
   "version": "0.1.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChakrasLab/Chakra_UI.git"
+    "url": "https://github.com/HobiqoraLabs/hobiui.git"
   },
   "files": ["dist"],
   "sideEffects": ["**/*.css"],

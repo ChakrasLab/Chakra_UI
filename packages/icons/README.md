@@ -1,15 +1,15 @@
-# Chakra Icons
+# Hobi UI Icons
 
-Shared, monochrome SVG icons for the Chakra UI workspace. All icons inherit `currentColor` and use the same 24 × 24 viewBox, 2-unit rounded stroke, accessible defaults, and `size` prop.
+Shared, monochrome SVG icons for the Hobi UI workspace. All icons inherit `currentColor` and use the same 24 × 24 viewBox, 2-unit rounded stroke, accessible defaults, and `size` prop.
 
 ## Package status
 
-This package is prepared for public npm publishing but has not been released yet. After release, install it with `npm i @chakra/icons`.
+This package is prepared for public npm publishing but has not been released yet. After release, install it with `npm i @hobiui/icons`.
 
 ## Use an icon
 
 ```tsx
-import { SearchIcon } from "@chakra/icons";
+import { SearchIcon } from "@hobiui/icons";
 
 function SearchButton() {
   return (

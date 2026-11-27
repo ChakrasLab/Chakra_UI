@@ -13,7 +13,7 @@ import {
   type ButtonSize,
   type ButtonVariant,
   type DataTableColumn,
-} from "@chakra/react";
+} from "@hobiui/react";
 import CodeBlock from "../code-block/CodeBlock";
 import "./ComponentPlayground.css";
 
@@ -112,7 +112,7 @@ export function ButtonPlayground() {
   const [size, setSize] = useState<ButtonSize>("md");
   const [active, setActive] = useState(false);
   const [disabled, setDisabled] = useState(false);
-  const code = `import { Button } from "@chakra/react";\n\n<Button variant="${variant}" size="${size}"${active ? " active" : ""}${disabled ? " disabled" : ""}>\n  Continue\n</Button>`;
+  const code = `import { Button } from "@hobiui/react";\n\n<Button variant="${variant}" size="${size}"${active ? " active" : ""}${disabled ? " disabled" : ""}>\n  Continue\n</Button>`;
 
   return (
     <ComponentPlayground
@@ -141,7 +141,7 @@ export function InputPlayground() {
   const [disabled, setDisabled] = useState(false);
   const label = type === "email" ? "Email address" : type === "search" ? "Search" : "Your name";
   const autoComplete = type === "email" ? "email" : type === "search" ? "off" : "name";
-  const code = `import { Input } from "@chakra/react";\n\n<label htmlFor="playground-input">${label}</label>\n<Input\n  id="playground-input"\n  name="${type === "email" ? "email" : type === "search" ? "search" : "name"}"\n  type="${type}"\n  autoComplete="${autoComplete}"${required ? "\n  required" : ""}${disabled ? "\n  disabled" : ""}\n/>`;
+  const code = `import { Input } from "@hobiui/react";\n\n<label htmlFor="playground-input">${label}</label>\n<Input\n  id="playground-input"\n  name="${type === "email" ? "email" : type === "search" ? "search" : "name"}"\n  type="${type}"\n  autoComplete="${autoComplete}"${required ? "\n  required" : ""}${disabled ? "\n  disabled" : ""}\n/>`;
 
   return (
     <ComponentPlayground
@@ -177,12 +177,12 @@ export function InputPlayground() {
 export function DialogPlayground() {
   const [open, setOpen] = useState(false);
   const [showDescription, setShowDescription] = useState(true);
-  const code = `import { useState } from "react";\nimport { Button, Dialog } from "@chakra/react";\n\nfunction DialogExample() {\n  const [open, setOpen] = useState(false);\n\n  return (\n    <>\n      <Button onClick={() => setOpen(true)}>Open dialog</Button>\n      <Dialog\n        open={open}\n        onOpenChange={setOpen}\n        title="Review changes"${showDescription ? '\n        description="Check the details before continuing."' : ""}\n        footer={<Button variant="outline" onClick={() => setOpen(false)}>Close</Button>}\n      >\n        Changes to your settings will be applied after you save.\n      </Dialog>\n    </>\n  );\n}`;
+  const code = `import { useState } from "react";\nimport { Button, Dialog } from "@hobiui/react";\n\nfunction DialogExample() {\n  const [open, setOpen] = useState(false);\n\n  return (\n    <>\n      <Button onClick={() => setOpen(true)}>Open dialog</Button>\n      <Dialog\n        open={open}\n        onOpenChange={setOpen}\n        title="Review changes"${showDescription ? '\n        description="Check the details before continuing."' : ""}\n        footer={<Button variant="outline" onClick={() => setOpen(false)}>Close</Button>}\n      >\n        Changes to your settings will be applied after you save.\n      </Dialog>\n    </>\n  );\n}`;
 
   return (
     <ComponentPlayground
       title="Native dialog pattern"
-      description="Try the controlled Chakra Dialog and toggle its description."
+      description="Try the controlled Hobi UI dialog and toggle its description."
       code={code}
       controls={<ToggleControl label="Show description" checked={showDescription} onChange={setShowDescription} />}
     >
@@ -203,7 +203,7 @@ export function DialogPlayground() {
 export function SelectPlayground() {
   const [value, setValue] = useState("docs");
   const [disabled, setDisabled] = useState(false);
-  const code = `import { Select } from "@chakra/react";\n\n<label htmlFor="team-select">Team</label>\n<Select id="team-select" defaultValue="${value}"${disabled ? " disabled" : ""}>\n  <option value="docs">Documentation</option>\n  <option value="design">Design systems</option>\n  <option value="platform">Platform</option>\n</Select>`;
+  const code = `import { Select } from "@hobiui/react";\n\n<label htmlFor="team-select">Team</label>\n<Select id="team-select" defaultValue="${value}"${disabled ? " disabled" : ""}>\n  <option value="docs">Documentation</option>\n  <option value="design">Design systems</option>\n  <option value="platform">Platform</option>\n</Select>`;
 
   return (
     <ComponentPlayground
@@ -227,7 +227,7 @@ export function SelectPlayground() {
 export function CheckboxPlayground() {
   const [checked, setChecked] = useState(true);
   const [disabled, setDisabled] = useState(false);
-  const code = `import { Checkbox } from "@chakra/react";\n\n<Checkbox\n  label="Send me product updates"\n  description="You can change this preference later."\n  defaultChecked={${checked}}${disabled ? "\n  disabled" : ""}\n/>`;
+  const code = `import { Checkbox } from "@hobiui/react";\n\n<Checkbox\n  label="Send me product updates"\n  description="You can change this preference later."\n  defaultChecked={${checked}}${disabled ? "\n  disabled" : ""}\n/>`;
 
   return (
     <ComponentPlayground
@@ -249,7 +249,7 @@ export function CheckboxPlayground() {
 
 export function RadioPlayground() {
   const [plan, setPlan] = useState("standard");
-  const code = `import { Radio } from "@chakra/react";\n\n<fieldset>\n  <legend>Plan</legend>\n  <Radio name="plan" value="standard" label="Standard" defaultChecked={${plan === "standard"}} />\n  <Radio name="plan" value="team" label="Team" defaultChecked={${plan === "team"}} />\n</fieldset>`;
+  const code = `import { Radio } from "@hobiui/react";\n\n<fieldset>\n  <legend>Plan</legend>\n  <Radio name="plan" value="standard" label="Standard" defaultChecked={${plan === "standard"}} />\n  <Radio name="plan" value="team" label="Team" defaultChecked={${plan === "team"}} />\n</fieldset>`;
 
   return (
     <ComponentPlayground
@@ -269,7 +269,7 @@ export function RadioPlayground() {
 
 export function SwitchPlayground() {
   const [enabled, setEnabled] = useState(true);
-  const code = `import { Switch } from "@chakra/react";\n\n<Switch\n  label="Email notifications"\n  description="Receive important account updates."\n  defaultChecked={${enabled}}\n/>`;
+  const code = `import { Switch } from "@hobiui/react";\n\n<Switch\n  label="Email notifications"\n  description="Receive important account updates."\n  defaultChecked={${enabled}}\n/>`;
 
   return (
     <ComponentPlayground
@@ -290,7 +290,7 @@ export function SwitchPlayground() {
 
 export function TabsPlayground() {
   const [orientation, setOrientation] = useState("horizontal");
-  const code = `import { Tabs } from "@chakra/react";\n\n<Tabs\n  aria-label="Workspace settings"\n  orientation="${orientation}"\n  items={[\n    { value: "profile", label: "Profile", content: "Manage your profile." },\n    { value: "security", label: "Security", content: "Review sign-in settings." },\n    { value: "billing", label: "Billing", content: "Manage your plan." },\n  ]}\n/>`;
+  const code = `import { Tabs } from "@hobiui/react";\n\n<Tabs\n  aria-label="Workspace settings"\n  orientation="${orientation}"\n  items={[\n    { value: "profile", label: "Profile", content: "Manage your profile." },\n    { value: "security", label: "Security", content: "Review sign-in settings." },\n    { value: "billing", label: "Billing", content: "Manage your plan." },\n  ]}\n/>`;
 
   return (
     <ComponentPlayground
@@ -314,7 +314,7 @@ export function TabsPlayground() {
 
 export function TooltipPlayground() {
   const [content, setContent] = useState("Opens workspace settings");
-  const code = `import { Button, Tooltip } from "@chakra/react";\n\n<Tooltip content="${content.replaceAll('"', '\\"')}">\n  <Button variant="outline">Settings</Button>\n</Tooltip>`;
+  const code = `import { Button, Tooltip } from "@hobiui/react";\n\n<Tooltip content="${content.replaceAll('"', '\\"')}">\n  <Button variant="outline">Settings</Button>\n</Tooltip>`;
 
   return (
     <ComponentPlayground
@@ -351,7 +351,7 @@ const projectColumns: DataTableColumn<DemoProject>[] = [
 
 export function DataTablePlayground() {
   const [rowCount, setRowCount] = useState("4");
-  const code = `import { DataTable, type DataTableColumn } from "@chakra/react";\n\ntype Project = { name: string; owner: string; status: string };\nconst projects: Project[] = [\n  { name: "Docs refresh", owner: "Maya", status: "In review" },\n  { name: "Token package", owner: "Arjun", status: "In progress" },\n  { name: "Icon catalog", owner: "Sam", status: "Ready" },\n  { name: "Component guides", owner: "Riya", status: "In progress" },\n];\n\nconst columns: DataTableColumn<Project>[] = [\n  { id: "name", header: "Project", rowHeader: true, cell: (row) => row.name, sortValue: (row) => row.name },\n  { id: "owner", header: "Owner", cell: (row) => row.owner, sortValue: (row) => row.owner },\n  { id: "status", header: "Status", cell: (row) => row.status, sortValue: (row) => row.status },\n];\n\n<DataTable caption="Projects" data={projects.slice(0, ${rowCount})} getRowId={(row) => row.name} columns={columns} />`;
+  const code = `import { DataTable, type DataTableColumn } from "@hobiui/react";\n\ntype Project = { name: string; owner: string; status: string };\nconst projects: Project[] = [\n  { name: "Docs refresh", owner: "Maya", status: "In review" },\n  { name: "Token package", owner: "Arjun", status: "In progress" },\n  { name: "Icon catalog", owner: "Sam", status: "Ready" },\n  { name: "Component guides", owner: "Riya", status: "In progress" },\n];\n\nconst columns: DataTableColumn<Project>[] = [\n  { id: "name", header: "Project", rowHeader: true, cell: (row) => row.name, sortValue: (row) => row.name },\n  { id: "owner", header: "Owner", cell: (row) => row.owner, sortValue: (row) => row.owner },\n  { id: "status", header: "Status", cell: (row) => row.status, sortValue: (row) => row.status },\n];\n\n<DataTable caption="Projects" data={projects.slice(0, ${rowCount})} getRowId={(row) => row.name} columns={columns} />`;
 
   return (
     <ComponentPlayground

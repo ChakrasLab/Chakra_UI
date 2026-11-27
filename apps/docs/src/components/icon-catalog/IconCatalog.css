@@ -1,33 +1,33 @@
-.chakra-icon-catalog { margin-top: 18px; }
+.hobiui-icon-catalog { margin-top: 18px; }
 
-.chakra-icon-catalog__search {
+.hobiui-icon-catalog__search {
   display: grid;
   grid-template-columns: 18px minmax(0, 1fr) auto;
   align-items: center;
   gap: 10px;
   min-height: 42px;
   padding: 0 12px;
-  border: 1px solid var(--chakra-color-border-control);
-  border-radius: var(--chakra-radius-control);
-  background: var(--chakra-color-surface-control);
-  color: var(--chakra-color-text-muted);
+  border: 1px solid var(--hobiui-color-border-control);
+  border-radius: var(--hobiui-radius-control);
+  background: var(--hobiui-color-surface-control);
+  color: var(--hobiui-color-text-muted);
 }
 
-.chakra-icon-catalog__search:focus-within {
-  border-color: var(--chakra-color-focus);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--chakra-color-focus) 28%, transparent);
+.hobiui-icon-catalog__search:focus-within {
+  border-color: var(--hobiui-color-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--hobiui-color-focus) 28%, transparent);
 }
 
-.chakra-icon-catalog__search > svg { width: 17px; height: 17px; }
-.chakra-icon-catalog__search input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--chakra-color-text-primary); font: inherit; font-size: .875rem; }
-.chakra-icon-catalog__search input::placeholder { color: var(--chakra-color-text-muted); opacity: 1; }
-.chakra-icon-catalog__search > span { color: var(--chakra-color-text-muted); font-size: .75rem; white-space: nowrap; }
+.hobiui-icon-catalog__search > svg { width: 17px; height: 17px; }
+.hobiui-icon-catalog__search input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--hobiui-color-text-primary); font: inherit; font-size: .875rem; }
+.hobiui-icon-catalog__search input::placeholder { color: var(--hobiui-color-text-muted); opacity: 1; }
+.hobiui-icon-catalog__search > span { color: var(--hobiui-color-text-muted); font-size: .75rem; white-space: nowrap; }
 
-.chakra-icon-catalog__group { margin-top: 24px; }
-.chakra-icon-catalog__group h3 { margin: 0 0 10px; color: var(--chakra-color-text-secondary); font-size: .8125rem; font-weight: 700; letter-spacing: .04em; }
-.chakra-icon-catalog__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.hobiui-icon-catalog__group { margin-top: 24px; }
+.hobiui-icon-catalog__group h3 { margin: 0 0 10px; color: var(--hobiui-color-text-secondary); font-size: .8125rem; font-weight: 700; letter-spacing: .04em; }
+.hobiui-icon-catalog__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
 
-.chakra-icon-catalog__item {
+.hobiui-icon-catalog__item {
   position: relative;
   display: grid;
   justify-items: center;
@@ -36,32 +36,32 @@
   min-width: 0;
   min-height: 100px;
   padding: 14px 28px 12px 8px;
-  border: 1px solid var(--chakra-color-border-subtle);
-  border-radius: var(--chakra-radius-control);
-  background: var(--chakra-color-surface-canvas);
-  color: var(--chakra-color-text-primary);
+  border: 1px solid var(--hobiui-color-border-subtle);
+  border-radius: var(--hobiui-radius-control);
+  background: var(--hobiui-color-surface-canvas);
+  color: var(--hobiui-color-text-primary);
   text-align: center;
-  transition: border-color var(--chakra-motion-fast), background-color var(--chakra-motion-fast);
+  transition: border-color var(--hobiui-motion-fast), background-color var(--hobiui-motion-fast);
 }
 
-.chakra-icon-catalog__item:hover { border-color: var(--chakra-color-border-control); background: var(--chakra-color-surface-subtle); }
-.chakra-icon-catalog__preview { display: grid; width: 34px; height: 34px; place-items: center; color: var(--chakra-color-brand); }
-.chakra-icon-catalog__preview svg { width: 26px; height: 26px; }
-.chakra-icon-catalog__item code { max-width: 100%; overflow-wrap: anywhere; color: var(--chakra-color-text-secondary); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: .6875rem; line-height: 1.35; }
-.chakra-button.chakra-icon-catalog__copy { position: absolute; top: 4px; right: 4px; width: 28px; min-height: 28px; padding: 5px; color: var(--chakra-color-text-muted); }
-.chakra-button.chakra-icon-catalog__copy svg { width: 16px; height: 16px; }
-.chakra-icon-catalog__empty { margin-top: 20px; color: var(--chakra-color-text-muted); }
-.chakra-icon-catalog__status { display: block; min-height: 20px; margin-top: 8px; color: var(--chakra-color-text-secondary); font-size: .75rem; }
+.hobiui-icon-catalog__item:hover { border-color: var(--hobiui-color-border-control); background: var(--hobiui-color-surface-subtle); }
+.hobiui-icon-catalog__preview { display: grid; width: 34px; height: 34px; place-items: center; color: var(--hobiui-color-brand); }
+.hobiui-icon-catalog__preview svg { width: 26px; height: 26px; }
+.hobiui-icon-catalog__item code { max-width: 100%; overflow-wrap: anywhere; color: var(--hobiui-color-text-secondary); font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: .6875rem; line-height: 1.35; }
+.hobiui-button.hobiui-icon-catalog__copy { position: absolute; top: 4px; right: 4px; width: 28px; min-height: 28px; padding: 5px; color: var(--hobiui-color-text-muted); }
+.hobiui-button.hobiui-icon-catalog__copy svg { width: 16px; height: 16px; }
+.hobiui-icon-catalog__empty { margin-top: 20px; color: var(--hobiui-color-text-muted); }
+.hobiui-icon-catalog__status { display: block; min-height: 20px; margin-top: 8px; color: var(--hobiui-color-text-secondary); font-size: .75rem; }
 
 @media (max-width: 68.75em) {
-  .chakra-icon-catalog__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hobiui-icon-catalog__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 47.5em) {
-  .chakra-icon-catalog__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-  .chakra-icon-catalog__item { min-height: 90px; }
+  .hobiui-icon-catalog__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .hobiui-icon-catalog__item { min-height: 90px; }
 }
 
 @media (pointer: coarse) {
-  .chakra-button.chakra-icon-catalog__copy { min-width: 44px; min-height: 44px; }
+  .hobiui-button.hobiui-icon-catalog__copy { min-width: 44px; min-height: 44px; }
 }

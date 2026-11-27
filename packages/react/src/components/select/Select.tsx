@@ -10,7 +10,7 @@ export interface SelectProps extends Omit<SelectHTMLAttributes<HTMLSelectElement
 
 /** A native select control styled with shared semantic tokens. Pair it with a visible label. */
 export function Select({ className = "", size = "md", invalid, children, ...props }: SelectProps) {
-  const classes = ["chakra-select", `chakra-select--${size}`, className].filter(Boolean).join(" ");
+  const classes = ["hobiui-select", `hobiui-select--${size}`, className].filter(Boolean).join(" ");
 
   return (
     <select

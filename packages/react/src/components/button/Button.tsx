@@ -10,7 +10,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   active?: boolean;
 }
 
-/** A native button with the shared Chakra design tokens and focus behavior. */
+/** A native button with the shared Hobi UI design tokens and focus behavior. */
 export function Button({
   className = "",
   variant = "solid",
@@ -19,7 +19,7 @@ export function Button({
   type = "button",
   ...props
 }: ButtonProps) {
-  const classes = ["chakra-button", `chakra-button--${variant}`, `chakra-button--${size}`, className]
+  const classes = ["hobiui-button", `hobiui-button--${variant}`, `hobiui-button--${size}`, className]
     .filter(Boolean)
     .join(" ");
 

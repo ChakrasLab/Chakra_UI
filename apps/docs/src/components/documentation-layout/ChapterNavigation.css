@@ -1,58 +1,58 @@
-.chakra-chapter-navigation {
+.hobiui-chapter-navigation {
   width: min(100%, 900px);
   margin-inline: auto;
   padding: 20px clamp(24px, 4vw, 64px) 0;
-  border-top: 1px solid var(--chakra-color-border-subtle);
+  border-top: 1px solid var(--hobiui-color-border-subtle);
 }
 
-.chakra-chapter-navigation__content {
+.hobiui-chapter-navigation__content {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--chakra-space-4);
+  gap: var(--hobiui-space-4);
   min-height: 54px;
 }
 
-.chakra-chapter-navigation__item {
+.hobiui-chapter-navigation__item {
   display: grid;
   align-content: center;
   gap: 4px;
   min-width: 0;
 }
 
-.chakra-chapter-navigation__item--next { justify-items: end; }
+.hobiui-chapter-navigation__item--next { justify-items: end; }
 
-.chakra-chapter-navigation__label {
-  color: var(--chakra-color-text-muted);
-  font-size: var(--chakra-font-size-sm);
+.hobiui-chapter-navigation__label {
+  color: var(--hobiui-color-text-muted);
+  font-size: var(--hobiui-font-size-sm);
 }
 
-.chakra-chapter-navigation__title {
+.hobiui-chapter-navigation__title {
   display: inline-flex;
   align-items: center;
-  gap: var(--chakra-space-2);
+  gap: var(--hobiui-space-2);
   min-width: 0;
   border: 0;
   background: transparent;
-  color: var(--chakra-color-brand);
+  color: var(--hobiui-color-brand);
   cursor: pointer;
-  font-size: var(--chakra-font-size-md);
+  font-size: var(--hobiui-font-size-md);
   font-weight: 650;
   font-family: inherit;
   overflow-wrap: anywhere;
   text-align: start;
 }
 
-.chakra-chapter-navigation__title:hover { text-decoration: underline; text-underline-offset: 3px; }
-.chakra-chapter-navigation__title:focus-visible { outline: 2px solid var(--chakra-color-focus); outline-offset: 2px; }
-.chakra-chapter-navigation__fallback { color: var(--chakra-color-text-muted); font-size: var(--chakra-font-size-sm); }
+.hobiui-chapter-navigation__title:hover { text-decoration: underline; text-underline-offset: 3px; }
+.hobiui-chapter-navigation__title:focus-visible { outline: 2px solid var(--hobiui-color-focus); outline-offset: 2px; }
+.hobiui-chapter-navigation__fallback { color: var(--hobiui-color-text-muted); font-size: var(--hobiui-font-size-sm); }
 
-.chakra-chapter-navigation__title svg {
+.hobiui-chapter-navigation__title svg {
   width: 17px;
   height: 17px;
   flex: 0 0 auto;
 }
 
-.chakra-chapter-navigation__art {
+.hobiui-chapter-navigation__art {
   display: block;
   width: calc(100% + 2 * clamp(24px, 4vw, 64px));
   max-height: 108px;
@@ -62,8 +62,8 @@
 }
 
 @media (max-width: 47.5em) {
-  .chakra-chapter-navigation { padding-top: 16px; }
-  .chakra-chapter-navigation__content { min-height: 48px; }
-  .chakra-chapter-navigation__title { font-size: var(--chakra-font-size-sm); }
-  .chakra-chapter-navigation__art { max-height: 76px; }
+  .hobiui-chapter-navigation { padding-top: 16px; }
+  .hobiui-chapter-navigation__content { min-height: 48px; }
+  .hobiui-chapter-navigation__title { font-size: var(--hobiui-font-size-sm); }
+  .hobiui-chapter-navigation__art { max-height: 76px; }
 }

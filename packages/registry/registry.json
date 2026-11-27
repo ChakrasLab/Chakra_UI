@@ -1,6 +1,6 @@
 {
   "$schema": "https://chakra.dev/schema/registry.json",
-  "name": "chakra",
+  "name": "hobiui",
   "version": "0.1.0",
   "components": []
 }

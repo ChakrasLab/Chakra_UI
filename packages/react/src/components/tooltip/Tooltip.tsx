@@ -15,9 +15,9 @@ export function Tooltip({ content, children, className = "" }: TooltipProps) {
   const trigger = cloneElement(children, { "aria-describedby": describedBy });
 
   return (
-    <span className={`chakra-tooltip ${className}`.trim()}>
+    <span className={`hobiui-tooltip ${className}`.trim()}>
       {trigger}
-      <span className="chakra-tooltip__content" id={tooltipId} role="tooltip">{content}</span>
+      <span className="hobiui-tooltip__content" id={tooltipId} role="tooltip">{content}</span>
     </span>
   );
 }

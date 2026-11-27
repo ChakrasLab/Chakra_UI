@@ -1,11 +1,11 @@
 import CodeBlock from "../../components/code-block/CodeBlock";
 
-export const semanticColorExample = `@import "@chakra/tokens/index.css";
+export const semanticColorExample = `@import "@hobiui/tokens/index.css";
 
 .card {
-  color: var(--chakra-color-text-primary);
-  background: var(--chakra-color-surface-canvas);
-  border: 1px solid var(--chakra-color-border-subtle);
+  color: var(--hobiui-color-text-primary);
+  background: var(--hobiui-color-surface-canvas);
+  border: 1px solid var(--hobiui-color-border-subtle);
 }`;
 
 # Colors
@@ -17,15 +17,15 @@ Color tokens have two jobs: primitive values form the palette, and semantic toke
 The current primitive palette contains a blue scale, white, saffron, and a brand blue. Semantic tokens cover surfaces, text, borders, focus, brand, accent, and status roles. The palette is intentionally smaller than a utility-class color catalog; use semantic names for everyday component styling.
 
 <div className="foundation-swatches" role="group" aria-label="Core semantic color examples">
-  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--chakra-color-surface-canvas)" }} /><code>--chakra-color-surface-canvas</code></div>
-  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--chakra-color-text-primary)" }} /><code>--chakra-color-text-primary</code></div>
-  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--chakra-color-brand)" }} /><code>--chakra-color-brand</code></div>
-  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--chakra-color-accent)" }} /><code>--chakra-color-accent</code></div>
+  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--hobiui-color-surface-canvas)" }} /><code>--hobiui-color-surface-canvas</code></div>
+  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--hobiui-color-text-primary)" }} /><code>--hobiui-color-text-primary</code></div>
+  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--hobiui-color-brand)" }} /><code>--hobiui-color-brand</code></div>
+  <div className="foundation-swatch"><span className="foundation-swatch__color" style={{ backgroundColor: "var(--hobiui-color-accent)" }} /><code>--hobiui-color-accent</code></div>
 </div>
 
 <h2 id="semantic-roles">Semantic roles</h2>
 
-Choose a semantic role by what it means in the interface, not only by how its color looks. For example, use `--chakra-color-text-primary` for primary text and `--chakra-color-surface-canvas` for a page surface.
+Choose a semantic role by what it means in the interface, not only by how its color looks. For example, use `--hobiui-color-text-primary` for primary text and `--hobiui-color-surface-canvas` for a page surface.
 
 <CodeBlock code={semanticColorExample} />
 
@@ -36,8 +36,8 @@ The system color scheme is the default. The dark theme remaps semantic variables
 <CodeBlock code={`<section
   data-theme="dark"
   style={{
-    color: "var(--chakra-color-text-primary)",
-    background: "var(--chakra-color-surface-canvas)",
+    color: "var(--hobiui-color-text-primary)",
+    background: "var(--hobiui-color-surface-canvas)",
   }}
 >
   The semantic colors update with the theme.
@@ -50,10 +50,10 @@ The swatches below follow the active theme. Primitive values stay the same in bo
     <caption className="visually-hidden">Primitive and semantic color token values in light and dark themes</caption>
     <thead><tr><th scope="col">Token</th><th scope="col">Light</th><th scope="col">Dark</th><th scope="col">Preview</th></tr></thead>
     <tbody>
-      <tr><th scope="row"><code>--chakra-blue-900</code></th><td><code>#0b285b</code></td><td><code>#0b285b</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--chakra-blue-900)" }} /></td></tr>
-      <tr><th scope="row"><code>--chakra-color-text-primary</code></th><td><code>#0b285b</code></td><td><code>#e5edf8</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--chakra-color-text-primary)" }} /></td></tr>
-      <tr><th scope="row"><code>--chakra-color-brand</code></th><td><code>#062fa8</code></td><td><code>#557ddd</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--chakra-color-brand)" }} /></td></tr>
-      <tr><th scope="row"><code>--chakra-color-accent</code></th><td><code>#ff7416</code></td><td><code>#ffad70</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--chakra-color-accent)" }} /></td></tr>
+      <tr><th scope="row"><code>--hobiui-blue-900</code></th><td><code>#0b285b</code></td><td><code>#0b285b</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--hobiui-blue-900)" }} /></td></tr>
+      <tr><th scope="row"><code>--hobiui-color-text-primary</code></th><td><code>#0b285b</code></td><td><code>#e5edf8</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--hobiui-color-text-primary)" }} /></td></tr>
+      <tr><th scope="row"><code>--hobiui-color-brand</code></th><td><code>#062fa8</code></td><td><code>#557ddd</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--hobiui-color-brand)" }} /></td></tr>
+      <tr><th scope="row"><code>--hobiui-color-accent</code></th><td><code>#ff7416</code></td><td><code>#ffad70</code></td><td><span className="foundation-swatch__color" aria-hidden="true" style={{ backgroundColor: "var(--hobiui-color-accent)" }} /></td></tr>
     </tbody>
   </table>
 </div>

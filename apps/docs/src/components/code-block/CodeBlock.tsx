@@ -1,6 +1,6 @@
 import { useEffect, useId, useRef, useState } from "react";
-import { Button } from "@chakra/react";
-import { CheckIcon, CopyIcon } from "@chakra/icons";
+import { Button } from "@hobiui/react";
+import { CheckIcon, CopyIcon } from "@hobiui/icons";
 import "./CodeBlock.css";
 
 interface CodeBlockProps {

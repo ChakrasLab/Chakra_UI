@@ -21,17 +21,17 @@ export function Checkbox({
     .join(" ") || undefined;
 
   return (
-    <label className={`chakra-choice ${className}`.trim()} data-disabled={props.disabled || undefined} data-invalid={invalid || undefined}>
+    <label className={`hobiui-choice ${className}`.trim()} data-disabled={props.disabled || undefined} data-invalid={invalid || undefined}>
       <input
         {...props}
-        className="chakra-choice__input"
+        className="hobiui-choice__input"
         type="checkbox"
         aria-invalid={invalid ? true : props["aria-invalid"]}
         aria-describedby={describedBy}
       />
-      <span className="chakra-choice__content">
-        <span className="chakra-choice__label">{label}</span>
-        {description && <span className="chakra-choice__description" id={descriptionId}>{description}</span>}
+      <span className="hobiui-choice__content">
+        <span className="hobiui-choice__label">{label}</span>
+        {description && <span className="hobiui-choice__description" id={descriptionId}>{description}</span>}
       </span>
     </label>
   );

@@ -1,33 +1,33 @@
-import { ArrowRightIcon, BoxIcon, LayersIcon, TagsIcon } from "@chakra/icons";
-import { Button } from "@chakra/react";
+import { ArrowRightIcon, BoxIcon, LayersIcon, TagsIcon } from "@hobiui/icons";
+import { Button } from "@hobiui/react";
 import CodeBlock from "../../components/code-block/CodeBlock";
 import "./design-tokens.css";
 
-export const quickStartCode = `@import "@chakra/tokens/index.css";
+export const quickStartCode = `@import "@hobiui/tokens/index.css";
 
 .card {
-  color: var(--chakra-color-text-primary);
-  background: var(--chakra-color-surface-canvas);
+  color: var(--hobiui-color-text-primary);
+  background: var(--hobiui-color-surface-canvas);
 }`;
 
-export const customThemeCode = `@import "@chakra/tokens/index.css";
+export const customThemeCode = `@import "@hobiui/tokens/index.css";
 
 :root {
-  --chakra-color-brand: #6741d9;
-  --chakra-color-brand-hover: #5834c4;
-  --chakra-color-brand-active: #4829a8;
+  --hobiui-color-brand: #6741d9;
+  --hobiui-color-brand-hover: #5834c4;
+  --hobiui-color-brand-active: #4829a8;
 }
 
 :root[data-theme="dark"] {
-  --chakra-color-brand: #b8a3ff;
-  --chakra-color-brand-hover: #c9baff;
-  --chakra-color-brand-active: #a58bed;
+  --hobiui-color-brand: #b8a3ff;
+  --hobiui-color-brand-hover: #c9baff;
+  --hobiui-color-brand-active: #a58bed;
 }`;
 
 <header className="token-page-intro" id="overview">
     <h1>Design Tokens</h1>
     <p>
-      Design tokens are shared values that power the visual language of Chakra UI. They provide a
+      Design tokens are shared values that power the visual language of Hobi UI. They provide a
       consistent and flexible way to manage color, spacing, typography, and themes across your
       application.
     </p>
@@ -37,7 +37,7 @@ export const customThemeCode = `@import "@chakra/tokens/index.css";
     <h2 id="quick-start-heading">Quick start</h2>
     <p>Import the token definitions once, then use semantic CSS properties in your styles.</p>
     <CodeBlock code={quickStartCode} />
-    <p><code>@chakra/tokens</code> is prepared for npm publishing but has not been released yet. This import works inside this repository.</p>
+    <p><code>@hobiui/tokens</code> is prepared for npm publishing but has not been released yet. This import works inside this repository.</p>
   </section>
 
   <section className="token-section" id="customize-theme">
@@ -48,7 +48,7 @@ export const customThemeCode = `@import "@chakra/tokens/index.css";
 
   <section className="token-section" id="token-layers">
     <h2 id="token-layers-heading">Token layers</h2>
-    <p>Chakra's tokens flow from primitive values to semantic tokens, and then to components.</p>
+    <p>Hobi's tokens flow from primitive values to semantic tokens, and then to components.</p>
     <div className="token-layer-flow" role="group" aria-label="Primitive values flow into semantic tokens and components">
       <div className="token-layer token-layer--primitive">
         <LayersIcon aria-hidden="true" />
@@ -72,32 +72,32 @@ export const customThemeCode = `@import "@chakra/tokens/index.css";
     <p>Primitive values are shared across themes. Semantic values resolve to the active light or dark theme.</p>
     <div className="token-table-wrap">
       <table className="token-table">
-        <caption className="visually-hidden">Example Chakra color tokens and values</caption>
+        <caption className="visually-hidden">Example Hobi UI color tokens and values</caption>
         <thead><tr><th scope="col">Token</th><th scope="col">Light value</th><th scope="col">Dark value</th><th scope="col">Preview</th></tr></thead>
         <tbody>
           <tr>
-            <th scope="row"><code>--chakra-blue-900</code></th>
+            <th scope="row"><code>--hobiui-blue-900</code></th>
             <td><code>#0b285b</code></td>
             <td><code>#0b285b</code></td>
-            <td><span className="color-swatch" aria-hidden="true" style={{ backgroundColor: "var(--chakra-blue-900)" }} /></td>
+            <td><span className="color-swatch" aria-hidden="true" style={{ backgroundColor: "var(--hobiui-blue-900)" }} /></td>
           </tr>
           <tr>
-            <th scope="row"><code>--chakra-color-text-primary</code></th>
+            <th scope="row"><code>--hobiui-color-text-primary</code></th>
             <td><code>#0b285b</code></td>
             <td><code>#e5edf8</code></td>
-            <td><span className="color-swatch" aria-hidden="true" style={{ backgroundColor: "var(--chakra-color-text-primary)" }} /></td>
+            <td><span className="color-swatch" aria-hidden="true" style={{ backgroundColor: "var(--hobiui-color-text-primary)" }} /></td>
           </tr>
           <tr>
-            <th scope="row"><code>--chakra-color-brand</code></th>
+            <th scope="row"><code>--hobiui-color-brand</code></th>
             <td><code>#062fa8</code></td>
             <td><code>#557ddd</code></td>
-            <td><span className="color-swatch" aria-hidden="true" style={{ backgroundColor: "var(--chakra-color-brand)" }} /></td>
+            <td><span className="color-swatch" aria-hidden="true" style={{ backgroundColor: "var(--hobiui-color-brand)" }} /></td>
           </tr>
           <tr>
-            <th scope="row"><code>--chakra-color-accent</code></th>
+            <th scope="row"><code>--hobiui-color-accent</code></th>
             <td><code>#ff7416</code></td>
             <td><code>#ffad70</code></td>
-            <td><span className="color-swatch" aria-hidden="true" style={{ backgroundColor: "var(--chakra-color-accent)" }} /></td>
+            <td><span className="color-swatch" aria-hidden="true" style={{ backgroundColor: "var(--hobiui-color-accent)" }} /></td>
           </tr>
         </tbody>
       </table>
@@ -108,12 +108,12 @@ export const customThemeCode = `@import "@chakra/tokens/index.css";
     <h2 id="spacing-heading">Spacing</h2>
     <p>Use the spacing scale to keep layout and component gaps consistent.</p>
     <div className="spacing-list">
-      <div className="spacing-row"><code>--chakra-space-1</code><span>4px</span><span className="spacing-bar" style={{ width: "var(--chakra-space-1)" }} /></div>
-      <div className="spacing-row"><code>--chakra-space-2</code><span>8px</span><span className="spacing-bar" style={{ width: "var(--chakra-space-2)" }} /></div>
-      <div className="spacing-row"><code>--chakra-space-3</code><span>12px</span><span className="spacing-bar" style={{ width: "var(--chakra-space-3)" }} /></div>
-      <div className="spacing-row"><code>--chakra-space-4</code><span>16px</span><span className="spacing-bar" style={{ width: "var(--chakra-space-4)" }} /></div>
-      <div className="spacing-row"><code>--chakra-space-6</code><span>24px</span><span className="spacing-bar" style={{ width: "var(--chakra-space-6)" }} /></div>
-      <div className="spacing-row"><code>--chakra-space-8</code><span>32px</span><span className="spacing-bar" style={{ width: "var(--chakra-space-8)" }} /></div>
+      <div className="spacing-row"><code>--hobiui-space-1</code><span>4px</span><span className="spacing-bar" style={{ width: "var(--hobiui-space-1)" }} /></div>
+      <div className="spacing-row"><code>--hobiui-space-2</code><span>8px</span><span className="spacing-bar" style={{ width: "var(--hobiui-space-2)" }} /></div>
+      <div className="spacing-row"><code>--hobiui-space-3</code><span>12px</span><span className="spacing-bar" style={{ width: "var(--hobiui-space-3)" }} /></div>
+      <div className="spacing-row"><code>--hobiui-space-4</code><span>16px</span><span className="spacing-bar" style={{ width: "var(--hobiui-space-4)" }} /></div>
+      <div className="spacing-row"><code>--hobiui-space-6</code><span>24px</span><span className="spacing-bar" style={{ width: "var(--hobiui-space-6)" }} /></div>
+      <div className="spacing-row"><code>--hobiui-space-8</code><span>32px</span><span className="spacing-bar" style={{ width: "var(--hobiui-space-8)" }} /></div>
     </div>
   </section>
 
@@ -121,10 +121,10 @@ export const customThemeCode = `@import "@chakra/tokens/index.css";
     <h2 id="typography-heading">Typography</h2>
     <p>Typography tokens use the shared sans-serif family and a compact size scale.</p>
     <div className="type-list">
-      <div className="type-row"><code>--chakra-font-size-xs</code><span>11px</span><span className="type-sample" style={{ fontSize: "var(--chakra-font-size-xs)" }}>Aa</span></div>
-      <div className="type-row"><code>--chakra-font-size-sm</code><span>12px</span><span className="type-sample" style={{ fontSize: "var(--chakra-font-size-sm)" }}>Aa</span></div>
-      <div className="type-row"><code>--chakra-font-size-md</code><span>14px</span><span className="type-sample" style={{ fontSize: "var(--chakra-font-size-md)" }}>Aa</span></div>
-      <div className="type-row"><code>--chakra-font-size-lg</code><span>16px</span><span className="type-sample" style={{ fontSize: "var(--chakra-font-size-lg)" }}>Aa</span></div>
+      <div className="type-row"><code>--hobiui-font-size-xs</code><span>11px</span><span className="type-sample" style={{ fontSize: "var(--hobiui-font-size-xs)" }}>Aa</span></div>
+      <div className="type-row"><code>--hobiui-font-size-sm</code><span>12px</span><span className="type-sample" style={{ fontSize: "var(--hobiui-font-size-sm)" }}>Aa</span></div>
+      <div className="type-row"><code>--hobiui-font-size-md</code><span>14px</span><span className="type-sample" style={{ fontSize: "var(--hobiui-font-size-md)" }}>Aa</span></div>
+      <div className="type-row"><code>--hobiui-font-size-lg</code><span>16px</span><span className="type-sample" style={{ fontSize: "var(--hobiui-font-size-lg)" }}>Aa</span></div>
     </div>
   </section>
 
@@ -132,10 +132,10 @@ export const customThemeCode = `@import "@chakra/tokens/index.css";
     <h2 id="radius-heading">Radius</h2>
     <p>Choose a radius by the role and scale of the surface.</p>
     <div className="radius-list">
-      <div className="radius-item"><span className="radius-sample radius-sample--sm" /><code>--chakra-radius-sm</code><span>6px</span></div>
-      <div className="radius-item"><span className="radius-sample radius-sample--control" /><code>--chakra-radius-control</code><span>8px</span></div>
-      <div className="radius-item"><span className="radius-sample radius-sample--lg" /><code>--chakra-radius-lg</code><span>12px</span></div>
-      <div className="radius-item"><span className="radius-sample radius-sample--pill" /><code>--chakra-radius-pill</code><span>999px</span></div>
+      <div className="radius-item"><span className="radius-sample radius-sample--sm" /><code>--hobiui-radius-sm</code><span>6px</span></div>
+      <div className="radius-item"><span className="radius-sample radius-sample--control" /><code>--hobiui-radius-control</code><span>8px</span></div>
+      <div className="radius-item"><span className="radius-sample radius-sample--lg" /><code>--hobiui-radius-lg</code><span>12px</span></div>
+      <div className="radius-item"><span className="radius-sample radius-sample--pill" /><code>--hobiui-radius-pill</code><span>999px</span></div>
     </div>
   </section>
 
@@ -143,8 +143,8 @@ export const customThemeCode = `@import "@chakra/tokens/index.css";
     <h2 id="shadows-motion-heading">Shadows and motion</h2>
     <p>Use a soft elevation shadow for panels and a short transition for controls.</p>
     <div className="effect-list">
-      <div className="effect-sample"><span className="shadow-sample" /><code>--chakra-shadow-panel</code></div>
-      <div className="effect-sample"><span className="motion-sample" /><code>--chakra-motion-fast · 140ms</code></div>
+      <div className="effect-sample"><span className="shadow-sample" /><code>--hobiui-shadow-panel</code></div>
+      <div className="effect-sample"><span className="motion-sample" /><code>--hobiui-motion-fast · 140ms</code></div>
     </div>
   </section>
 
@@ -154,7 +154,7 @@ export const customThemeCode = `@import "@chakra/tokens/index.css";
     <div className="theme-previews">
       <div className="theme-preview theme-preview--custom-light" data-theme="light">
         <span>Light theme</span>
-        <code>--chakra-color-brand: #6741d9</code>
+        <code>--hobiui-color-brand: #6741d9</code>
         <div className="theme-preview__buttons">
           <Button>Primary action</Button>
           <Button variant="outline">Secondary</Button>
@@ -163,7 +163,7 @@ export const customThemeCode = `@import "@chakra/tokens/index.css";
       </div>
       <div className="theme-preview theme-preview--custom-dark" data-theme="dark">
         <span>Dark theme</span>
-        <code>--chakra-color-brand: #b8a3ff</code>
+        <code>--hobiui-color-brand: #b8a3ff</code>
         <div className="theme-preview__buttons">
           <Button>Primary action</Button>
           <Button variant="outline">Secondary</Button>

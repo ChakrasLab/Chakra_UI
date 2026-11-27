@@ -1,5 +1,5 @@
-import ChakraUiShell from "../components/documentation-layout/ChakraUiShell";
+import HobiUiShell from "../components/documentation-layout/HobiUiShell";
 
 export default function App() {
-  return <ChakraUiShell />;
+  return <HobiUiShell />;
 }

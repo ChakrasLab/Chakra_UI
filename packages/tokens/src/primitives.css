@@ -1,42 +1,42 @@
 :root {
-  --chakra-blue-950: #061e4a;
-  --chakra-blue-900: #0b285b;
-  --chakra-blue-800: #132f5d;
-  --chakra-blue-700: #173866;
-  --chakra-blue-600: #254574;
-  --chakra-blue-500: #3f5e8c;
-  --chakra-blue-400: #536e9e;
-  --chakra-blue-300: #8ca8d4;
-  --chakra-blue-200: #dbe3ee;
-  --chakra-blue-100: #e0e6ee;
-  --chakra-blue-50: #f0f4fa;
-  --chakra-white: #fff;
-  --chakra-saffron-500: #ff7416;
-  --chakra-brand-blue: #062fa8;
+  --hobiui-blue-950: #061e4a;
+  --hobiui-blue-900: #0b285b;
+  --hobiui-blue-800: #132f5d;
+  --hobiui-blue-700: #173866;
+  --hobiui-blue-600: #254574;
+  --hobiui-blue-500: #3f5e8c;
+  --hobiui-blue-400: #536e9e;
+  --hobiui-blue-300: #8ca8d4;
+  --hobiui-blue-200: #dbe3ee;
+  --hobiui-blue-100: #e0e6ee;
+  --hobiui-blue-50: #f0f4fa;
+  --hobiui-white: #fff;
+  --hobiui-saffron-500: #ff7416;
+  --hobiui-brand-blue: #062fa8;
 
-  --chakra-space-1: 4px;
-  --chakra-space-2: 8px;
-  --chakra-space-3: 12px;
-  --chakra-space-4: 16px;
-  --chakra-space-5: 20px;
-  --chakra-space-6: 24px;
-  --chakra-space-8: 32px;
+  --hobiui-space-1: 4px;
+  --hobiui-space-2: 8px;
+  --hobiui-space-3: 12px;
+  --hobiui-space-4: 16px;
+  --hobiui-space-5: 20px;
+  --hobiui-space-6: 24px;
+  --hobiui-space-8: 32px;
 
-  --chakra-radius-sm: 6px;
-  --chakra-radius-control: 8px;
-  --chakra-radius-lg: 12px;
-  --chakra-radius-pill: 999px;
+  --hobiui-radius-sm: 6px;
+  --hobiui-radius-control: 8px;
+  --hobiui-radius-lg: 12px;
+  --hobiui-radius-pill: 999px;
 
-  --chakra-font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --chakra-font-serif: Georgia, "Times New Roman", serif;
-  --chakra-font-size-xs: 0.6875rem;
-  --chakra-font-size-sm: 0.75rem;
-  --chakra-font-size-md: 0.875rem;
-  --chakra-font-size-lg: 1rem;
+  --hobiui-font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --hobiui-font-serif: Georgia, "Times New Roman", serif;
+  --hobiui-font-size-xs: 0.6875rem;
+  --hobiui-font-size-sm: 0.75rem;
+  --hobiui-font-size-md: 0.875rem;
+  --hobiui-font-size-lg: 1rem;
 
-  --chakra-shadow-panel: 0 12px 32px rgb(11 32 67 / 12%);
-  --chakra-shadow-control: 0 1px 2px rgb(13 38 76 / 3%);
-  --chakra-shadow-control-hover: 0 4px 14px rgb(13 38 76 / 14%);
-  --chakra-motion-fast: 140ms ease;
-  --chakra-motion-panel: 220ms ease;
+  --hobiui-shadow-panel: 0 12px 32px rgb(11 32 67 / 12%);
+  --hobiui-shadow-control: 0 1px 2px rgb(13 38 76 / 3%);
+  --hobiui-shadow-control-hover: 0 4px 14px rgb(13 38 76 / 14%);
+  --hobiui-motion-fast: 140ms ease;
+  --hobiui-motion-panel: 220ms ease;
 }

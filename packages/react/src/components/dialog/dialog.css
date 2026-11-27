@@ -1,29 +1,29 @@
-.chakra-dialog {
+.hobiui-dialog {
   width: min(520px, calc(100vw - 32px));
   max-width: none;
   max-height: min(720px, calc(100dvh - 32px));
   margin: auto;
   padding: 0;
   overflow: auto;
-  border: 1px solid var(--chakra-color-border-subtle);
-  border-radius: var(--chakra-radius-lg);
-  background: var(--chakra-color-surface-canvas);
-  color: var(--chakra-color-text-primary);
-  box-shadow: var(--chakra-shadow-surface);
+  border: 1px solid var(--hobiui-color-border-subtle);
+  border-radius: var(--hobiui-radius-lg);
+  background: var(--hobiui-color-surface-canvas);
+  color: var(--hobiui-color-text-primary);
+  box-shadow: var(--hobiui-shadow-surface);
 }
 
-.chakra-dialog::backdrop { background: rgb(9 26 54 / 42%); }
-.chakra-dialog__header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--chakra-space-4); padding: var(--chakra-space-6); border-bottom: 1px solid var(--chakra-color-border-subtle); }
-.chakra-dialog__heading { min-width: 0; }
-.chakra-dialog__heading h2 { margin: 0; color: var(--chakra-color-text-strong); font-size: var(--chakra-font-size-lg); line-height: 1.35; }
-.chakra-dialog__heading p { margin: 6px 0 0; color: var(--chakra-color-text-muted); font-size: var(--chakra-font-size-md); line-height: 1.5; }
-.chakra-dialog__close { flex: 0 0 auto; width: 36px; min-height: 36px; padding: 0; font-size: 1.5rem; }
-.chakra-dialog__body { padding: var(--chakra-space-6); }
-.chakra-dialog__footer { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--chakra-space-2); padding: var(--chakra-space-4) var(--chakra-space-6); border-top: 1px solid var(--chakra-color-border-subtle); background: var(--chakra-color-surface-subtle); }
+.hobiui-dialog::backdrop { background: rgb(9 26 54 / 42%); }
+.hobiui-dialog__header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--hobiui-space-4); padding: var(--hobiui-space-6); border-bottom: 1px solid var(--hobiui-color-border-subtle); }
+.hobiui-dialog__heading { min-width: 0; }
+.hobiui-dialog__heading h2 { margin: 0; color: var(--hobiui-color-text-strong); font-size: var(--hobiui-font-size-lg); line-height: 1.35; }
+.hobiui-dialog__heading p { margin: 6px 0 0; color: var(--hobiui-color-text-muted); font-size: var(--hobiui-font-size-md); line-height: 1.5; }
+.hobiui-dialog__close { flex: 0 0 auto; width: 36px; min-height: 36px; padding: 0; font-size: 1.5rem; }
+.hobiui-dialog__body { padding: var(--hobiui-space-6); }
+.hobiui-dialog__footer { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: var(--hobiui-space-2); padding: var(--hobiui-space-4) var(--hobiui-space-6); border-top: 1px solid var(--hobiui-color-border-subtle); background: var(--hobiui-color-surface-subtle); }
 
 @media (max-width: 30em) {
-  .chakra-dialog { width: calc(100vw - 20px); max-height: calc(100dvh - 20px); }
-  .chakra-dialog__header,
-  .chakra-dialog__body { padding: var(--chakra-space-4); }
-  .chakra-dialog__footer { padding: var(--chakra-space-3) var(--chakra-space-4); }
+  .hobiui-dialog { width: calc(100vw - 20px); max-height: calc(100dvh - 20px); }
+  .hobiui-dialog__header,
+  .hobiui-dialog__body { padding: var(--hobiui-space-4); }
+  .hobiui-dialog__footer { padding: var(--hobiui-space-3) var(--hobiui-space-4); }
 }

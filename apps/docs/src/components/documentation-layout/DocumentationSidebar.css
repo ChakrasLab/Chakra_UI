@@ -1,75 +1,75 @@
-.chakra-sidebar-frame {
+.hobiui-sidebar-frame {
   position: absolute;
   z-index: 2;
   inset: 0 0 0 clamp(42px, 3.65vw, 56px);
   overflow: hidden;
 }
 
-.chakra-sidebar {
+.hobiui-sidebar {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  padding: var(--chakra-space-4) var(--chakra-space-3) var(--chakra-space-3) clamp(18px, 2.2vw, 34px);
+  padding: var(--hobiui-space-4) var(--hobiui-space-3) var(--hobiui-space-3) clamp(18px, 2.2vw, 34px);
 }
 
-.chakra-sidebar__section + .chakra-sidebar__section {
+.hobiui-sidebar__section + .hobiui-sidebar__section {
   margin-top: 8px;
   padding-top: 8px;
-  border-top: 1px solid var(--chakra-color-border-subtle);
+  border-top: 1px solid var(--hobiui-color-border-subtle);
 }
 
-.chakra-sidebar__heading {
+.hobiui-sidebar__heading {
   margin: 2px 0 5px 2px;
-  color: var(--chakra-color-text-secondary);
-  font-size: var(--chakra-font-size-xs);
+  color: var(--hobiui-color-text-secondary);
+  font-size: var(--hobiui-font-size-xs);
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: .09em;
   text-transform: uppercase;
 }
 
-.chakra-sidebar__items { display: grid; gap: 1px; margin: 0; padding: 0; list-style: none; }
+.hobiui-sidebar__items { display: grid; gap: 1px; margin: 0; padding: 0; list-style: none; }
 
-.chakra-button.chakra-sidebar__link {
+.hobiui-button.hobiui-sidebar__link {
   display: grid;
   grid-template-columns: 19px minmax(0, 1fr) 12px;
   align-items: center;
-  gap: var(--chakra-space-3);
+  gap: var(--hobiui-space-3);
   width: 100%;
   min-height: 27px;
   padding: 2px 7px 2px 10px;
   border: 0;
-  border-radius: var(--chakra-radius-sm);
+  border-radius: var(--hobiui-radius-sm);
   background: transparent;
-  color: var(--chakra-color-text-primary);
+  color: var(--hobiui-color-text-primary);
   cursor: pointer;
   font: inherit;
   font-size: .8125rem;
   line-height: 1.2;
   text-align: left;
-  transition: background-color var(--chakra-motion-fast), color var(--chakra-motion-fast);
+  transition: background-color var(--hobiui-motion-fast), color var(--hobiui-motion-fast);
 }
 
-.chakra-button.chakra-sidebar__link:hover { background: color-mix(in srgb, var(--chakra-color-border-control) 55%, transparent); }
-.chakra-button.chakra-sidebar__link:focus-visible { outline: 2px solid var(--chakra-color-focus); outline-offset: 1px; }
-.chakra-nav-icon { display: block; width: 17px; height: 17px; }
-.chakra-sidebar__link[data-active="true"] .chakra-nav-icon { fill: currentColor; stroke-width: 1.2; }
-.chakra-sidebar__link span { min-width: 0; overflow-wrap: anywhere; }
-.chakra-sidebar__chevron { width: 13px; height: 13px; color: var(--chakra-blue-400); }
-.chakra-sidebar__empty { margin: var(--chakra-space-2) 2px; color: var(--chakra-color-text-muted); font-size: var(--chakra-font-size-sm); line-height: 1.5; }
+.hobiui-button.hobiui-sidebar__link:hover { background: color-mix(in srgb, var(--hobiui-color-border-control) 55%, transparent); }
+.hobiui-button.hobiui-sidebar__link:focus-visible { outline: 2px solid var(--hobiui-color-focus); outline-offset: 1px; }
+.hobiui-nav-icon { display: block; width: 17px; height: 17px; }
+.hobiui-sidebar__link[data-active="true"] .hobiui-nav-icon { fill: currentColor; stroke-width: 1.2; }
+.hobiui-sidebar__link span { min-width: 0; overflow-wrap: anywhere; }
+.hobiui-sidebar__chevron { width: 13px; height: 13px; color: var(--hobiui-blue-400); }
+.hobiui-sidebar__empty { margin: var(--hobiui-space-2) 2px; color: var(--hobiui-color-text-muted); font-size: var(--hobiui-font-size-sm); line-height: 1.5; }
 
 @media (max-width: 47.5em) {
-  .chakra-sidebar { padding: 20px 18px 28px; background: color-mix(in srgb, var(--chakra-color-surface-canvas) 96%, transparent); }
-  .chakra-sidebar-frame { inset: 0 0 calc(21% - var(--chakra-sidebar-row-extension)) 0; }
-  .chakra-sidebar { overflow-y: auto; }
-  .chakra-sidebar__heading { font-size: .625rem; }
-  .chakra-button.chakra-sidebar__link { grid-template-columns: 19px minmax(0, 1fr) 12px; gap: var(--chakra-space-3); padding-inline: 10px; font-size: .8125rem; }
+  .hobiui-sidebar { padding: 20px 18px 28px; background: color-mix(in srgb, var(--hobiui-color-surface-canvas) 96%, transparent); }
+  .hobiui-sidebar-frame { inset: 0 0 calc(21% - var(--hobiui-sidebar-row-extension)) 0; }
+  .hobiui-sidebar { overflow-y: auto; }
+  .hobiui-sidebar__heading { font-size: .625rem; }
+  .hobiui-button.hobiui-sidebar__link { grid-template-columns: 19px minmax(0, 1fr) 12px; gap: var(--hobiui-space-3); padding-inline: 10px; font-size: .8125rem; }
 }
 
 @media (min-width: 47.5625em) and (max-height: 47.5em) {
-  .chakra-sidebar { overflow-y: auto; scrollbar-width: none; }
-  .chakra-sidebar::-webkit-scrollbar { display: none; }
+  .hobiui-sidebar { overflow-y: auto; scrollbar-width: none; }
+  .hobiui-sidebar::-webkit-scrollbar { display: none; }
 }
