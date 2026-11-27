@@ -13,15 +13,21 @@
   "scripts": {
     "predev": "npm run build:packages",
     "dev": "npm run dev --workspace @chakra/docs",
+    "test": "vitest run",
     "build:packages": "npm run build --workspace @chakra/icons && npm run build --workspace @chakra/react",
     "build": "npm run build:packages && tsc --noEmit && npm run build --workspace @chakra/docs",
     "preview": "npm run preview --workspace @chakra/docs"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^8.0.0",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.13",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^6.3.0",
+    "jsdom": "^31.0.1",
     "typescript": "^7.0.2",
-    "vite": "^8.3.8"
+    "vite": "^8.3.8",
+    "vitest": "^5.1.2"
   }
 }
