@@ -1,7 +1,7 @@
 {
   "name": "@hobiui/tokens",
   "description": "Customizable CSS design tokens and light and dark themes for Hobi UI.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "type": "module",
   "repository": {

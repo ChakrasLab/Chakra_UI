@@ -9,9 +9,9 @@
     "preview": "vite preview --config ../../vite.config.ts"
   },
   "dependencies": {
-    "@hobiui/icons": "0.1.0",
-    "@hobiui/react": "0.1.0",
-    "@hobiui/tokens": "0.1.0",
+    "@hobiui/icons": "0.1.1",
+    "@hobiui/react": "0.1.1",
+    "@hobiui/tokens": "0.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
