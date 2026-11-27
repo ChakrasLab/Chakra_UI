@@ -1,24 +1,24 @@
-# @chakra/react
+# @hobiui/react
 
-Reusable React components for the Chakra UI workspace.
+Reusable React components for the Hobi UI workspace.
 
 This package is prepared for npm publishing but has not been released yet. After release, install it with:
 
 ```sh
-npm install @chakra/react @chakra/tokens
+npm install @hobiui/react @hobiui/tokens
 ```
 
 Import the token definitions and component styles once in the app entry point:
 
 ```ts
-import "@chakra/tokens/index.css";
-import "@chakra/react/style.css";
+import "@hobiui/tokens/index.css";
+import "@hobiui/react/style.css";
 ```
 
 Then import components and types from the package root:
 
 ```tsx
-import { Button, Input, Tabs } from "@chakra/react";
+import { Button, Input, Tabs } from "@hobiui/react";
 ```
 
 React 18 and 19 are supported as peer dependencies.

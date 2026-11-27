@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { ChevronDownIcon, CloseIcon, GithubIcon, MenuIcon, MoonIcon, SearchIcon, SunIcon } from "@chakra/icons";
-import { InteractivePixels } from "@chakra/react";
-import leftRailArtwork from "../../assets/chakra-left-rail.png";
-import leftRailArtworkDark from "../../assets/chakra-left-rail.dark.png";
-import rightRailArtwork from "../../assets/chakra-right-rail.png";
-import rightRailArtworkDark from "../../assets/chakra-right-rail.dark.png";
+import { ChevronDownIcon, CloseIcon, GithubIcon, MenuIcon, MoonIcon, SearchIcon, SunIcon } from "@hobiui/icons";
+import { InteractivePixels } from "@hobiui/react";
+import leftRailArtwork from "../../assets/hobiui-left-rail.png";
+import leftRailArtworkDark from "../../assets/hobiui-left-rail.dark.png";
+import rightRailArtwork from "../../assets/hobiui-right-rail.png";
+import rightRailArtworkDark from "../../assets/hobiui-right-rail.dark.png";
 import { navigationSections } from "../../config/navigation";
 import ChapterNavigation from "./ChapterNavigation";
 import DocumentationContent, { DocumentationOutline } from "./DocumentationContent";
 import DocumentationSidebar from "./DocumentationSidebar";
-import "./ChakraUiShell.css";
+import "./HobiUiShell.css";
 
 type ThemePreference = "system" | "light" | "dark";
 
@@ -36,7 +36,7 @@ const logoDots = Array.from({ length: 64 }, (_, index) => {
 });
 
 /** Documentation chrome and the site's monument artwork. */
-export default function ChakraUiShell() {
+export default function HobiUiShell() {
   const [activePage, setActivePage] = useState("design-tokens");
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileNavigationOpen, setIsMobileNavigationOpen] = useState(false);
@@ -83,10 +83,10 @@ export default function ChakraUiShell() {
       root.removeAttribute("data-theme");
       if (colorSchemeMeta) colorSchemeMeta.content = "light dark";
       if (themeColorMeta) {
-        themeColorMeta.content = getComputedStyle(root).getPropertyValue("--chakra-color-surface-canvas").trim();
+        themeColorMeta.content = getComputedStyle(root).getPropertyValue("--hobiui-color-surface-canvas").trim();
       }
       try {
-        window.localStorage.removeItem("chakra-color-scheme");
+        window.localStorage.removeItem("hobiui-color-scheme");
       } catch {
         // The current tab still follows the system preference when storage is unavailable.
       }
@@ -94,10 +94,10 @@ export default function ChakraUiShell() {
       root.dataset.theme = themePreference;
       if (colorSchemeMeta) colorSchemeMeta.content = themePreference;
       if (themeColorMeta) {
-        themeColorMeta.content = getComputedStyle(root).getPropertyValue("--chakra-color-surface-canvas").trim();
+        themeColorMeta.content = getComputedStyle(root).getPropertyValue("--hobiui-color-surface-canvas").trim();
       }
       try {
-        window.localStorage.setItem("chakra-color-scheme", themePreference);
+        window.localStorage.setItem("hobiui-color-scheme", themePreference);
       } catch {
         // The current tab still uses the selected theme when storage is unavailable.
       }
@@ -106,7 +106,7 @@ export default function ChakraUiShell() {
 
   useEffect(() => {
     const handleStorage = (event: StorageEvent) => {
-      if (event.key !== "chakra-color-scheme") return;
+      if (event.key !== "hobiui-color-scheme") return;
       setThemePreference(event.newValue === "light" || event.newValue === "dark" ? event.newValue : "system");
     };
     window.addEventListener("storage", handleStorage);
@@ -166,26 +166,26 @@ export default function ChakraUiShell() {
   };
 
   return (
-    <div className="chakra-app">
-      <a className="chakra-skip-link" href="#chakra-main-content">Skip to main content</a>
-      <header className={`chakra-navbar${isMobileSearchOpen ? " is-search-open" : ""}`}>
-        <div className="chakra-navbar__identity">
-          <div className="chakra-brand">
-            <svg className="chakra-brand__mark" viewBox="0 0 33 33" aria-hidden="true">
+    <div className="hobiui-app">
+      <a className="hobiui-skip-link" href="#hobiui-main-content">Skip to main content</a>
+      <header className={`hobiui-navbar${isMobileSearchOpen ? " is-search-open" : ""}`}>
+        <div className="hobiui-navbar__identity">
+          <div className="hobiui-brand">
+            <svg className="hobiui-brand__mark" viewBox="0 0 33 33" aria-hidden="true">
               {logoDots}
             </svg>
-            <span className="chakra-brand__name">Chakra UI</span>
-            <span className="chakra-version">
+            <span className="hobiui-brand__name">Hobi UI</span>
+            <span className="hobiui-version">
               v0.1.0
               <ChevronDownIcon />
             </span>
           </div>
         </div>
 
-        <label className="chakra-search" htmlFor="chakra-docs-search">
+        <label className="hobiui-search" htmlFor="hobiui-docs-search">
           <SearchIcon />
           <input
-            id="chakra-docs-search"
+            id="hobiui-docs-search"
             ref={searchInputRef}
             type="search"
             aria-label="Search documentation"
@@ -197,20 +197,20 @@ export default function ChakraUiShell() {
           <kbd>{navigator.userAgent.includes("Mac") ? "⌘ K" : "Ctrl K"}</kbd>
         </label>
 
-        <div className="chakra-navbar__icons">
+        <div className="hobiui-navbar__icons">
           <button
             ref={mobileSearchTriggerRef}
-            className="chakra-mobile-search-toggle"
+            className="hobiui-mobile-search-toggle"
             type="button"
             aria-label={isMobileSearchOpen ? "Close search" : "Search documentation"}
             aria-expanded={isMobileSearchOpen}
-            aria-controls="chakra-docs-search"
+            aria-controls="hobiui-docs-search"
             onClick={toggleMobileSearch}
           >
             <SearchIcon />
           </button>
           <button
-            className="chakra-theme-toggle"
+            className="hobiui-theme-toggle"
             type="button"
             aria-label={`Theme: ${themePreference}; currently ${activeScheme}. Activate to switch to ${getNextThemePreference(themePreference)} theme.`}
             title={`Theme: ${themePreference}`}
@@ -219,25 +219,25 @@ export default function ChakraUiShell() {
             {activeScheme === "dark" ? <MoonIcon aria-hidden="true" /> : <SunIcon aria-hidden="true" />}
           </button>
           <a
-            className="chakra-navbar__github"
+            className="hobiui-navbar__github"
             href="https://github.com/ChakrasLab/Chakra_UI"
             target="_blank"
             rel="noreferrer"
-            aria-label="Chakra UI on GitHub"
+            aria-label="Hobi UI on GitHub"
           >
             <GithubIcon aria-hidden="true" />
           </a>
         </div>
       </header>
 
-      <div className="chakra-layout">
+      <div className="hobiui-layout">
         <button
           ref={mobileMenuTriggerRef}
-          className="chakra-mobile-menu-toggle"
+          className="hobiui-mobile-menu-toggle"
           type="button"
           aria-label="Open navigation menu"
           aria-expanded={isMobileNavigationOpen}
-          aria-controls="chakra-mobile-navigation"
+          aria-controls="hobiui-mobile-navigation"
           onClick={() => openMobileDialog(mobileNavigationDialogRef.current)}
         >
           <MenuIcon aria-hidden="true" />
@@ -245,11 +245,11 @@ export default function ChakraUiShell() {
 
         <button
           ref={mobileOutlineTriggerRef}
-          className="chakra-mobile-outline-toggle"
+          className="hobiui-mobile-outline-toggle"
           type="button"
           aria-label="Open on this page panel"
           aria-expanded={isMobileOutlineOpen}
-          aria-controls="chakra-mobile-outline"
+          aria-controls="hobiui-mobile-outline"
           onClick={() => openMobileDialog(mobileOutlineDialogRef.current)}
         >
           <svg viewBox="0 0 20 20" aria-hidden="true">
@@ -261,11 +261,11 @@ export default function ChakraUiShell() {
           <span>On this page</span>
         </button>
 
-        <div className="chakra-left-column">
-          <div className="chakra-left-column__art" aria-hidden="true">
+        <div className="hobiui-left-column">
+          <div className="hobiui-left-column__art" aria-hidden="true">
             <InteractivePixels
               src={activeLeftRailArtwork}
-              className="chakra-rail__pixels"
+              className="hobiui-rail__pixels"
               ariaLabel="Interactive India Gate pixel artwork"
               objectPosition={{ x: 1, y: 1 }}
             />
@@ -273,31 +273,31 @@ export default function ChakraUiShell() {
           <DocumentationSidebar
             activePage={activePage}
             searchQuery={searchQuery}
-            navId="chakra-documentation-sidebar"
+            navId="hobiui-documentation-sidebar"
             onPageChange={navigateToChapter}
           />
         </div>
 
         <dialog
-          id="chakra-mobile-navigation"
+          id="hobiui-mobile-navigation"
           ref={mobileNavigationDialogRef}
-          className="chakra-mobile-navigation chakra-mobile-drawer"
+          className="hobiui-mobile-navigation hobiui-mobile-drawer"
           aria-label="Documentation navigation"
           onClose={() => setIsMobileNavigationOpen(false)}
           onClick={(event) => {
             if (event.target === event.currentTarget) event.currentTarget.close();
           }}
         >
-          <div className="chakra-mobile-navigation__art" aria-hidden="true">
+          <div className="hobiui-mobile-navigation__art" aria-hidden="true">
             <InteractivePixels
               src={activeLeftRailArtwork}
-              className="chakra-rail__pixels"
+              className="hobiui-rail__pixels"
               ariaLabel="Interactive India Gate pixel artwork"
               objectPosition={{ x: 1, y: 1 }}
             />
           </div>
           <button
-            className="chakra-mobile-drawer__close"
+            className="hobiui-mobile-drawer__close"
             type="button"
             aria-label="Close navigation menu"
             autoFocus
@@ -308,12 +308,12 @@ export default function ChakraUiShell() {
           <DocumentationSidebar
             activePage={activePage}
             searchQuery={searchQuery}
-            navId="chakra-mobile-documentation-sidebar"
+            navId="hobiui-mobile-documentation-sidebar"
             onPageChange={navigateToChapter}
           />
         </dialog>
 
-        <main className="chakra-workspace" id="chakra-main-content" tabIndex={-1}>
+        <main className="hobiui-workspace" id="hobiui-main-content" tabIndex={-1}>
           <DocumentationContent pageId={activePage} />
           <ChapterNavigation
             previousChapter={previousChapter}
@@ -324,40 +324,40 @@ export default function ChakraUiShell() {
         </main>
 
         <aside
-          id="chakra-page-outline"
-          className="chakra-page-outline"
-          aria-labelledby="chakra-page-outline-heading"
+          id="hobiui-page-outline"
+          className="hobiui-page-outline"
+          aria-labelledby="hobiui-page-outline-heading"
         >
-          <div className="chakra-page-outline__art" aria-hidden="true">
+          <div className="hobiui-page-outline__art" aria-hidden="true">
             <InteractivePixels
               src={activeRightRailArtwork}
-              className="chakra-rail__pixels"
+              className="hobiui-rail__pixels"
               ariaLabel="Interactive Rashtrapati Bhavan pixel artwork"
               objectPosition={{ x: 0.5, y: 1 }}
               crop={{ left: 2, top: 2 }}
             />
           </div>
-          <h2 id="chakra-page-outline-heading" className="chakra-page-outline__heading">On this page</h2>
+          <h2 id="hobiui-page-outline-heading" className="hobiui-page-outline__heading">On this page</h2>
           <DocumentationOutline pageId={activePage} />
         </aside>
 
         <dialog
-          id="chakra-mobile-outline"
+          id="hobiui-mobile-outline"
           ref={mobileOutlineDialogRef}
-          className="chakra-mobile-outline chakra-mobile-drawer"
-          aria-labelledby="chakra-mobile-outline-heading"
+          className="hobiui-mobile-outline hobiui-mobile-drawer"
+          aria-labelledby="hobiui-mobile-outline-heading"
           onClose={() => setIsMobileOutlineOpen(false)}
           onClick={(event) => {
             if (event.target === event.currentTarget) event.currentTarget.close();
           }}
         >
-          <h2 id="chakra-mobile-outline-heading" className="chakra-page-outline__heading">On this page</h2>
+          <h2 id="hobiui-mobile-outline-heading" className="hobiui-page-outline__heading">On this page</h2>
           <DocumentationOutline
             pageId={activePage}
             onNavigate={() => mobileOutlineDialogRef.current?.close()}
           />
           <button
-            className="chakra-mobile-drawer__close"
+            className="hobiui-mobile-drawer__close"
             type="button"
             aria-label="Close on this page panel"
             autoFocus

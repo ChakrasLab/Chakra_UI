@@ -10,7 +10,7 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 
 
 /** A native text input styled with shared semantic tokens. Pair it with a visible label. */
 export function Input({ className = "", size = "md", invalid, ...props }: InputProps) {
-  const classes = ["chakra-input", `chakra-input--${size}`, className].filter(Boolean).join(" ");
+  const classes = ["hobiui-input", `hobiui-input--${size}`, className].filter(Boolean).join(" ");
 
   return (
     <input

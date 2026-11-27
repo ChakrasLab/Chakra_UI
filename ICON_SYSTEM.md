@@ -164,7 +164,7 @@ instiui/
 ```
 
 - Do not create `apps/docs/src/icons` as a duplicate source library.
-- The docs app may contain icon previews, category metadata, search/filter UI, and examples—but imports icon components from `@chakra/icons`.
+- The docs app may contain icon previews, category metadata, search/filter UI, and examples—but imports icon components from `@hobiui/icons`.
 - Keep `packages/react` free to consume the same icon package for component defaults where appropriate.
 - Keep the registry in `packages/registry` responsible for registry-ready component/source entries, not as a second canonical icon implementation.
 - Use explicit named exports from `src/index.ts`. Add category entry points only if they improve the public API and remain tree-shakeable.
@@ -199,7 +199,7 @@ When changing an existing icon, preserve its name and meaning unless a deliberat
 Decorative icon beside visible text:
 
 ```tsx
-import { SearchIcon } from "@chakra/icons";
+import { SearchIcon } from "@hobiui/icons";
 
 <button type="button">
   <SearchIcon size={18} aria-hidden="true" />
@@ -210,7 +210,7 @@ import { SearchIcon } from "@chakra/icons";
 Icon-only control:
 
 ```tsx
-import { SearchIcon } from "@chakra/icons";
+import { SearchIcon } from "@hobiui/icons";
 
 <button type="button" aria-label="Search documentation">
   <SearchIcon size={20} aria-hidden="true" />
@@ -220,12 +220,12 @@ import { SearchIcon } from "@chakra/icons";
 Institutional motif (illustrates the API for a future, approved icon; it is not part of the current package exports):
 
 ```tsx
-import { AshokaChakraIcon } from "@chakra/icons";
+import { AshokaChakraIcon } from "@hobiui/icons";
 
 <AshokaChakraIcon
   size={24}
   aria-hidden="true"
-  style={{ color: "var(--chakra-color-text-primary)" }}
+  style={{ color: "var(--hobiui-color-text-primary)" }}
 />
 ```
 

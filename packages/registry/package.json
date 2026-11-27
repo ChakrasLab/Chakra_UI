@@ -1,5 +1,5 @@
 {
-  "name": "@chakra/registry",
+  "name": "@hobiui/registry",
   "version": "0.1.0",
   "private": true,
   "type": "module"

@@ -1,23 +1,23 @@
 .component-playground {
   margin-block: 18px 24px;
   overflow: hidden;
-  border: 1px solid var(--chakra-color-border-subtle);
-  border-radius: var(--chakra-radius-lg);
-  background: var(--chakra-color-surface-control);
+  border: 1px solid var(--hobiui-color-border-subtle);
+  border-radius: var(--hobiui-radius-lg);
+  background: var(--hobiui-color-surface-control);
 }
 
 .component-playground__heading {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: var(--chakra-space-4);
+  gap: var(--hobiui-space-4);
   padding: 16px 18px;
-  border-bottom: 1px solid var(--chakra-color-border-subtle);
+  border-bottom: 1px solid var(--hobiui-color-border-subtle);
 }
 
 .component-playground__heading h3 {
   margin: 0;
-  color: var(--chakra-color-text-strong);
+  color: var(--hobiui-color-text-strong);
   font-size: 1rem;
   font-weight: 650;
 }
@@ -25,7 +25,7 @@
 .component-playground__heading p,
 .component-playground__code > p {
   margin: 4px 0 0;
-  color: var(--chakra-color-text-muted);
+  color: var(--hobiui-color-text-muted);
   font-size: .8125rem;
   line-height: 1.45;
 }
@@ -33,9 +33,9 @@
 .component-playground__badge {
   flex: 0 0 auto;
   padding: 4px 8px;
-  border-radius: var(--chakra-radius-pill);
-  background: var(--chakra-color-info-subtle);
-  color: var(--chakra-color-info);
+  border-radius: var(--hobiui-radius-pill);
+  background: var(--hobiui-color-info-subtle);
+  color: var(--hobiui-color-info);
   font-size: .6875rem;
   font-weight: 650;
 }
@@ -53,9 +53,9 @@
   min-height: 176px;
   padding: 20px;
   place-items: center;
-  border: 1px dashed var(--chakra-color-border-control);
-  border-radius: var(--chakra-radius-control);
-  background: var(--chakra-color-surface-canvas);
+  border: 1px dashed var(--hobiui-color-border-control);
+  border-radius: var(--hobiui-radius-control);
+  background: var(--hobiui-color-surface-canvas);
 }
 
 .component-playground__controls {
@@ -65,13 +65,13 @@
   min-width: 0;
   margin: 0;
   padding: 12px;
-  border: 1px solid var(--chakra-color-border-subtle);
-  border-radius: var(--chakra-radius-control);
+  border: 1px solid var(--hobiui-color-border-subtle);
+  border-radius: var(--hobiui-radius-control);
 }
 
 .component-playground__controls legend {
   padding-inline: 4px;
-  color: var(--chakra-color-text-secondary);
+  color: var(--hobiui-color-text-secondary);
   font-size: .75rem;
   font-weight: 650;
 }
@@ -79,7 +79,7 @@
 .component-playground__field {
   display: grid;
   gap: 5px;
-  color: var(--chakra-color-text-secondary);
+  color: var(--hobiui-color-text-secondary);
   font-size: .75rem;
   font-weight: 600;
 }
@@ -89,10 +89,10 @@
   width: 100%;
   min-height: 36px;
   padding-inline: 9px;
-  border: 1px solid var(--chakra-color-border-control);
-  border-radius: var(--chakra-radius-control);
-  background: var(--chakra-color-surface-control);
-  color: var(--chakra-color-text-primary);
+  border: 1px solid var(--hobiui-color-border-control);
+  border-radius: var(--hobiui-radius-control);
+  background: var(--hobiui-color-surface-control);
+  color: var(--hobiui-color-text-primary);
   font: inherit;
   font-weight: 400;
 }
@@ -102,7 +102,7 @@
   align-items: center;
   gap: 8px;
   min-height: 28px;
-  color: var(--chakra-color-text-primary);
+  color: var(--hobiui-color-text-primary);
   font-size: .8125rem;
 }
 
@@ -110,14 +110,14 @@
   width: 16px;
   height: 16px;
   margin: 0;
-  accent-color: var(--chakra-color-brand);
+  accent-color: var(--hobiui-color-brand);
 }
 
 .component-playground__field select:focus-visible,
 .component-playground__text-control:focus-visible,
 .component-playground__toggle input:focus-visible,
 .component-playground__input-demo input:focus-visible {
-  outline: 2px solid var(--chakra-color-focus);
+  outline: 2px solid var(--hobiui-color-focus);
   outline-offset: 2px;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .component-playground__input-demo label {
-  color: var(--chakra-color-text-primary);
+  color: var(--hobiui-color-text-primary);
   font-size: .875rem;
   font-weight: 600;
 }
@@ -136,10 +136,10 @@
 .component-playground__input-demo input {
   min-height: 40px;
   padding-inline: 12px;
-  border: 1px solid var(--chakra-color-border-control);
-  border-radius: var(--chakra-radius-control);
-  background: var(--chakra-color-surface-control);
-  color: var(--chakra-color-text-primary);
+  border: 1px solid var(--hobiui-color-border-control);
+  border-radius: var(--hobiui-radius-control);
+  background: var(--hobiui-color-surface-control);
+  color: var(--hobiui-color-text-primary);
   font: inherit;
 }
 
@@ -149,14 +149,14 @@
 }
 
 .component-playground__input-demo > span {
-  color: var(--chakra-color-text-muted);
+  color: var(--hobiui-color-text-muted);
   font-size: .75rem;
   line-height: 1.4;
 }
 
 .component-playground__radio-group { display: grid; gap: 12px; min-width: 0; margin: 0; padding: 0; border: 0; }
-.component-playground__radio-group legend { margin-bottom: 8px; color: var(--chakra-color-text-strong); font-size: .9rem; font-weight: 650; }
-.component-playground__control-note { color: var(--chakra-color-text-muted); font-size: .75rem; line-height: 1.45; }
+.component-playground__radio-group legend { margin-bottom: 8px; color: var(--hobiui-color-text-strong); font-size: .9rem; font-weight: 650; }
+.component-playground__control-note { color: var(--hobiui-color-text-muted); font-size: .75rem; line-height: 1.45; }
 
 .component-playground__code {
   padding: 0 16px 16px;

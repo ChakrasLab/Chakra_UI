@@ -1,49 +1,49 @@
-.chakra-button {
+.hobiui-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--chakra-space-2);
+  gap: var(--hobiui-space-2);
   border: 1px solid transparent;
-  border-radius: var(--chakra-radius-control);
+  border-radius: var(--hobiui-radius-control);
   font: inherit;
   font-weight: 600;
   line-height: 1.2;
   cursor: pointer;
-  transition: background-color var(--chakra-motion-fast), border-color var(--chakra-motion-fast), color var(--chakra-motion-fast), box-shadow var(--chakra-motion-fast);
+  transition: background-color var(--hobiui-motion-fast), border-color var(--hobiui-motion-fast), color var(--hobiui-motion-fast), box-shadow var(--hobiui-motion-fast);
 }
 
-.chakra-button:focus-visible {
-  outline: 2px solid var(--chakra-color-focus);
+.hobiui-button:focus-visible {
+  outline: 2px solid var(--hobiui-color-focus);
   outline-offset: 2px;
 }
 
-.chakra-button:disabled {
+.hobiui-button:disabled {
   cursor: not-allowed;
   opacity: 0.56;
 }
 
-.chakra-button--sm { min-height: 32px; padding-inline: var(--chakra-space-3); font-size: var(--chakra-font-size-sm); }
-.chakra-button--md { min-height: 40px; padding-inline: var(--chakra-space-4); font-size: var(--chakra-font-size-md); }
-.chakra-button--lg { min-height: 48px; padding-inline: var(--chakra-space-5); font-size: var(--chakra-font-size-md); }
+.hobiui-button--sm { min-height: 32px; padding-inline: var(--hobiui-space-3); font-size: var(--hobiui-font-size-sm); }
+.hobiui-button--md { min-height: 40px; padding-inline: var(--hobiui-space-4); font-size: var(--hobiui-font-size-md); }
+.hobiui-button--lg { min-height: 48px; padding-inline: var(--hobiui-space-5); font-size: var(--hobiui-font-size-md); }
 
-.chakra-button--solid {
-  background: var(--chakra-color-brand);
-  color: var(--chakra-color-on-brand);
+.hobiui-button--solid {
+  background: var(--hobiui-color-brand);
+  color: var(--hobiui-color-on-brand);
 }
-.chakra-button--solid:hover:not(:disabled) { background: var(--chakra-color-brand-hover); }
-.chakra-button--solid[data-active="true"] { background: var(--chakra-color-brand-active); }
+.hobiui-button--solid:hover:not(:disabled) { background: var(--hobiui-color-brand-hover); }
+.hobiui-button--solid[data-active="true"] { background: var(--hobiui-color-brand-active); }
 
-.chakra-button--outline {
-  border-color: var(--chakra-color-border-control);
-  background: var(--chakra-color-surface-canvas);
-  color: var(--chakra-color-text-primary);
+.hobiui-button--outline {
+  border-color: var(--hobiui-color-border-control);
+  background: var(--hobiui-color-surface-canvas);
+  color: var(--hobiui-color-text-primary);
 }
-.chakra-button--outline:hover:not(:disabled) { background: var(--chakra-color-surface-subtle); }
-.chakra-button--outline[data-active="true"] { border-color: var(--chakra-color-brand); background: var(--chakra-color-surface-subtle); color: var(--chakra-color-brand); }
+.hobiui-button--outline:hover:not(:disabled) { background: var(--hobiui-color-surface-subtle); }
+.hobiui-button--outline[data-active="true"] { border-color: var(--hobiui-color-brand); background: var(--hobiui-color-surface-subtle); color: var(--hobiui-color-brand); }
 
-.chakra-button--ghost {
+.hobiui-button--ghost {
   background: transparent;
-  color: var(--chakra-color-text-primary);
+  color: var(--hobiui-color-text-primary);
 }
-.chakra-button--ghost:hover:not(:disabled) { background: var(--chakra-color-surface-subtle); }
-.chakra-button--ghost[data-active="true"] { background: var(--chakra-color-surface-selected); color: var(--chakra-color-brand); font-weight: 600; }
+.hobiui-button--ghost:hover:not(:disabled) { background: var(--hobiui-color-surface-subtle); }
+.hobiui-button--ghost[data-active="true"] { background: var(--hobiui-color-surface-selected); color: var(--hobiui-color-brand); font-weight: 600; }

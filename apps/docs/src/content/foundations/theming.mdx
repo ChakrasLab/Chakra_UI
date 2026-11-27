@@ -1,29 +1,29 @@
 import CodeBlock from "../../components/code-block/CodeBlock";
 
-export const themeExample = `@import "@chakra/tokens/index.css";
+export const themeExample = `@import "@hobiui/tokens/index.css";
 
 /* Put theme overrides after the token import. */
 :root[data-theme="dark"] {
-  --chakra-color-brand: #8fb2ff;
-  --chakra-color-brand-hover: #a8c3ff;
-  --chakra-color-brand-active: #7299ed;
+  --hobiui-color-brand: #8fb2ff;
+  --hobiui-color-brand-hover: #a8c3ff;
+  --hobiui-color-brand-active: #7299ed;
 }`;
 
 export const customThemeExample = `/* Define a custom theme scope. */
 [data-theme="ocean"] {
   color-scheme: light;
-  --chakra-color-surface-canvas: #f4faff;
-  --chakra-color-text-primary: #102b46;
-  --chakra-color-brand: #075985;
-  --chakra-color-brand-hover: #064b70;
-  --chakra-color-brand-active: #043b5a;
-  --chakra-color-on-brand: #fff;
-  --chakra-color-focus: #0284c7;
+  --hobiui-color-surface-canvas: #f4faff;
+  --hobiui-color-text-primary: #102b46;
+  --hobiui-color-brand: #075985;
+  --hobiui-color-brand-hover: #064b70;
+  --hobiui-color-brand-active: #043b5a;
+  --hobiui-color-on-brand: #fff;
+  --hobiui-color-focus: #0284c7;
 }`;
 
 # Theming
 
-Chakra's semantic tokens resolve to the active theme. Components can keep using the same variable names while the theme changes their surface, text, border, focus, and brand values.
+Hobi's semantic tokens resolve to the active theme. Components can keep using the same variable names while the theme changes their surface, text, border, focus, and brand values.
 
 <h2 id="activate-theme">Activate a theme</h2>
 
@@ -47,9 +47,9 @@ Define a theme selector and apply its `data-theme` value to the application subt
 
 <h2 id="theme-guidance">Theme guidance</h2>
 
-- Prefer semantic variables such as `--chakra-color-text-primary` in component styles.
+- Prefer semantic variables such as `--hobiui-color-text-primary` in component styles.
 - Keep raw values in the primitive palette and theme mappings.
 - Verify controls, focus indicators, disabled states, and code samples in each theme.
 - Use `color-scheme` to tell browser-rendered controls which color mode is active.
 
-`@chakra/tokens` is prepared for npm publishing but has not been released yet.
+`@hobiui/tokens` is prepared for npm publishing but has not been released yet.

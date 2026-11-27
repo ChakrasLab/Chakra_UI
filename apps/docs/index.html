@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#ffffff" />
     <script>
       try {
-        const preference = localStorage.getItem("chakra-color-scheme");
+        const preference = localStorage.getItem("hobiui-color-scheme");
         const colorScheme = document.querySelector('meta[name="color-scheme"]');
         if (preference === "light" || preference === "dark") {
           document.documentElement.dataset.theme = preference;
@@ -24,7 +24,7 @@
         document.documentElement.dataset.themePreference = "system";
       }
     </script>
-    <title>Chakra UI</title>
+    <title>Hobi UI</title>
   </head>
   <body>
     <div id="root"></div>

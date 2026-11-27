@@ -1,5 +1,5 @@
 import type { ComponentType } from "react";
-import type { IconProps } from "@chakra/icons";
+import type { IconProps } from "@hobiui/icons";
 import {
   AccessibilityIcon,
   BoltIcon,
@@ -24,7 +24,7 @@ import {
   TabsIcon,
   TooltipIcon,
   TypeIcon,
-} from "@chakra/icons";
+} from "@hobiui/icons";
 
 export interface NavigationItem {
   id: string;

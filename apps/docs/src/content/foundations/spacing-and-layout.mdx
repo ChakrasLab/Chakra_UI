@@ -1,14 +1,14 @@
 import CodeBlock from "../../components/code-block/CodeBlock";
 
-export const spacingExample = `@import "@chakra/tokens/index.css";
+export const spacingExample = `@import "@hobiui/tokens/index.css";
 
 .stack {
   display: grid;
-  gap: var(--chakra-space-4);
+  gap: var(--hobiui-space-4);
 }
 
 .panel {
-  padding: var(--chakra-space-6);
+  padding: var(--hobiui-space-6);
 }`;
 
 # Spacing and layout
@@ -19,16 +19,16 @@ Use the spacing scale for gaps, padding, and related layout decisions. Shared va
 
 <div className="foundation-table-wrap">
   <table className="foundation-table">
-    <caption className="visually-hidden">Chakra spacing tokens and their common uses</caption>
+    <caption className="visually-hidden">Hobi UI spacing tokens and their common uses</caption>
     <thead><tr><th scope="col">Token</th><th scope="col">Value</th><th scope="col">Example</th></tr></thead>
     <tbody>
-      <tr><th scope="row"><code>--chakra-space-1</code></th><td>4px</td><td>Icon to label</td></tr>
-      <tr><th scope="row"><code>--chakra-space-2</code></th><td>8px</td><td>Tight control groups</td></tr>
-      <tr><th scope="row"><code>--chakra-space-3</code></th><td>12px</td><td>Compact component padding</td></tr>
-      <tr><th scope="row"><code>--chakra-space-4</code></th><td>16px</td><td>Default content gap</td></tr>
-      <tr><th scope="row"><code>--chakra-space-5</code></th><td>20px</td><td>Intermediate layout gap</td></tr>
-      <tr><th scope="row"><code>--chakra-space-6</code></th><td>24px</td><td>Section spacing</td></tr>
-      <tr><th scope="row"><code>--chakra-space-8</code></th><td>32px</td><td>Major group separation</td></tr>
+      <tr><th scope="row"><code>--hobiui-space-1</code></th><td>4px</td><td>Icon to label</td></tr>
+      <tr><th scope="row"><code>--hobiui-space-2</code></th><td>8px</td><td>Tight control groups</td></tr>
+      <tr><th scope="row"><code>--hobiui-space-3</code></th><td>12px</td><td>Compact component padding</td></tr>
+      <tr><th scope="row"><code>--hobiui-space-4</code></th><td>16px</td><td>Default content gap</td></tr>
+      <tr><th scope="row"><code>--hobiui-space-5</code></th><td>20px</td><td>Intermediate layout gap</td></tr>
+      <tr><th scope="row"><code>--hobiui-space-6</code></th><td>24px</td><td>Section spacing</td></tr>
+      <tr><th scope="row"><code>--hobiui-space-8</code></th><td>32px</td><td>Major group separation</td></tr>
     </tbody>
   </table>
 </div>
@@ -46,7 +46,7 @@ Use flexible grid tracks and min/max constraints so content can shrink before it
 <CodeBlock code={`.content-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--chakra-space-6);
+  gap: var(--hobiui-space-6);
 }
 
 @media (max-width: 47.5em) {

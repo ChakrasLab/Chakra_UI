@@ -1,5 +1,5 @@
 {
-  "name": "chakra-ui",
+  "name": "hobiui",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -12,11 +12,11 @@
   ],
   "scripts": {
     "predev": "npm run build:packages",
-    "dev": "npm run dev --workspace @chakra/docs",
+    "dev": "npm run dev --workspace @hobiui/docs",
     "test": "vitest run",
-    "build:packages": "npm run build --workspace @chakra/icons && npm run build --workspace @chakra/react",
-    "build": "npm run build:packages && tsc --noEmit && npm run build --workspace @chakra/docs",
-    "preview": "npm run preview --workspace @chakra/docs",
+    "build:packages": "npm run build --workspace @hobiui/icons && npm run build --workspace @hobiui/react",
+    "build": "npm run build:packages && tsc --noEmit && npm run build --workspace @hobiui/docs",
+    "preview": "npm run preview --workspace @hobiui/docs",
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "npm run build:packages && changeset publish"

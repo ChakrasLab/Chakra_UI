@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState, type ComponentType } from "react";
-import { Button } from "@chakra/react";
-import type { IconProps } from "@chakra/icons";
+import { Button } from "@hobiui/react";
+import type { IconProps } from "@hobiui/icons";
 import {
   AccessibilityIcon,
   ArrowLeftIcon,
@@ -45,7 +45,7 @@ import {
   TooltipIcon,
   TypeIcon,
   WarningIcon,
-} from "@chakra/icons";
+} from "@hobiui/icons";
 import "./IconCatalog.css";
 
 type IconCategory = "Core UI" | "Navigation" | "Forms" | "Feedback";
@@ -71,7 +71,7 @@ function iconItem(
     category,
     description,
     keywords,
-    snippet: `import { ${name} } from "@chakra/icons";\n\n<${name} size={20} aria-hidden="true" />`,
+    snippet: `import { ${name} } from "@hobiui/icons";\n\n<${name} size={20} aria-hidden="true" />`,
     Icon,
   };
 }
@@ -165,8 +165,8 @@ export default function IconCatalog() {
   };
 
   return (
-    <div className="chakra-icon-catalog">
-      <label className="chakra-icon-catalog__search">
+    <div className="hobiui-icon-catalog">
+      <label className="hobiui-icon-catalog__search">
         <SearchIcon aria-hidden="true" />
         <input
           type="search"
@@ -179,18 +179,18 @@ export default function IconCatalog() {
       </label>
 
       {groups.length > 0 ? groups.map(({ category, icons }) => (
-        <section className="chakra-icon-catalog__group" key={category}>
+        <section className="hobiui-icon-catalog__group" key={category}>
           <h3>{category}</h3>
-          <div className="chakra-icon-catalog__grid">
+          <div className="hobiui-icon-catalog__grid">
             {icons.map((item) => (
-              <div className="chakra-icon-catalog__item" key={item.name}>
-                <span className="chakra-icon-catalog__preview"><item.Icon aria-hidden="true" /></span>
+              <div className="hobiui-icon-catalog__item" key={item.name}>
+                <span className="hobiui-icon-catalog__preview"><item.Icon aria-hidden="true" /></span>
                 <code>{item.name}</code>
-                <span className="chakra-icon-catalog__description">{item.description}</span>
+                <span className="hobiui-icon-catalog__description">{item.description}</span>
                 <Button
                   variant="ghost"
                   size="sm"
-                  className="chakra-icon-catalog__copy"
+                  className="hobiui-icon-catalog__copy"
                   type="button"
                   aria-label={copiedIcon === item.name ? `${item.name} copied` : `Copy ${item.name} example`}
                   title="Copy import and JSX"
@@ -203,10 +203,10 @@ export default function IconCatalog() {
           </div>
         </section>
       )) : (
-        <p className="chakra-icon-catalog__empty">No icons match “{query}”.</p>
+        <p className="hobiui-icon-catalog__empty">No icons match “{query}”.</p>
       )}
 
-      <span className="chakra-icon-catalog__status" role="status" aria-live="polite">
+      <span className="hobiui-icon-catalog__status" role="status" aria-live="polite">
         {copyFailed ? "Copy failed. Check clipboard permissions and try again." : copiedIcon ? `${copiedIcon} example copied.` : ""}
       </span>
     </div>

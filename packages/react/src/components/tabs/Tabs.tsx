@@ -64,8 +64,8 @@ export function Tabs({
   if (!selectedItem) return null;
 
   return (
-    <div className={`chakra-tabs chakra-tabs--${orientation} ${className}`.trim()}>
-      <div className="chakra-tabs__list" role="tablist" aria-label={ariaLabel} aria-orientation={orientation}>
+    <div className={`hobiui-tabs hobiui-tabs--${orientation} ${className}`.trim()}>
+      <div className="hobiui-tabs__list" role="tablist" aria-label={ariaLabel} aria-orientation={orientation}>
         {items.map((item, index) => {
           const isSelected = item.value === selectedItem.value;
           const tabId = `${baseId}-tab-${index}`;
@@ -74,7 +74,7 @@ export function Tabs({
           return (
             <button
               ref={(node) => { tabRefs.current[index] = node; }}
-              className="chakra-tabs__tab"
+              className="hobiui-tabs__tab"
               id={tabId}
               key={item.value}
               type="button"
@@ -93,7 +93,7 @@ export function Tabs({
       </div>
       {items.map((item, index) => (
         <div
-          className="chakra-tabs__panel"
+          className="hobiui-tabs__panel"
           id={`${baseId}-panel-${index}`}
           key={item.value}
           role="tabpanel"
